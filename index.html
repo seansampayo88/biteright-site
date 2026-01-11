@@ -114,28 +114,299 @@
       .phone-frame:hover { transform: rotate(0deg) scale(1.02); }
 
       /* Phone Content Simulation */
-      .app-header { padding: 40px 24px 20px 24px; display: flex; justify-content: space-between; align-items: center; }
-      .app-card {
-        margin: 0 20px 16px 20px; padding: 20px;
-        background: white; border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        border: 1px solid #f5f5f5;
+      .phone-content {
+        padding: 40px 20px 80px 20px;
+        background: #F7F9FB;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      
+      .phone-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .phone-country {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--navy);
+      }
+      .phone-country-flag {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .phone-chef-card-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      }
+      
+      .phone-header {
+        margin-bottom: 4px;
+      }
+      .phone-header h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--navy);
+        margin: 0 0 4px 0;
+      }
+      .phone-header p {
+        font-size: 14px;
+        color: var(--text-body);
+        margin: 0;
+      }
+      
+      .phone-search {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px;
+        height: 44px;
+        background: white;
+        border-radius: 22px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        margin-bottom: 8px;
+      }
+      .phone-search input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: var(--navy);
+        background: transparent;
+      }
+      .phone-search input::placeholder {
+        color: #999;
+      }
+      
+      .phone-mode-card {
+        padding: 16px;
+        background: rgba(0, 163, 111, 0.1);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .phone-mode-card-text h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary-teal);
+        margin: 0 0 2px 0;
+      }
+      .phone-mode-card-text p {
+        font-size: 12px;
+        color: var(--text-body);
+        margin: 0;
+      }
+      
+      .phone-action-chips {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 8px 0;
+        margin: 0 -4px;
+      }
+      .phone-action-chip {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 12px;
+        min-width: 70px;
+      }
+      .phone-action-chip-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      .phone-action-chip-text {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--navy);
+      }
+      
+      .phone-recent-section {
+        margin-top: 8px;
+      }
+      .phone-recent-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+      .phone-recent-cards {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 4px 0;
+      }
+      .phone-recent-card {
+        flex-shrink: 0;
+        width: 140px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+      .phone-recent-card-img {
+        width: 100%;
+        height: 90px;
+        background: linear-gradient(135deg, #FFD5C0 0%, #FFE8D6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+      }
+      .phone-recent-card-content {
+        padding: 10px;
+      }
+      .phone-recent-card-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .phone-recent-card-time {
+        font-size: 10px;
+        color: var(--text-body);
+        margin-bottom: 6px;
+      }
+      .phone-recent-card-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 8px;
+        font-size: 10px;
+        font-weight: 700;
+      }
+      .phone-recent-card-badge.safe {
+        background: rgba(0, 163, 111, 0.1);
+        color: var(--primary-teal);
+      }
+      .phone-recent-card-badge.caution {
+        background: rgba(244, 193, 110, 0.2);
+        color: var(--apricot);
+      }
+      .phone-recent-card-badge.unsafe {
+        background: rgba(255, 109, 94, 0.1);
+        color: var(--coral);
+      }
+      
+      .phone-bottom-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: white;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .phone-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: #999;
+      }
+      .phone-nav-item.active {
+        color: var(--primary-teal);
       }
       
       /* Animated Elements inside Phone */
       .anim-beam {
-        position: absolute; top: 180px; left: 0; width: 100%; height: 4px;
+        position: absolute; top: 280px; left: 0; width: 100%; height: 4px;
         background: var(--primary-teal);
         box-shadow: 0 0 15px var(--primary-teal);
         animation: scan 3s infinite linear;
         opacity: 0.8; z-index: 20;
       }
-      @keyframes scan { 0% {top:150px; opacity:0;} 20%{opacity:1;} 80%{opacity:1;} 100% {top: 400px; opacity:0;} }
+      @keyframes scan { 0% {top:250px; opacity:0;} 20%{opacity:1;} 80%{opacity:1;} 100% {top: 480px; opacity:0;} }
 
       /* Background Blobs */
       .blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.5; z-index: 0; }
       .blob-1 { width: 400px; height: 400px; background: var(--apricot); top: -100px; right: -100px; }
       .blob-2 { width: 300px; height: 300px; background: var(--primary-teal); bottom: 0; left: -100px; opacity: 0.2; }
+
+      /* MARK: - How It Works Section */
+      .how-it-works {
+        padding: 80px 0;
+        background: white;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .how-it-works h2 {
+        font-size: 32px;
+        color: var(--navy);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .how-it-works-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 40px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .how-it-works-step {
+        text-align: center;
+      }
+      .how-it-works-step-number {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary-teal);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: 800;
+        margin: 0 auto 24px;
+        box-shadow: 0 10px 20px rgba(0, 163, 111, 0.2);
+      }
+      .how-it-works-step h3 {
+        font-size: 22px;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+      .how-it-works-step p {
+        font-size: 16px;
+        color: var(--text-body);
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+      }
 
       /* MARK: - Features Grid */
       .features { padding: 80px 0; }
@@ -161,6 +432,45 @@
 
       h3 { font-size: 20px; margin-bottom: 8px; }
       p.card-text { font-size: 16px; color: var(--text-body); line-height: 1.5; }
+
+      /* MARK: - FAQ Section */
+      .faq {
+        padding: 80px 0;
+        background: white;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .faq h2 {
+        font-size: 32px;
+        color: var(--navy);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .faq-item {
+        background: var(--paper-color);
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid rgba(0,0,0,0.03);
+      }
+      .faq-question {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+      .faq-answer {
+        font-size: 16px;
+        color: var(--text-body);
+        line-height: 1.6;
+      }
 
       /* Footer */
       footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-body); font-size: 14px; }
@@ -191,8 +501,8 @@
         </div>
         <div class="nav-links">
           <a href="#features">Features</a>
-          <a href="#safety">Safety</a>
-          <a href="support.html">Support</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#faq">FAQ</a>
         </div>
       </nav>
 
@@ -200,8 +510,8 @@
       <section class="hero">
         <div>
           <span class="pill">
-            <i data-feather="check-circle" style="width:16px; margin-right:4px;"></i> 
-            Now available in NZ/AU
+            <i data-feather="smartphone" style="width:16px; margin-right:4px;"></i> 
+            iOS App
           </span>
           <h1>Eat safely, anywhere.</h1>
           <p class="hero-text">
@@ -209,7 +519,7 @@
           </p>
 
           <div class="cta-group">
-            <a class="btn btn-primary" href="#" aria-label="Get BiteRight">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/biteright/id000000000" aria-label="Get BiteRight on the App Store">
               <i data-feather="download-cloud"></i>
               Get the App
             </a>
@@ -218,17 +528,6 @@
             </a>
           </div>
           
-          <div style="margin-top: 24px; font-size: 13px; color: var(--text-body); display: flex; align-items: center; gap: 8px;">
-            <div style="display:flex;">
-              <!-- Star icons -->
-              <i data-feather="star" style="width:14px; fill:var(--apricot); color:var(--apricot);"></i>
-              <i data-feather="star" style="width:14px; fill:var(--apricot); color:var(--apricot);"></i>
-              <i data-feather="star" style="width:14px; fill:var(--apricot); color:var(--apricot);"></i>
-              <i data-feather="star" style="width:14px; fill:var(--apricot); color:var(--apricot);"></i>
-              <i data-feather="star" style="width:14px; fill:var(--apricot); color:var(--apricot);"></i>
-            </div>
-            Trusted by 10,000+ Coeliacs
-          </div>
         </div>
 
         <!-- CSS Phone Mockup -->
@@ -237,49 +536,122 @@
             <!-- Simulated App Interface -->
             <div class="anim-beam"></div> <!-- Scanning Laser -->
             
-            <div class="app-header">
-              <div style="font-weight:800; color:var(--navy); font-size:18px;">Is it safe?</div>
-              <div style="width:32px; height:32px; background:#f5f5f5; border-radius:50%;"></div>
-            </div>
-
-            <!-- Card 1: Scanning State -->
-            <div class="app-card" style="border: 2px solid var(--primary-teal); background: rgba(0,163,111,0.05);">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <div style="font-weight:700; color:var(--primary-teal);">Scan Complete</div>
-                <i data-feather="check-circle" style="color:var(--primary-teal); width:18px;"></i>
+            <div class="phone-content">
+              <!-- Top Bar -->
+              <div class="phone-top-bar">
+                <div class="phone-country">
+                  <div class="phone-country-flag">🇳🇿</div>
+                  <span>New Zealand</span>
+                </div>
+                <div class="phone-chef-card-btn">
+                  <i data-feather="creditcard" style="width:16px; color:var(--navy);"></i>
+                </div>
               </div>
-              <div style="display:flex; gap:12px; align-items:center;">
-                <div style="font-size:32px;">🥗</div>
-                <div>
-                  <div style="font-weight:700;">Garden Salad</div>
-                  <div style="font-size:12px; color:var(--text-body);">Safe ingredients detected</div>
+              
+              <!-- Header -->
+              <div class="phone-header">
+                <h2>Is it gluten free?</h2>
+                <p>Scan a menu or check an ingredient.</p>
+              </div>
+              
+              <!-- Search Bar -->
+              <div class="phone-search">
+                <i data-feather="search" style="width:16px; color:var(--primary-teal);"></i>
+                <input type="text" placeholder="Type ingredient or meal..." readonly>
+              </div>
+              
+              <!-- Mode Card -->
+              <div class="phone-mode-card">
+                <div class="phone-mode-card-text">
+                  <h3>Coeliac Safe Mode</h3>
+                  <p>Strict analysis active</p>
+                </div>
+                <i data-feather="shield" style="width:24px; color:var(--primary-teal);"></i>
+              </div>
+              
+              <!-- Action Chips -->
+              <div class="phone-action-chips">
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(0,163,111,0.1); color:var(--primary-teal);">
+                    <i data-feather="camera" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Scan Menu</div>
+                </div>
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(244,193,110,0.2); color:var(--apricot);">
+                    <i data-feather="grid" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Scan Meal</div>
+                </div>
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(255,109,94,0.1); color:var(--coral);">
+                    <i data-feather="maximize-2" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Barcode</div>
+                </div>
+              </div>
+              
+              <!-- Recent Checks -->
+              <div class="phone-recent-section">
+                <div class="phone-recent-title">Recent Checks</div>
+                <div class="phone-recent-cards">
+                  <div class="phone-recent-card">
+                    <div class="phone-recent-card-img">🥩</div>
+                    <div class="phone-recent-card-content">
+                      <div class="phone-recent-card-title">Steak with Mu...</div>
+                      <div class="phone-recent-card-time">3:53 PM</div>
+                      <span class="phone-recent-card-badge caution">Caution</span>
+                    </div>
+                  </div>
+                  <div class="phone-recent-card">
+                    <div class="phone-recent-card-img">🍝</div>
+                    <div class="phone-recent-card-content">
+                      <div class="phone-recent-card-title">Stracciatella...</div>
+                      <div class="phone-recent-card-time">3:52 PM</div>
+                      <span class="phone-recent-card-badge unsafe">Unsafe</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2: Risk State -->
-            <div class="app-card">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                <div style="font-weight:700; color:var(--coral);">Risk Detected</div>
-                <i data-feather="alert-triangle" style="color:var(--coral); width:18px;"></i>
+            <!-- Bottom Nav -->
+            <div class="phone-bottom-nav">
+              <div class="phone-nav-item active">
+                <i data-feather="home" style="width:20px;"></i>
+                <span>Home</span>
               </div>
-              <div style="display:flex; gap:12px; align-items:center;">
-                <div style="font-size:32px;">🍟</div>
-                <div>
-                  <div style="font-weight:700;">Fries</div>
-                  <div style="font-size:12px; color:var(--text-body);">Shared fryer warning</div>
-                </div>
+              <div class="phone-nav-item">
+                <i data-feather="heart" style="width:20px;"></i>
+                <span>Saved</span>
+              </div>
+              <div class="phone-nav-item">
+                <i data-feather="user" style="width:20px;"></i>
+                <span>Profile</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <!-- Bottom Nav Sim -->
-            <div style="position:absolute; bottom:0; width:100%; height:70px; border-top:1px solid #eee; display:flex; justify-content:space-around; align-items:center; color:#ccc;">
-              <i data-feather="home" style="color:var(--primary-teal);"></i>
-              <div style="width:48px; height:48px; background:var(--primary-teal); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; margin-bottom:20px; box-shadow: 0 5px 15px rgba(0,163,111,0.4);">
-                <i data-feather="camera" style="width:20px;"></i>
-              </div>
-              <i data-feather="user"></i>
-            </div>
+      <!-- HOW IT WORKS -->
+      <section class="how-it-works" id="how-it-works">
+        <h2>How it works</h2>
+        <div class="how-it-works-steps">
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">1</div>
+            <h3>Snap or Type</h3>
+            <p>Take a photo of a menu, meal, or type an ingredient. BiteRight works with menus, plated food, ingredient lists, and barcodes.</p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">2</div>
+            <h3>AI Analysis</h3>
+            <p>BiteRight's AI identifies hidden gluten risks instantly. We analyze ingredients, cross-contamination risks, and local food practices.</p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">3</div>
+            <h3>Get Your Answer</h3>
+            <p>See safe, caution, or unsafe results with clear explanations. Always double-check with kitchen staff for the final word.</p>
           </div>
         </div>
       </section>
@@ -295,8 +667,8 @@
           <!-- Card 1 -->
           <div class="feature-card">
             <div class="icon-box ib-teal"><i data-feather="camera"></i></div>
-            <h3>Menu Scan</h3>
-            <p class="card-text">Snap a photo of any menu. We highlight the safe options and flag the risky ones instantly.</p>
+            <h3>Menu or Meal Scan</h3>
+            <p class="card-text">Snap a photo of any menu or plated meal. We highlight the safe options and flag the risky ones instantly.</p>
           </div>
           
           <!-- Card 2 -->
@@ -317,7 +689,63 @@
           <div class="feature-card">
             <div class="icon-box ib-navy"><i data-feather="map-pin"></i></div>
             <h3>Local Knowledge</h3>
-            <p class="card-text">Optimised for NZ/AU labeling laws. We know that "Soy Sauce" usually means wheat here.</p>
+            <p class="card-text">Set your country and we'll adapt our analysis. Soy sauce in Japan vs. UK? Different risks. We know the local nuances.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">What is BiteRight?</div>
+            <div class="faq-answer">BiteRight is an AI-powered gluten risk checker designed for people with coeliac disease and gluten intolerance. Simply scan a menu, meal, ingredient list, or barcode to get instant guidance on potential gluten risks.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">How does the scanning work?</div>
+            <div class="faq-answer">BiteRight uses advanced AI to analyze photos of menus, plated meals, or ingredient lists. Our AI identifies hidden gluten sources, cross-contamination risks, and local food practices to give you a safe, caution, or unsafe assessment.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What can I scan?</div>
+            <div class="faq-answer">You can scan menus, plated meals, ingredient lists, or barcodes. BiteRight works with photos taken directly in the app or uploaded from your library. You can also type ingredients manually for quick checks.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Is BiteRight a medical device?</div>
+            <div class="faq-answer">No, BiteRight is not a medical device. It's a guidance tool to help you assess gluten risks. Always double-check with kitchen staff, especially if you have coeliac disease. BiteRight provides helpful information but is not a substitute for professional medical advice.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What is Coeliac Safe Mode?</div>
+            <div class="faq-answer">Coeliac Safe Mode is a stricter analysis setting that flags additional risks like cross-contamination, shared fryers, and hidden gluten sources. It's designed for people with diagnosed coeliac disease who need to be extra cautious about even trace amounts of gluten.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What are Chef Cards?</div>
+            <div class="faq-answer">Chef Cards are digital cards that explain your dietary needs to restaurant staff in over 20 languages. They're designed to help you communicate your gluten requirements clearly when traveling or dining out, reducing language barriers and misunderstandings.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Why do you ask for my location?</div>
+            <div class="faq-answer">BiteRight uses your location to localize ingredient knowledge and provide more accurate assessments. For example, soy sauce formulations vary by country—what's safe in Japan might not be safe in the UK. Setting your country helps us tailor our analysis to local food practices.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Is my data private?</div>
+            <div class="faq-answer">Yes, privacy is important to us. Photos are analyzed for gluten assessment and are not stored long-term. We focus on privacy-first practices and don't sell your data. Your recent checks are stored locally on your device for your convenience.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What platforms is BiteRight available on?</div>
+            <div class="faq-answer">BiteRight is currently available on iOS only. You can download it from the App Store. We're working to expand to other platforms in the future.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">How accurate is BiteRight?</div>
+            <div class="faq-answer">BiteRight uses advanced AI to provide helpful guidance, but it's not 100% guaranteed. Always verify with kitchen staff, especially if you have coeliac disease. The app is designed to help you make informed decisions, not replace your judgment or professional medical advice.</div>
           </div>
         </div>
       </section>
