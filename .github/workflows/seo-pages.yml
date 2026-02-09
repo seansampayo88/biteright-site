@@ -1,0 +1,43 @@
+name: Generate SEO pages
+
+on:
+  schedule:
+    - cron: "0 19 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install
+        run: npm install
+
+      - name: Generate pages
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MAX_NEW_PAGES: "10"
+        run: node scripts/generate-pages.mjs
+
+      - name: Validate + build (safety check)
+        run: npm run build
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(seo): generate programmatic pages"
+          title: "SEO: add new programmatic pages"
+          body: "Automated weekly generation of new BiteRight programmatic SEO pages."
+          branch: "automation/seo-pages"
+          delete-branch: true
