@@ -4,9 +4,7 @@
   "private": true,
   "description": "Static marketing site for BiteRight with programmatic SEO build step.",
   "scripts": {
-    "build": "node scripts/build.js",
-    "lint": "node scripts/lint.js",
-    "test": "node scripts/test.js"
+    "build": "node scripts/build.js"
   },
   "engines": {
     "node": ">=18.0.0"
