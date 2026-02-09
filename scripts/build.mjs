@@ -33,10 +33,19 @@ function renderPage({
   description,
   heading,
   intro,
+  verdict,
   sections = [],
   faq = [],
   cta,
 }) {
+  const verdictMarkup = verdict?.summary
+    ? `
+        <section class="section verdict">
+          <h2>Verdict</h2>
+          <p>${verdict.summary}</p>
+        </section>
+      `
+    : "";
   const sectionMarkup = sections
     .map(
       (section) => `
@@ -156,6 +165,7 @@ function renderPage({
     <main>
       <h1>${heading}</h1>
       <p class="intro">${intro}</p>
+      ${verdictMarkup}
       ${sectionMarkup}
       <section class="faq">
         <h2>FAQ</h2>

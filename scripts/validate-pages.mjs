@@ -33,6 +33,8 @@ for (const file of files) {
 
   const status = json.verdict?.status;
   if (!status) die(`Missing verdict.status in ${file}`);
+  const summary = json.verdict?.summary;
+  if (!summary) die(`Missing verdict.summary in ${file}`);
 
   // Optional guardrail
   if (!json.disclaimer || json.disclaimer.length < 10) die(`Disclaimer too short in ${file}`);
