@@ -1,0 +1,35 @@
+[
+  {
+    "slug": "gluten-free-restaurants-auckland",
+    "title": "Gluten-Free Restaurants in Auckland",
+    "description": "Find trusted gluten-free dining options in Auckland with BiteRight's AI-powered guidance.",
+    "summary": "Discover gluten-friendly spots across Auckland, from cafés to fine dining, with tips for safe ordering.",
+    "highlights": [
+      "Neighborhood-specific tips for Ponsonby, CBD, and Parnell",
+      "Common hidden gluten sources to watch out for",
+      "Conversation starters for kitchen staff"
+    ]
+  },
+  {
+    "slug": "gluten-free-travel-cards",
+    "title": "Gluten-Free Travel Cards",
+    "description": "Use BiteRight travel cards to explain gluten needs in 20+ languages.",
+    "summary": "Travel confidently with translation-ready chef cards and local ingredient insights so you can avoid cross-contamination.",
+    "highlights": [
+      "Instant translations for restaurants abroad",
+      "Clear explanations of coeliac-safe requirements",
+      "Offline-ready saved cards"
+    ]
+  },
+  {
+    "slug": "barcode-scan-gluten-check",
+    "title": "Barcode Scan Gluten Check",
+    "description": "Scan grocery barcodes with BiteRight to flag risky ingredients before you buy.",
+    "summary": "Speed up your shopping by scanning barcodes, getting instant ingredient analysis, and saving safe favorites.",
+    "highlights": [
+      "Instant ingredient risk analysis",
+      "Alerts for malt, barley, and brewer's yeast",
+      "Save and organize safe pantry staples"
+    ]
+  }
+]
