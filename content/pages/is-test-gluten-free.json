@@ -1,0 +1,16 @@
+{
+  "slug": "is-test-gluten-free",
+  "title": "Is Test Gluten Free?",
+  "description": "Learn how BiteRight evaluates whether Test is gluten free and what to ask before you eat.",
+  "updatedAt": "2024-10-01",
+  "faq": [
+    {
+      "question": "What does BiteRight check?",
+      "answer": "We scan ingredients, preparation methods, and cross-contamination risks to provide a safe, caution, or unsafe assessment."
+    },
+    {
+      "question": "Is this a medical diagnosis?",
+      "answer": "No. BiteRight provides guidance only. Always confirm with staff if you have coeliac disease or severe gluten intolerance."
+    }
+  ]
+}
