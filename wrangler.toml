@@ -1,0 +1,9 @@
+name = "biteright-site"
+compatibility_date = "2024-01-01"
+main = "src/index.js"
+
+[assets]
+directory = "./dist"
+
+[build]
+command = "npm run build"
