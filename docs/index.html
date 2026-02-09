@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BiteRight — Eat safely, anywhere.</title>
+    <meta name="description" content="The official BiteRight website. Assess gluten risk from menus, ingredients, and barcodes." />
+    <link rel="canonical" href="https://seansampayo88.github.io/biteright-site/" />
+    <meta name="theme-color" content="#00A36F" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BiteRight" />
+    <meta property="og:title" content="BiteRight — Eat safely, anywhere." />
+    <meta property="og:description" content="The official BiteRight website. Assess gluten risk from menus, ingredients, and barcodes." />
+    <meta property="og:url" content="https://seansampayo88.github.io/biteright-site/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="BiteRight — Eat safely, anywhere." />
+    <meta name="twitter:description" content="The official BiteRight website. Assess gluten risk from menus, ingredients, and barcodes." />
+    
+    <!-- Fonts: Using Nunito to match the rounded iOS feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+      /* MARK: - Brand Variables */
+      :root {
+        --paper-color: #FDFBF7;
+        --primary-teal: #00A36F;
+        --navy: #0D1B2A;
+        --coral: #FF6D5E;
+        --apricot: #F4C16E;
+        --text-body: #5F6B7A;
+        
+        --radius-lg: 24px;
+        --radius-pill: 999px;
+        --shadow-card: 0 10px 30px rgba(13, 27, 42, 0.05);
+        --shadow-float: 0 20px 40px rgba(0, 163, 111, 0.15);
+      }
+
+      * { box-sizing: border-box; }
+
+      body { 
+        font-family: 'Nunito', sans-serif; 
+        margin: 0; 
+        background-color: var(--paper-color);
+        background-image: radial-gradient(#E8E4DD 1px, transparent 1px);
+        background-size: 24px 24px;
+        color: var(--navy);
+        overflow-x: hidden;
+      }
+
+      /* Layout Utilities */
+      .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
+      
+      /* Navigation */
+      nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; }
+      .logo { font-size: 24px; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+      .logo-mark { width: 32px; height: 32px; background: var(--primary-teal); border-radius: 8px; position: relative; }
+      .logo-mark::after { content:''; position: absolute; top: -4px; right: -4px; width: 12px; height: 12px; background: var(--paper-color); border-radius: 50%; }
+      
+      .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 24px; font-size: 15px; transition: color 0.2s; }
+      .nav-links a:hover { color: var(--primary-teal); }
+
+      /* MARK: - Hero Section */
+      .hero { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 60px; 
+        align-items: center; 
+        padding: 40px 0 100px 0;
+      }
+
+      h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px 0; letter-spacing: -1px; color: var(--navy); }
+      p.hero-text { font-size: 20px; line-height: 1.6; color: var(--text-body); margin-bottom: 40px; max-width: 480px; }
+
+      .pill { 
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 8px 16px; 
+        background: rgba(0, 163, 111, 0.1); 
+        color: var(--primary-teal); 
+        border-radius: var(--radius-pill); 
+        font-weight: 700; font-size: 14px; letter-spacing: 0.5px; text-transform: uppercase;
+      }
+
+      /* Buttons */
+      .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+      
+      .btn { 
+        display: inline-flex; align-items: center; gap: 10px;
+        padding: 16px 32px; 
+        border-radius: var(--radius-pill); 
+        text-decoration: none; 
+        font-weight: 700; font-size: 17px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      
+      .btn-primary { 
+        background: var(--navy); color: #fff; 
+        box-shadow: 0 10px 20px rgba(13, 27, 42, 0.2);
+      }
+      .btn-secondary { 
+        background: white; color: var(--navy); border: 2px solid #E5E7EB;
+      }
+
+      /* MARK: - CSS Product Shot (The Phone) */
+      .phone-container {
+        position: relative;
+        display: flex; justify-content: center;
+      }
+      .phone-frame {
+        width: 320px; height: 640px;
+        background: white;
+        border-radius: 48px;
+        border: 8px solid white;
+        box-shadow: 0 50px 100px -20px rgba(13,27,42,0.2), inset 0 0 0 2px #f0f0f0;
+        position: relative; overflow: hidden;
+        z-index: 10;
+        /* Tilt Effect */
+        transform: rotate(-3deg);
+        transition: transform 0.5s ease;
+      }
+      .phone-frame:hover { transform: rotate(0deg) scale(1.02); }
+
+      /* Phone Content Simulation */
+      .phone-content {
+        padding: 40px 20px 80px 20px;
+        background: #F7F9FB;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      
+      .phone-top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .phone-country {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--navy);
+      }
+      .phone-country-flag {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .phone-chef-card-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      }
+      
+      .phone-header {
+        margin-bottom: 4px;
+      }
+      .phone-header h2 {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--navy);
+        margin: 0 0 4px 0;
+      }
+      .phone-header p {
+        font-size: 14px;
+        color: var(--text-body);
+        margin: 0;
+      }
+      
+      .phone-search {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px;
+        height: 44px;
+        background: white;
+        border-radius: 22px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        margin-bottom: 8px;
+      }
+      .phone-search input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        color: var(--navy);
+        background: transparent;
+      }
+      .phone-search input::placeholder {
+        color: #999;
+      }
+      
+      .phone-mode-card {
+        padding: 16px;
+        background: rgba(0, 163, 111, 0.1);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .phone-mode-card-text h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--primary-teal);
+        margin: 0 0 2px 0;
+      }
+      .phone-mode-card-text p {
+        font-size: 12px;
+        color: var(--text-body);
+        margin: 0;
+      }
+      
+      .phone-action-chips {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 8px 0;
+        margin: 0 -4px;
+      }
+      .phone-action-chip {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 12px;
+        min-width: 70px;
+      }
+      .phone-action-chip-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      .phone-action-chip-text {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--navy);
+      }
+      
+      .phone-recent-section {
+        margin-top: 8px;
+      }
+      .phone-recent-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+      .phone-recent-cards {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding: 4px 0;
+      }
+      .phone-recent-card {
+        flex-shrink: 0;
+        width: 140px;
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+      .phone-recent-card-img {
+        width: 100%;
+        height: 90px;
+        background: linear-gradient(135deg, #FFD5C0 0%, #FFE8D6 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+      }
+      .phone-recent-card-content {
+        padding: 10px;
+      }
+      .phone-recent-card-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .phone-recent-card-time {
+        font-size: 10px;
+        color: var(--text-body);
+        margin-bottom: 6px;
+      }
+      .phone-recent-card-badge {
+        display: inline-block;
+        padding: 3px 8px;
+        border-radius: 8px;
+        font-size: 10px;
+        font-weight: 700;
+      }
+      .phone-recent-card-badge.safe {
+        background: rgba(0, 163, 111, 0.1);
+        color: var(--primary-teal);
+      }
+      .phone-recent-card-badge.caution {
+        background: rgba(244, 193, 110, 0.2);
+        color: var(--apricot);
+      }
+      .phone-recent-card-badge.unsafe {
+        background: rgba(255, 109, 94, 0.1);
+        color: var(--coral);
+      }
+      
+      .phone-bottom-nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 70px;
+        background: white;
+        border-top: 1px solid #eee;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .phone-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: #999;
+      }
+      .phone-nav-item.active {
+        color: var(--primary-teal);
+      }
+      
+      /* Animated Elements inside Phone */
+      .anim-beam {
+        position: absolute; top: 280px; left: 0; width: 100%; height: 4px;
+        background: var(--primary-teal);
+        box-shadow: 0 0 15px var(--primary-teal);
+        animation: scan 3s infinite linear;
+        opacity: 0.8; z-index: 20;
+      }
+      @keyframes scan { 0% {top:250px; opacity:0;} 20%{opacity:1;} 80%{opacity:1;} 100% {top: 480px; opacity:0;} }
+
+      /* Background Blobs */
+      .blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.5; z-index: 0; }
+      .blob-1 { width: 400px; height: 400px; background: var(--apricot); top: -100px; right: -100px; }
+      .blob-2 { width: 300px; height: 300px; background: var(--primary-teal); bottom: 0; left: -100px; opacity: 0.2; }
+
+      /* MARK: - How It Works Section */
+      .how-it-works {
+        padding: 80px 0;
+        background: white;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .how-it-works h2 {
+        font-size: 32px;
+        color: var(--navy);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .how-it-works-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .how-it-works-step {
+        text-align: center;
+        padding: 32px 24px;
+        background: var(--paper-color);
+        border-radius: 24px;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .how-it-works-step:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      }
+      .how-it-works-icon-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        position: relative;
+        overflow: hidden;
+      }
+      .how-it-works-icon-wrapper.step-1 {
+        background: linear-gradient(135deg, rgba(0,163,111,0.15) 0%, rgba(0,163,111,0.05) 100%);
+      }
+      .how-it-works-icon-wrapper.step-2 {
+        background: linear-gradient(135deg, rgba(244,193,110,0.25) 0%, rgba(244,193,110,0.1) 100%);
+      }
+      .how-it-works-icon-wrapper.step-3 {
+        background: linear-gradient(135deg, rgba(255,109,94,0.15) 0%, rgba(0,163,111,0.1) 100%);
+      }
+      .how-it-works-icon-wrapper svg,
+      .how-it-works-icon-wrapper i {
+        width: 48px;
+        height: 48px;
+        z-index: 2;
+      }
+      .how-it-works-icon-wrapper.step-1 svg,
+      .how-it-works-icon-wrapper.step-1 i { color: var(--primary-teal); }
+      .how-it-works-icon-wrapper.step-2 svg,
+      .how-it-works-icon-wrapper.step-2 i { color: var(--apricot); }
+      .how-it-works-icon-wrapper.step-3 svg,
+      .how-it-works-icon-wrapper.step-3 i { color: var(--primary-teal); }
+      
+      /* Animated particles/decorations */
+      .how-it-works-icon-wrapper::before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 0.3;
+        animation: float 3s ease-in-out infinite;
+      }
+      .how-it-works-icon-wrapper.step-1::before {
+        background: var(--primary-teal);
+        top: 15px;
+        right: 20px;
+      }
+      .how-it-works-icon-wrapper.step-2::before {
+        background: var(--apricot);
+        top: 20px;
+        left: 15px;
+        animation-delay: 0.5s;
+      }
+      .how-it-works-icon-wrapper.step-3::before {
+        background: var(--primary-teal);
+        bottom: 15px;
+        right: 18px;
+        animation-delay: 1s;
+      }
+      .how-it-works-icon-wrapper::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        opacity: 0.2;
+        animation: float 2.5s ease-in-out infinite reverse;
+      }
+      .how-it-works-icon-wrapper.step-1::after {
+        background: var(--primary-teal);
+        bottom: 18px;
+        left: 22px;
+      }
+      .how-it-works-icon-wrapper.step-2::after {
+        background: var(--apricot);
+        bottom: 22px;
+        right: 20px;
+        animation-delay: 0.3s;
+      }
+      .how-it-works-icon-wrapper.step-3::after {
+        background: var(--coral);
+        top: 18px;
+        left: 20px;
+        animation-delay: 0.7s;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+      
+      .how-it-works-step-number {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--navy);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 800;
+        box-shadow: 0 4px 12px rgba(13, 27, 42, 0.2);
+      }
+      .how-it-works-step h3 {
+        font-size: 22px;
+        color: var(--navy);
+        margin-bottom: 12px;
+      }
+      .how-it-works-step p {
+        font-size: 16px;
+        color: var(--text-body);
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+      
+      /* Connection lines between steps (desktop only) */
+      @media (min-width: 900px) {
+        .how-it-works-steps::before,
+        .how-it-works-steps::after {
+          content: '';
+          position: absolute;
+          top: 80px;
+          width: 60px;
+          height: 2px;
+          background: linear-gradient(90deg, var(--primary-teal), var(--apricot));
+          opacity: 0.3;
+        }
+        .how-it-works-steps::before {
+          left: calc(33.33% - 30px);
+        }
+        .how-it-works-steps::after {
+          left: calc(66.66% - 30px);
+          background: linear-gradient(90deg, var(--apricot), var(--primary-teal));
+        }
+      }
+
+      /* MARK: - Features Grid */
+      .features { padding: 80px 0; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+      
+      .feature-card {
+        background: white; border-radius: 24px; padding: 32px;
+        border: 1px solid rgba(0,0,0,0.03);
+        box-shadow: var(--shadow-card);
+        transition: 0.3s;
+      }
+      .feature-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-float); border-color: var(--primary-teal); }
+      
+      .icon-box {
+        width: 56px; height: 56px; border-radius: 16px;
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 20px; font-size: 24px;
+      }
+      .ib-teal { background: rgba(0,163,111,0.1); color: var(--primary-teal); }
+      .ib-coral { background: rgba(255,109,94,0.1); color: var(--coral); }
+      .ib-apricot { background: rgba(244,193,110,0.2); color: var(--apricot); }
+      .ib-navy { background: rgba(13,27,42,0.05); color: var(--navy); }
+
+      h3 { font-size: 20px; margin-bottom: 8px; }
+      p.card-text { font-size: 16px; color: var(--text-body); line-height: 1.5; }
+
+      /* MARK: - FAQ Section (Accordion) */
+      .faq {
+        padding: 80px 0;
+        background: white;
+        margin: 0 -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .faq h2 {
+        font-size: 32px;
+        color: var(--navy);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-item {
+        background: var(--paper-color);
+        border-radius: 16px;
+        border: 1px solid rgba(0,0,0,0.03);
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+      }
+      .faq-item:hover {
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      }
+      .faq-question {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--navy);
+        padding: 24px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        user-select: none;
+        transition: background 0.2s ease;
+      }
+      .faq-question:hover {
+        background: rgba(0,0,0,0.02);
+      }
+      .faq-question::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid var(--primary-teal);
+        border-bottom: 2px solid var(--primary-teal);
+        transform: rotate(45deg);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+      .faq-item.open .faq-question::after {
+        transform: rotate(-135deg);
+      }
+      .faq-answer {
+        font-size: 16px;
+        color: var(--text-body);
+        line-height: 1.6;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0 24px;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 300px;
+        padding: 0 24px 24px 24px;
+      }
+
+      /* Footer */
+      footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-body); font-size: 14px; }
+      .footer-content { display: flex; justify-content: space-between; align-items: center; }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+        .hero-text { margin: 0 auto 40px auto; }
+        .cta-group { justify-content: center; }
+        h1 { font-size: 40px; }
+        .phone-container { order: -1; transform: scale(0.9); }
+        .nav-links { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- Decor Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <div class="logo-mark"></div>
+          BiteRight
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="pill">Official BiteRight website</div>
+          <h1>Eat safely, anywhere.</h1>
+          <p class="hero-text">
+            Snap a menu, ingredients list, or barcode. BiteRight's AI identifies hidden gluten risks instantly so you can dine with confidence.
+          </p>
+
+          <div class="cta-group">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/biteright/id000000000" aria-label="Get BiteRight on the App Store">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download on the App Store
+            </a>
+            <a class="btn btn-secondary" href="#how-it-works">
+              How it works
+            </a>
+          </div>
+          
+        </div>
+
+        <!-- CSS Phone Mockup -->
+        <div class="phone-container">
+          <div class="phone-frame">
+            <!-- Simulated App Interface -->
+            <div class="anim-beam"></div> <!-- Scanning Laser -->
+            
+            <div class="phone-content">
+              <!-- Top Bar -->
+              <div class="phone-top-bar">
+                <div class="phone-country">
+                  <div class="phone-country-flag">🇳🇿</div>
+                  <span>New Zealand</span>
+                </div>
+                <div class="phone-chef-card-btn">
+                  <i data-feather="creditcard" style="width:16px; color:var(--navy);"></i>
+                </div>
+              </div>
+              
+              <!-- Header -->
+              <div class="phone-header">
+                <h2>Is it gluten free?</h2>
+                <p>Scan a menu or check an ingredient.</p>
+              </div>
+              
+              <!-- Search Bar -->
+              <div class="phone-search">
+                <i data-feather="search" style="width:16px; color:var(--primary-teal);"></i>
+                <input type="text" placeholder="Type ingredient or meal..." readonly>
+              </div>
+              
+              <!-- Mode Card -->
+              <div class="phone-mode-card">
+                <div class="phone-mode-card-text">
+                  <h3>Coeliac Safe Mode</h3>
+                  <p>Strict analysis active</p>
+                </div>
+                <i data-feather="shield" style="width:24px; color:var(--primary-teal);"></i>
+              </div>
+              
+              <!-- Action Chips -->
+              <div class="phone-action-chips">
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(0,163,111,0.1); color:var(--primary-teal);">
+                    <i data-feather="camera" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Scan Menu</div>
+                </div>
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(244,193,110,0.2); color:var(--apricot);">
+                    <i data-feather="grid" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Scan Meal</div>
+                </div>
+                <div class="phone-action-chip">
+                  <div class="phone-action-chip-icon" style="background:rgba(255,109,94,0.1); color:var(--coral);">
+                    <i data-feather="maximize-2" style="width:20px;"></i>
+                  </div>
+                  <div class="phone-action-chip-text">Barcode</div>
+                </div>
+              </div>
+              
+              <!-- Recent Checks -->
+              <div class="phone-recent-section">
+                <div class="phone-recent-title">Recent Checks</div>
+                <div class="phone-recent-cards">
+                  <div class="phone-recent-card">
+                    <div class="phone-recent-card-img">🥩</div>
+                    <div class="phone-recent-card-content">
+                      <div class="phone-recent-card-title">Steak with Mu...</div>
+                      <div class="phone-recent-card-time">3:53 PM</div>
+                      <span class="phone-recent-card-badge caution">Caution</span>
+                    </div>
+                  </div>
+                  <div class="phone-recent-card">
+                    <div class="phone-recent-card-img">🍝</div>
+                    <div class="phone-recent-card-content">
+                      <div class="phone-recent-card-title">Stracciatella...</div>
+                      <div class="phone-recent-card-time">3:52 PM</div>
+                      <span class="phone-recent-card-badge unsafe">Unsafe</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Nav -->
+            <div class="phone-bottom-nav">
+              <div class="phone-nav-item active">
+                <i data-feather="home" style="width:20px;"></i>
+                <span>Home</span>
+              </div>
+              <div class="phone-nav-item">
+                <i data-feather="heart" style="width:20px;"></i>
+                <span>Saved</span>
+              </div>
+              <div class="phone-nav-item">
+                <i data-feather="user" style="width:20px;"></i>
+                <span>Profile</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how-it-works" id="how-it-works">
+        <h2>How it works</h2>
+        <div class="how-it-works-steps">
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">1</div>
+            <div class="how-it-works-icon-wrapper step-1">
+              <i data-feather="camera"></i>
+            </div>
+            <h3>Snap or Type</h3>
+            <p>Take a photo of a menu, meal, or type an ingredient. BiteRight works with menus, plated food, ingredient lists, and barcodes.</p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">2</div>
+            <div class="how-it-works-icon-wrapper step-2">
+              <i data-feather="cpu"></i>
+            </div>
+            <h3>AI Analysis</h3>
+            <p>BiteRight's AI identifies hidden gluten risks instantly. We analyze ingredients, cross-contamination risks, and local food practices.</p>
+          </div>
+          <div class="how-it-works-step">
+            <div class="how-it-works-step-number">3</div>
+            <div class="how-it-works-icon-wrapper step-3">
+              <i data-feather="check-circle"></i>
+            </div>
+            <h3>Get Your Answer</h3>
+            <p>See safe, caution, or unsafe results with clear explanations. Always double-check with kitchen staff for the final word.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features" id="features">
+        <div style="text-align:center; margin-bottom: 60px;">
+          <h2 style="font-size: 32px; color: var(--navy);">Everything you need to eat safely</h2>
+          <p style="color: var(--text-body);">Strict Coeliac mode enabled by default.</p>
+        </div>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="icon-box ib-teal"><i data-feather="camera"></i></div>
+            <h3>Menu or Meal Scan</h3>
+            <p class="card-text">Snap a photo of any menu or plated meal. We highlight the safe options and flag the risky ones instantly.</p>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="icon-box ib-coral"><i data-feather="alert-octagon"></i></div>
+            <h3>Hidden Ingredients</h3>
+            <p class="card-text">We spot terms like "malt extract" or "brewer's yeast" that often hide in ingredient lists.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="icon-box ib-apricot"><i data-feather="globe"></i></div>
+            <h3>Travel Cards</h3>
+            <p class="card-text">Explain your allergy in Italian, Japanese, French, and 20+ other languages.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="icon-box ib-navy"><i data-feather="map-pin"></i></div>
+            <h3>Local Knowledge</h3>
+            <p class="card-text">Set your country and we'll adapt our analysis. Soy sauce in Japan vs. UK? Different risks. We know the local nuances.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">What is BiteRight?</div>
+            <div class="faq-answer">BiteRight is an AI-powered gluten risk checker designed for people with coeliac disease and gluten intolerance. Simply scan a menu, meal, ingredient list, or barcode to get instant guidance on potential gluten risks.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">How does the scanning work?</div>
+            <div class="faq-answer">BiteRight uses advanced AI to analyze photos of menus, plated meals, or ingredient lists. Our AI identifies hidden gluten sources, cross-contamination risks, and local food practices to give you a safe, caution, or unsafe assessment.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What can I scan?</div>
+            <div class="faq-answer">You can scan menus, plated meals, ingredient lists, or barcodes. BiteRight works with photos taken directly in the app or uploaded from your library. You can also type ingredients manually for quick checks.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Is BiteRight a medical device?</div>
+            <div class="faq-answer">No, BiteRight is not a medical device. It's a guidance tool to help you assess gluten risks. Always double-check with kitchen staff, especially if you have coeliac disease. BiteRight provides helpful information but is not a substitute for professional medical advice.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What is Coeliac Safe Mode?</div>
+            <div class="faq-answer">Coeliac Safe Mode is a stricter analysis setting that flags additional risks like cross-contamination, shared fryers, and hidden gluten sources. It's designed for people with diagnosed coeliac disease who need to be extra cautious about even trace amounts of gluten.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What are Chef Cards?</div>
+            <div class="faq-answer">Chef Cards are digital cards that explain your dietary needs to restaurant staff in over 20 languages. They're designed to help you communicate your gluten requirements clearly when traveling or dining out, reducing language barriers and misunderstandings.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Why do you ask for my location?</div>
+            <div class="faq-answer">BiteRight uses your location to localize ingredient knowledge and provide more accurate assessments. For example, soy sauce formulations vary by country—what's safe in Japan might not be safe in the UK. Setting your country helps us tailor our analysis to local food practices.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">Is my data private?</div>
+            <div class="faq-answer">Yes, privacy is important to us. Photos are analyzed for gluten assessment and are not stored long-term. We focus on privacy-first practices and don't sell your data. Your recent checks are stored locally on your device for your convenience.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">What platforms is BiteRight available on?</div>
+            <div class="faq-answer">BiteRight is currently available on iOS only. You can download it from the App Store. We're working to expand to other platforms in the future.</div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">How accurate is BiteRight?</div>
+            <div class="faq-answer">BiteRight uses advanced AI to provide helpful guidance, but it's not 100% guaranteed. Always verify with kitchen staff, especially if you have coeliac disease. The app is designed to help you make informed decisions, not replace your judgment or professional medical advice.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="support">
+        <div style="text-align:center; margin-bottom: 60px;">
+          <h2 style="font-size: 32px; color: var(--navy);">Support & privacy</h2>
+          <p style="color: var(--text-body);">Everything you need to feel confident using BiteRight.</p>
+        </div>
+        <div class="grid">
+          <div class="feature-card">
+            <div class="icon-box ib-navy"><i data-feather="life-buoy"></i></div>
+            <h3>Support</h3>
+            <p class="card-text">Need help or have feedback? Email us anytime at <a href="mailto:support@biteright.app">support@biteright.app</a>.</p>
+          </div>
+          <div class="feature-card" id="privacy">
+            <div class="icon-box ib-teal"><i data-feather="lock"></i></div>
+            <h3>Privacy</h3>
+            <p class="card-text">We analyze photos for gluten risk and don’t store them long-term. BiteRight is built with privacy-first practices so your data stays yours.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-content">
+          <div>
+            <strong>BiteRight</strong> • Eat safely.
+          </div>
+          <div style="text-align: center;">
+            Made with aroha in Aotearoa ❤️
+          </div>
+          <div>
+            © <span id="y"></span> BiteRight Inc.
+            <a href="#privacy" style="margin-left:20px; color:inherit; text-decoration:none;">Privacy</a>
+            <a href="#support" style="margin-left:20px; color:inherit; text-decoration:none;">Support</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script>
+      feather.replace();
+      document.getElementById("y").textContent = new Date().getFullYear();
+      
+      // FAQ Accordion
+      document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+          const item = question.parentElement;
+          const isOpen = item.classList.contains('open');
+          
+          // Close all other items
+          document.querySelectorAll('.faq-item').forEach(faqItem => {
+            faqItem.classList.remove('open');
+          });
+          
+          // Toggle current item
+          if (!isOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+      
+      // Open first FAQ by default
+      document.querySelector('.faq-item')?.classList.add('open');
+    </script>
+  </body>
+</html>
