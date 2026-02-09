@@ -1,9 +1,19 @@
 {
+  "schema_version": 1,
+  "topic_key": "test",
   "slug": "is-test-gluten-free",
   "title": "Is Test Gluten Free? | BiteRight",
   "description": "Learn if Test is gluten-free, what to watch out for, and how BiteRight can help you eat safely.",
   "heading": "Is Test gluten free?",
   "intro": "Use this guide as a quick reference when you're deciding whether Test is safe for a gluten-free lifestyle.",
+  "verdict": {
+    "status": "depends",
+    "summary": "Test can be gluten-free when prepared without gluten ingredients and cross-contact."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-02-09"
+  },
   "sections": [
     {
       "title": "Quick answer",
