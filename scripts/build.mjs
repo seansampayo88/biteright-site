@@ -187,6 +187,8 @@ async function buildPages() {
       await fs.writeFile(path.join(pageDir, "index.html"), pageHtml);
     })
   );
+
+  await import("./generate-sitemap.mjs");
 }
 
 buildPages().catch((error) => {
