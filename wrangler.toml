@@ -4,3 +4,6 @@ main = "src/index.js"
 
 [assets]
 directory = "./dist"
+
+[build]
+command = "npm run build"
