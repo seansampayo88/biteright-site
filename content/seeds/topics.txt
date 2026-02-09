@@ -8,3 +8,53 @@ rice vinegar
 kimchi
 ramen broth
 worcestershire sauce
+miso soup
+soy sauce
+tamari
+teriyaki sauce
+hoisin sauce
+oyster sauce
+fish sauce
+worcestershire sauce
+gochujang
+doenjang
+ssamjang
+dark soy sauce
+light soy sauce
+malt vinegar
+rice vinegar
+balsamic vinegar
+mayonnaise
+salad dressing
+ramen noodles
+udon noodles
+soba noodles
+rice noodles
+glass noodles
+vermicelli
+dumpling wrappers
+spring roll wrappers
+panko breadcrumbs
+fried rice
+pad thai
+pho broth
+laksa
+ramen broth
+curry sauce
+butter chicken
+katsu chicken
+sweet and sour pork
+beef stir fry
+croissants
+pancakes
+waffles
+hash browns
+sausages
+meatballs
+chicken nuggets
+fish and chips
+scrambled eggs
+omelette
+bacon and eggs
+overnight oats
+granola
