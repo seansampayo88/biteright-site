@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "topic_key": "fish-sauce",
+  "slug": "is-fish-sauce-gluten-free",
+  "title": "Is Fish Sauce Gluten Free? | BiteRight",
+  "description": "Learn if Fish Sauce is gluten-free, what to watch out for, and how BiteRight can help you eat safely.",
+  "heading": "Is Fish Sauce gluten free?",
+  "intro": "Use this guide as a quick reference when you're deciding whether Fish Sauce is safe for a gluten-free lifestyle.",
+  "verdict": {
+    "status": "depends",
+    "summary": "Fish Sauce can be gluten-free when prepared without gluten ingredients and cross-contact."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-02-09"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Fish Sauce can be gluten-free depending on the recipe and preparation. Always check ingredients and ask about cross-contact."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like malt flavoring, soy sauce, or shared fryers. These are frequent sources of cross-contact."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Snap a menu or ingredient list with BiteRight and get an instant gluten risk assessment tailored to your location."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Fish Sauce is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright/id000000000",
+    "label": "Get BiteRight"
+  }
+}
