@@ -2,7 +2,7 @@ name: Generate SEO pages
 
 on:
   schedule:
-    - cron: "0 19 * * 0"
+    - cron: "0 19 */3 * *"
   workflow_dispatch: {}
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       - name: Generate pages
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          MAX_NEW_PAGES: "10"
+          MAX_NEW_PAGES: "20"
         run: node scripts/generate-pages.mjs
 
       - name: Validate + build (safety check)
@@ -38,6 +38,6 @@ jobs:
         with:
           commit-message: "chore(seo): generate programmatic pages"
           title: "SEO: add new programmatic pages"
-          body: "Automated weekly generation of new BiteRight programmatic SEO pages."
+          body: "Automated generation of new BiteRight programmatic SEO pages every 3 days."
           branch: "automation/seo-pages"
           delete-branch: true
