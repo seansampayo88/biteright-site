@@ -157,7 +157,7 @@ function buildPage(topicName, existingPage = {}) {
     cta: {
       title: "Want to scan menus in seconds?",
       body: "Download BiteRight to check ingredients and menu items on the go.",
-      href: "https://apps.apple.com/app/biteright-gluten-scanner",
+      href: "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
       label: "Download on the App Store",
     },
   };
