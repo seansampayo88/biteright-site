@@ -8,7 +8,7 @@ const rootDir = path.resolve(__dirname, "..");
 const srcDir = path.join(rootDir, "src");
 const contentDir = path.join(rootDir, "content", "pages");
 const distDir = path.join(rootDir, "dist");
-const APP_STORE_URL = "https://apps.apple.com/app/biteright-gluten-scanner";
+const APP_STORE_URL = "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176";
 
 async function copyDir(source, destination) {
   await fs.mkdir(destination, { recursive: true });
