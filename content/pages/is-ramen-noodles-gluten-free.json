@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "oyster-sauce",
-  "slug": "is-oyster-sauce-gluten-free",
-  "title": "Is Oyster Sauce Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Oyster Sauce. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Oyster Sauce gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Oyster Sauce and how to order more safely.",
+  "topic_key": "ramen-noodles",
+  "slug": "is-ramen-noodles-gluten-free",
+  "title": "Is Ramen Noodles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Ramen Noodles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Ramen Noodles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Ramen Noodles and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "summary": "This dish is often high risk due to broth bases and fermented ingredients that may include barley or wheat."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-10"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Oyster Sauce can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Ramen Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -30,26 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Barley koji",
+      "Wheat soy sauce",
+      "Seasoning packets"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Plain tofu",
+      "Wakame",
+      "Rice noodles (if separate pot)"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Is the broth or paste made with barley, wheat, or regular soy sauce?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Clear broth",
+    "Steamed rice",
+    "Sashimi (no sauce)"
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Oyster Sauce is gluten free?",
+      "question": "Can BiteRight confirm if Ramen Noodles is gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

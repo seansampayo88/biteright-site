@@ -84,7 +84,7 @@ const buildPage = page => `<!doctype html>
         <ul>
           ${page.highlights.map(item => `<li>${item}</li>`).join('\n          ')}
         </ul>
-        <a class="cta" href="https://apps.apple.com/app/biteright/id000000000">Try BiteRight</a>
+        <a class="cta" href="https://apps.apple.com/app/biteright-gluten-scanner/id6755896176">Try BiteRight</a>
       </main>
     </div>
   </body>

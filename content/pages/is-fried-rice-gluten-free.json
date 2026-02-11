@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "oyster-sauce",
-  "slug": "is-oyster-sauce-gluten-free",
-  "title": "Is Oyster Sauce Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Oyster Sauce. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Oyster Sauce gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Oyster Sauce and how to order more safely.",
+  "topic_key": "fried-rice",
+  "slug": "is-fried-rice-gluten-free",
+  "title": "Is Fried Rice Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Fried Rice. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Fried Rice gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Fried Rice and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "status": "caution",
+    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-10"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Oyster Sauce can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Fried Rice can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -30,26 +30,26 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Soy sauce",
+      "Malt flavoring",
+      "Shared fryer oil"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Plain rice",
+      "Fresh vegetables"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Steamed rice",
+    "Plain salad",
+    "Grilled protein without sauce"
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Oyster Sauce is gluten free?",
+      "question": "Can BiteRight confirm if Fried Rice is gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {
