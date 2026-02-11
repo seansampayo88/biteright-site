@@ -29,35 +29,66 @@ async function copyDir(source, destination) {
   );
 }
 
-function renderPage({
-  title,
-  description,
-  heading,
-  intro,
-  verdict,
-  sections = [],
-  faq = [],
-  cta,
-}) {
-  const verdictMarkup = verdict?.summary
-    ? `
-        <section class="section verdict">
-          <h2>Verdict</h2>
-          <p>${verdict.summary}</p>
-        </section>
-      `
-    : "";
-  const sectionMarkup = sections
+function normalizeStatus(status) {
+  const value = String(status || "caution").toLowerCase();
+  if (["safe", "low", "low-risk"].includes(value)) return "safe";
+  if (["unsafe", "high", "high-risk", "avoid"].includes(value)) return "unsafe";
+  return "caution";
+}
+
+function statusContent(status) {
+  if (status === "safe") {
+    return { label: "Likely Safe", icon: "check" };
+  }
+  if (status === "unsafe") {
+    return { label: "High Risk", icon: "alert-triangle" };
+  }
+  return { label: "Use Caution", icon: "alert-circle" };
+}
+
+function renderIngredientPills(list, type) {
+  return list
     .map(
-      (section) => `
-        <section class="section">
-          <h2>${section.title}</h2>
-          <p>${section.body}</p>
-        </section>
-      `
+      (item) =>
+        `<div class="pill ${type}"><i data-feather="${type === "risk" ? "alert-circle" : "check"}" width="14"></i>${item}</div>`
     )
     .join("");
+}
 
+function renderPage(pageData) {
+  const {
+    title,
+    description,
+    heading,
+    verdict,
+    sections = [],
+    faq = [],
+    cta,
+    intro,
+    disclaimer,
+    ingredients = {},
+    waiter_script: waiterScript,
+    safe_alternatives: safeAlternatives,
+  } = pageData;
+
+  const status = normalizeStatus(verdict?.status);
+  const { label: verdictLabel, icon: verdictIcon } = statusContent(status);
+
+  const riskIngredients = ingredients.risk?.length
+    ? ingredients.risk
+    : ["Wheat soy sauce", "Barley malt", "Shared fryer oil"];
+  const safeIngredients = ingredients.safe?.length
+    ? ingredients.safe
+    : ["Plain rice", "Fresh vegetables"];
+
+  const waiterPreview = waiterScript?.preview
+    || `Can you confirm whether ${heading.replace(/^Is\s+/i, "").replace(/\?$/, "")} has any wheat, barley, rye, or regular soy sauce?`;
+
+  const alternatives = safeAlternatives?.length
+    ? safeAlternatives
+    : ["Steamed rice", "Plain salad", "Grilled protein without sauce"];
+
+  const overviewBody = sections[0]?.body || intro || verdict?.summary || "";
   const faqMarkup = faq
     .map(
       (item) => `
@@ -97,21 +128,29 @@ function renderPage({
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <style>
       :root {
-        --paper-color: #fdfbf7;
         --primary-teal: #00a36f;
+        --accent-coral: #ff6d5e;
+        --accent-apricot: #f4c16e;
         --navy: #0d1b2a;
-        --text-body: #5f6b7a;
+        --text-dark: #1c1c1e;
+        --text-grey: #5f6b7a;
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+        --blur: blur(20px);
+        --radius-lg: 32px;
+        --radius-sm: 16px;
+        --radius-pill: 999px;
       }
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
       body {
-        font-family: "Nunito", sans-serif;
         margin: 0;
-        background-color: var(--paper-color);
-        color: var(--navy);
+        font-family: "Nunito", sans-serif;
+        background-color: #f7f9fb;
+        color: var(--text-dark);
+        overflow-x: hidden;
       }
       .container {
         max-width: 900px;
@@ -136,56 +175,138 @@ function renderPage({
       main {
         padding: 24px 0 80px;
       }
-      h1 {
-        font-size: 40px;
-        margin-bottom: 16px;
-      }
-      .intro {
-        font-size: 18px;
-        line-height: 1.6;
-        color: var(--text-body);
-        margin-bottom: 32px;
-      }
-      .section {
-        background: white;
-        padding: 24px;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 12px 24px rgba(13, 27, 42, 0.05);
-      }
-      .section h2 {
-        margin-top: 0;
-      }
-      .faq {
-        margin-top: 48px;
-      }
-      .faq-item {
-        padding: 16px 0;
-        border-bottom: 1px solid rgba(13, 27, 42, 0.1);
-      }
-      .cta {
-        margin-top: 48px;
+      .container { max-width: 980px; margin: 0 auto; padding: 20px; }
+      .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: var(--blur);
+        -webkit-backdrop-filter: var(--blur);
+        border: var(--glass-border);
+        border-radius: var(--radius-lg);
         padding: 32px;
-        border-radius: 24px;
-        background: rgba(0, 163, 111, 0.1);
+        margin-bottom: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
       }
-      .cta a {
-        display: inline-block;
-        margin-top: 16px;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+      .logo {
+        font-weight: 800;
+        font-size: 24px;
+        color: var(--navy);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .logo-dot { width: 12px; height: 12px; background: var(--primary-teal); border-radius: 50%; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 32px;
+        border-radius: var(--radius-pill);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 17px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      .apple-icon { flex: 0 0 auto; }
+      .btn-primary {
+        background: var(--navy);
+        color: #fff;
+        box-shadow: 0 10px 20px rgba(13, 27, 42, 0.2);
+      }
+      .hero-header { text-align: center; margin: 24px 0 40px; }
+      .eyebrow {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--text-grey);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+      h1 { font-size: 48px; line-height: 1.1; margin: 0 0 16px; color: var(--navy); }
+      .status-container.unsafe { --theme: var(--accent-coral); }
+      .status-container.safe { --theme: var(--primary-teal); }
+      .status-container.caution { --theme: var(--accent-apricot); }
+      .verdict-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.85);
         padding: 12px 24px;
+        border-radius: 50px;
+        border: 2px solid var(--theme);
+      }
+      .verdict-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--theme);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .verdict-text { font-size: 20px; font-weight: 800; color: var(--theme); }
+      .analysis-grid { display: grid; gap: 24px; grid-template-columns: 1fr; }
+      @media (min-width: 720px) { .analysis-grid { grid-template-columns: 2fr 1fr; } }
+      h2 { font-size: 24px; margin: 0 0 16px; color: var(--navy); }
+      p { font-size: 17px; line-height: 1.6; color: var(--text-grey); margin: 0 0 16px; }
+      .pill-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .pill {
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .pill.risk { background: rgba(255, 109, 94, 0.1); color: var(--accent-coral); }
+      .pill.safe { background: rgba(0, 163, 111, 0.1); color: var(--primary-teal); }
+      .chef-card-preview {
         background: var(--navy);
         color: white;
-        text-decoration: none;
-        border-radius: 999px;
-        font-weight: 700;
+        border-radius: 24px;
+        padding: 24px;
+        margin-top: 12px;
+        position: relative;
+        overflow: hidden;
       }
-      .back-link {
-        display: inline-block;
-        margin-top: 32px;
-        color: var(--primary-teal);
-        text-decoration: none;
-        font-weight: 700;
+      .cc-flag { position: absolute; top: -14px; right: -10px; font-size: 72px; opacity: 0.12; }
+      .cc-title { font-size: 12px; opacity: 0.75; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+      .cc-text { font-size: 18px; line-height: 1.4; font-weight: 700; margin-top: 10px; }
+      .app-promo { text-align: center; }
+      .app-icon-lg {
+        width: 64px;
+        height: 64px;
+        background: var(--primary-teal);
+        color: white;
+        border-radius: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(0, 163, 111, 0.25);
+        margin-bottom: 12px;
       }
+      .faq-item { padding: 14px 0; border-bottom: 1px solid rgba(13, 27, 42, 0.08); }
+      .faq-item h3 { margin: 0 0 8px; color: var(--navy); }
+      .safe-list { margin: 0; padding-left: 20px; color: var(--text-grey); line-height: 1.7; }
+      .legal { text-align: center; color: #8d96a3; font-size: 14px; margin: 40px 0 90px; }
+      .sticky-cta {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(320px, calc(100% - 24px));
+        z-index: 100;
+      }
+      .sticky-cta .btn { width: 100%; }
     </style>
   </head>
   <body>

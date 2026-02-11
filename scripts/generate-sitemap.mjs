@@ -5,8 +5,7 @@ const root = process.cwd();
 const pagesDir = path.join(root, "content", "pages");
 const outPath = path.join(root, "dist", "sitemap.xml");
 
-// Update this later when you buy a domain
-const SITE_ORIGIN = "https://biteright-site.pages.dev";
+const SITE_ORIGIN = "https://biterightgluten.com";
 
 function today() {
   return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
