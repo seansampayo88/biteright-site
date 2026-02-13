@@ -99,6 +99,28 @@ function renderPage(pageData) {
       `
     )
     .join("");
+
+  const updatedAt = pageData.meta?.updated_at || new Date().toISOString().slice(0, 10);
+  const faqSchema =
+    faq.length > 0
+      ? `<script type="application/ld+json">${JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        })}</script>`
+      : "";
+  const articleSchema = `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: pageData.title,
+    description: pageData.description,
+    datePublished: updatedAt,
+    dateModified: updatedAt,
+  })}</script>`;
   const iconDataUri =
     typeof BRAND_ICON_DATA_URI === "string" && BRAND_ICON_DATA_URI.length > 0
       ? BRAND_ICON_DATA_URI
@@ -114,12 +136,20 @@ function renderPage(pageData) {
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>${title}</title>
     <meta name="description" content="${description}" />
+    <link rel="canonical" href="${(pageData.slug ? `https://biterightgluten.com/${pageData.slug}/` : "https://biterightgluten.com/")}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="${(pageData.slug ? `https://biterightgluten.com/${pageData.slug}/` : "https://biterightgluten.com/")}" />
+    <meta property="og:title" content="${title}" />
+    <meta property="og:description" content="${description}" />
+    <meta property="og:site_name" content="BiteRight" />
     <link rel="icon" type="image/png" href="${iconDataUri}" />
     <link rel="shortcut icon" href="${iconDataUri}" />
     <link rel="apple-touch-icon" href="${iconDataUri}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    ${articleSchema}
+    ${faqSchema}
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
       :root {

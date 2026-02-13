@@ -26,7 +26,7 @@ if (!fs.existsSync(pagesDir)) {
 }
 
 const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith(".json"));
-const urls = [];
+const urls = [{ loc: `${SITE_ORIGIN}/`, lastmod: today() }];
 
 for (const file of files) {
   const json = JSON.parse(fs.readFileSync(path.join(pagesDir, file), "utf-8"));
