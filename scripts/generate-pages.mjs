@@ -71,12 +71,12 @@ async function fetchProfileFromOpenAI(topicName) {
 Return a JSON object with exactly these keys (no extra fields):
 - verdict: "safe" | "caution" | "unsafe" — overall gluten risk
 - summary: 1–2 sentence explanation of the main gluten risks or why it's safe
-- risk: array of 3–5 specific ingredients or prep methods that commonly contain gluten (e.g. "Wheat flour", "Soy sauce", "Shared fryer")
-- safe: array of 3–5 ingredients or variants that are typically gluten-free
+- risk: array of 3–5 specific ingredients or prep methods in "${topicName}" that commonly contain gluten (e.g. for soy sauce: "Wheat", "Barley"; for bagels: "Wheat flour", "Malt")
+- safe: array of 3–5 specific ingredients, brands, or prep methods for "${topicName}" that are typically gluten-free (e.g. for soy sauce: "Tamari (labeled GF)", "Coconut aminos"; for bagels: "GF-certified bagels", "Separate toaster"). Do NOT use generic items like "Plain rice" or "Fresh vegetables" — be specific to this food.
 - alternatives: array of 3–5 gluten-free alternatives diners could order instead
 - waiter: one short question a diner could ask the kitchen to confirm gluten safety
 
-Be specific to "${topicName}". Do not use generic lists. Focus on real ingredients and preparation methods for this exact food.`;
+Be specific to "${topicName}" for both risk and safe. No generic lists.`;
 
   try {
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
