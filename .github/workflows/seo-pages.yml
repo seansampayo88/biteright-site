@@ -41,3 +41,5 @@ jobs:
           body: "Automated generation of new BiteRight programmatic SEO pages every 3 days."
           branch: "automation/seo-pages"
           delete-branch: true
+          assignees: seansampayo88
+          reviewers: seansampayo88
