@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#00A36F" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
     :root { --paper-color: #FDFBF7; --primary-teal: #00A36F; --navy: #0D1B2A; --text-body: #5F6B7A; --radius-lg: 24px; --shadow-card: 0 10px 30px rgba(13, 27, 42, 0.05); }
@@ -17,8 +17,10 @@
     body { font-family: 'Nunito', sans-serif; margin: 0; background: var(--paper-color); color: var(--navy); line-height: 1.6; }
     .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
-    .logo { font-size: 22px; font-weight: 800; color: var(--navy); text-decoration: none; }
-    .logo:hover { color: var(--primary-teal); }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #212529; transition: opacity 0.2s; }
+    .logo:hover { opacity: 0.85; }
+    .logo-mark { width: 32px; height: 32px; border-radius: 10px; object-fit: contain; flex-shrink: 0; }
+    .logo-text { font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; color: #212529; }
     .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 20px; }
     .nav-links a:hover { color: var(--primary-teal); }
     h1 { font-size: 36px; margin: 0 0 16px; }
@@ -35,7 +37,10 @@
 <body>
   <div class="container">
     <nav>
-      <a href="/" class="logo">BiteRight</a>
+      <a href="/" class="logo" aria-label="BiteRight home">
+        <img class="logo-mark" src="../img/biteright-logo.png" alt="" width="32" height="32" />
+        <span class="logo-text">BiteRight</span>
+      </a>
       <div class="nav-links">
         <a href="/#features">Features</a>
         <a href="/knowledge-hub/">Knowledge Hub</a>
