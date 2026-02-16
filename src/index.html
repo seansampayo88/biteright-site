@@ -65,12 +65,11 @@
       /* Layout Utilities */
       .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
       
-      /* Navigation — BiteRight brand: dark forest green icon + charcoal text */
+      /* Navigation */
       nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; }
-      .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #212529; transition: opacity 0.2s; }
-      .logo:hover { opacity: 0.85; }
-      .logo-mark { width: 36px; height: 36px; border-radius: 10px; object-fit: contain; display: block; flex-shrink: 0; }
-      .logo-text { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: #212529; }
+      .logo { font-size: 24px; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+      .logo:hover { color: var(--primary-teal); }
+      .logo-mark { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; display: block; flex-shrink: 0; }
       
       .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 24px; font-size: 15px; transition: color 0.2s; }
       .nav-links a:hover { color: var(--primary-teal); }
@@ -715,8 +714,8 @@
     <div class="container">
       <nav>
         <a href="/" class="logo" aria-label="BiteRight home">
-          <img class="logo-mark" src="img/biteright-logo.png" alt="" width="36" height="36" />
-          <span class="logo-text">BiteRight</span>
+          <img class="logo-mark" src="img/biteright-icon.png" alt="" width="32" height="32" />
+          BiteRight
         </a>
         <div class="nav-links">
           <a href="#features">Features</a>
