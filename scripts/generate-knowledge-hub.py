@@ -54,8 +54,9 @@ def main():
     body {{ font-family: 'Nunito', sans-serif; margin: 0; background: var(--paper-color); color: var(--navy); }}
     .container {{ max-width: 980px; margin: 0 auto; padding: 0 24px; }}
     nav {{ display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }}
-    .logo {{ font-size: 22px; font-weight: 800; color: var(--navy); text-decoration: none; }}
+    .logo {{ font-size: 22px; font-weight: 800; color: var(--navy); display: flex; align-items: center; gap: 8px; text-decoration: none; }}
     .logo:hover {{ color: var(--primary-teal); }}
+    .logo-mark {{ width: 32px; height: 32px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }}
     .nav-links a {{ text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 20px; }}
     .nav-links a:hover {{ color: var(--primary-teal); }}
     h1 {{ font-size: 36px; margin: 0 0 12px; }}
@@ -73,7 +74,10 @@ def main():
 <body>
   <div class="container">
     <nav>
-      <a href="/" class="logo">BiteRight</a>
+      <a href="/" class="logo" aria-label="BiteRight home">
+        <img class="logo-mark" src="../img/biteright-icon.png" alt="" width="32" height="32" />
+        BiteRight
+      </a>
       <div class="nav-links">
         <a href="/#features">Features</a>
         <a href="/#how-it-works">How it works</a>
