@@ -393,8 +393,8 @@ function renderPage(pageData) {
       <footer class="legal">
         <p>© 2026 BiteRight. Not medical advice.</p>
         <div style="margin-bottom: 20px;">
-          <a href="https://www.instagram.com/biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;">Instagram</a>
-          <a href="https://www.tiktok.com/@biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;">TikTok</a>
+          <a href="https://www.instagram.com/biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;" aria-label="Instagram"><i data-feather="instagram" style="width:20px;height:20px;vertical-align:middle;"></i></a>
+          <a href="https://www.tiktok.com/@biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle;"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg></a>
         </div>
         <a href="/" style="color:inherit;">Back to BiteRight home</a>
       </footer>
