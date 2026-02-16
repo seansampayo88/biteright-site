@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/validate-pages.mjs && node scripts/build.mjs"
+    "build": "python3 scripts/generate-knowledge-hub.py && node scripts/validate-pages.mjs && node scripts/build.mjs",
+    "generate-pages": "MAX_NEW_PAGES=20 python3 scripts/generate-pages-py.py",
+    "generate-knowledge-hub": "python3 scripts/generate-knowledge-hub.py"
   }
 }
