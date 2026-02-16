@@ -392,6 +392,10 @@ function renderPage(pageData) {
 
       <footer class="legal">
         <p>© 2026 BiteRight. Not medical advice.</p>
+        <div style="margin-bottom: 20px;">
+          <a href="https://www.instagram.com/biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;">Instagram</a>
+          <a href="https://www.tiktok.com/@biterightgluten" target="_blank" rel="noopener noreferrer" style="margin: 0 10px; color:inherit; text-decoration:none;">TikTok</a>
+        </div>
         <a href="/" style="color:inherit;">Back to BiteRight home</a>
       </footer>
     </div>
