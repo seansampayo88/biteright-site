@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Stuffing and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "Stuffing often contains bread, which is a significant source of gluten. Additionally, some seasonings and broths may contain gluten, so careful ingredient selection is crucial."
+    "summary": "Stuffing often contains bread or bread crumbs, which are typically made from wheat and pose a significant gluten risk. Care should be taken to ensure that no gluten-containing ingredients are used in the preparation."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,29 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Bread cubes (often made from wheat)",
-      "Seasoned bread crumbs (may contain wheat)",
-      "Soy sauce (if used in flavoring)",
-      "Malt (if included in any seasoning)",
-      "Broth (if not labeled gluten-free)"
+      "Bread crumbs",
+      "Wheat bread",
+      "Seasoning mixes (may contain gluten)",
+      "Soy sauce (unless labeled GF)",
+      "Shared cooking surfaces"
     ],
     "safe": [
-      "Gluten-free bread cubes (such as Udi's or Canyon Bakehouse)",
-      "Gluten-free broth (like Swanson's or homemade)",
-      "Herbs and spices (fresh or labeled gluten-free)",
-      "Rice or quinoa as a base instead of bread",
-      "Gluten-free stuffing mixes (like Bob's Red Mill or Trader Joe's)"
+      "Gluten-free bread or bread crumbs",
+      "Rice or quinoa as a base",
+      "Fresh herbs and spices (without additives)",
+      "Vegetable broth (labeled GF)",
+      "Dedicated gluten-free prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if the stuffing is made with gluten-free bread and broth?"
+    "preview": "Can you confirm if the stuffing is made with gluten-free bread?"
   },
   "safe_alternatives": [
     "Quinoa salad",
-    "Stuffed peppers with gluten-free grains",
-    "Roasted vegetables with herbs",
-    "Cauliflower rice stuffing",
-    "Polenta with herbs and vegetables"
+    "Rice pilaf",
+    "Stuffed vegetables",
+    "Polenta dish",
+    "Gluten-free grain bowl"
   ],
   "faq": [
     {

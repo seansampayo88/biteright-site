@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Ssamjang and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Ssamjang may contain gluten due to the use of fermented soybean paste and gochujang, which can have wheat as an ingredient. It is essential to check the specific ingredients used in the preparation."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,23 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Gochujang (may contain wheat)",
+      "Fermented soybean paste (may contain wheat)",
+      "Soy sauce (if not labeled gluten-free)"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Homemade versions using gluten-free ingredients",
+      "Tamari (labeled GF)",
+      "Coconut aminos"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the gochujang and soybean paste used in the Ssamjang are gluten-free?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Rice paper rolls",
+    "Grilled meats with gluten-free dipping sauces",
+    "Vegetable sticks with hummus"
   ],
   "faq": [
     {

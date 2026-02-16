@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Bacon And Eggs and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Bacon and eggs can be safe, but there are potential gluten risks from cross-contamination and certain preparation methods. It's important to ensure that no gluten-containing ingredients are used and that cooking surfaces are clean."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,23 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Shared cooking surfaces",
+      "Bacon cured with gluten-containing ingredients",
+      "Seasonings or marinades that may contain gluten"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Fresh eggs",
+      "Unprocessed bacon",
+      "Dedicated gluten-free cooking utensils"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm that the bacon is gluten-free and cooked separately from any gluten-containing items?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Omelette with vegetables",
+    "Scrambled eggs with cheese",
+    "Breakfast hash with potatoes and vegetables"
   ],
   "faq": [
     {

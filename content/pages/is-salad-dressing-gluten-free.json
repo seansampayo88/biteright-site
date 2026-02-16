@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Salad Dressing and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Many salad dressings can contain gluten due to ingredients like wheat-based thickeners or malt vinegar. It's important to check labels or inquire about specific ingredients to ensure safety."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour",
+      "Barley malt",
+      "Soy sauce (unless labeled GF)",
+      "Malt vinegar",
+      "Certain emulsifiers"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Olive oil",
+      "Vinegar (except malt vinegar)",
+      "Lemon juice",
+      "Herbs and spices",
+      "Mustard (check for gluten-free labeling)"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if your salad dressing contains any gluten ingredients?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Oil and vinegar dressing",
+    "Homemade vinaigrette",
+    "Citrus-based dressings",
+    "Yogurt-based dressings",
+    "Nut-based dressings"
   ],
   "faq": [
     {

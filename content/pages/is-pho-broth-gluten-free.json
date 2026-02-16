@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Pho Broth and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Pho broth can be at risk for gluten contamination due to the use of certain sauces and additives. It's important to verify ingredient sources and preparation methods to ensure safety for those with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,25 @@
   "ingredients": {
     "risk": [
       "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat-based hoisin sauce",
+      "Barley malt extract",
+      "Shared cooking utensils or surfaces"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Homemade broth using gluten-free ingredients",
+      "Rice noodles",
+      "Fresh herbs and vegetables",
+      "Dedicated gluten-free soy sauce"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the broth contains any soy sauce or wheat-based ingredients?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Rice noodle soup with clear broth",
+    "Vegetable broth with gluten-free noodles",
+    "Coconut curry soup",
+    "Chicken broth with rice"
   ],
   "faq": [
     {

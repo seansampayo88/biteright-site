@@ -7,12 +7,12 @@
   "heading": "Is Omelette gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Omelette and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "status": "safe",
+    "summary": "An omelette made with eggs and gluten-free ingredients is generally safe for individuals with coeliac disease. However, cross-contamination risks should be considered during preparation."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Shared cooking surfaces",
+      "Seasonings or sauces containing gluten",
+      "Pre-packaged fillings that may contain gluten"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Eggs",
+      "Fresh vegetables",
+      "Cheese",
+      "Gluten-free herbs and spices",
+      "Dedicated cooking utensils"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm that the omelette is prepared in a gluten-free area?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Scrambled eggs",
+    "Frittata",
+    "Egg muffins",
+    "Quiche with gluten-free crust",
+    "Egg salad"
   ],
   "faq": [
     {

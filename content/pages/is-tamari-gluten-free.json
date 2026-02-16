@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Tamari and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Tamari is often made from fermented soybeans and is typically gluten-free, but some varieties may contain wheat or be cross-contaminated with gluten during production. It's essential to check labels and ensure that the tamari is specifically labeled as gluten-free."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat-based tamari",
+      "Cross-contamination during processing",
+      "Shared equipment with gluten-containing products"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Tamari (labeled GF)",
+      "Fermented soybeans",
+      "Dedicated GF production facility",
+      "Coconut aminos",
+      "Rice vinegar"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Is this tamari gluten-free and made in a dedicated facility?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Coconut aminos",
+    "Gluten-free soy sauce",
+    "Homemade gluten-free sauce",
+    "Rice vinegar",
+    "Miso paste (gluten-free)"
   ],
   "faq": [
     {

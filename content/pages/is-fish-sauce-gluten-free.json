@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Fish Sauce and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This can be gluten-free, but ingredient brands and prep methods vary by kitchen and region."
+    "summary": "Fish sauce is generally made from fermented fish and salt, which are gluten-free; however, cross-contamination during production or the addition of gluten-containing ingredients can pose risks. It's important to verify the specific product and preparation methods used."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,23 +30,25 @@
   ],
   "ingredients": {
     "risk": [
-      "Added soy sauce",
-      "Flavoring blends",
-      "Cross-contact prep"
+      "Wheat-based additives",
+      "Cross-contamination during production",
+      "Shared processing equipment"
     ],
     "safe": [
-      "Simple fermentation ingredients",
-      "Rice vinegar",
-      "Plain fish extract"
+      "Pure fish and salt",
+      "Dedicated gluten-free production",
+      "Fermented fish without additives"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm there is no wheat, barley, rye, or regular soy sauce in this?"
+    "preview": "Can you confirm if your fish sauce is gluten-free and if it\u2019s prepared in a gluten-free environment?"
   },
   "safe_alternatives": [
-    "Plain pickled vegetables",
-    "Steamed sides",
-    "Fresh salad"
+    "Tamari (labeled GF)",
+    "Coconut aminos",
+    "Homemade fish sauce using gluten-free ingredients",
+    "Soy sauce alternatives made from rice",
+    "Vegan fish sauce made from mushrooms"
   ],
   "faq": [
     {

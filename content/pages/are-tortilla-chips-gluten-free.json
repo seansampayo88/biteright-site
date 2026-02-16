@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Tortilla Chips and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "Tortilla chips can be at risk for gluten contamination due to cross-contact during manufacturing or serving. It's essential to check for gluten-free certification and ingredient lists."
+    "summary": "Tortilla chips can be made from corn, which is gluten-free, but there is a risk of cross-contamination with gluten-containing ingredients or shared equipment. It's important to verify the source and preparation methods to ensure safety for those with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,23 +30,25 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat-based flavorings",
-      "Malt (barley-derived)",
-      "Cross-contamination during frying in shared oil"
+      "Shared fryer",
+      "Wheat flour (in seasoning or coatings)",
+      "Barley malt (in flavoring)"
     ],
     "safe": [
-      "Corn tortillas (labeled gluten-free)",
-      "Brands like Late July Organic Tortilla Chips",
-      "Tostitos (original flavor, labeled GF)"
+      "Corn (maize) flour",
+      "Vegetable oil",
+      "Dedicated GF prep area",
+      "Salt"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if the tortilla chips are made in a gluten-free facility?"
+    "preview": "Can you confirm if these tortilla chips are made in a gluten-free facility?"
   },
   "safe_alternatives": [
-    "Vegetable chips",
     "Rice crackers",
     "Popcorn",
+    "Vegetable sticks with dip",
+    "Corn tortillas",
     "Puffed corn snacks"
   ],
   "faq": [

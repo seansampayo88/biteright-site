@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Light Soy Sauce and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "Traditional soy sauce is usually high risk because it is commonly brewed with wheat."
+    "summary": "Light soy sauce typically contains wheat, which poses a significant gluten risk for individuals with coeliac disease. Cross-contamination during production or preparation can also occur, increasing the risk further."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,25 @@
   "ingredients": {
     "risk": [
       "Wheat",
-      "Barley",
-      "Hydrolyzed wheat protein"
+      "Barley malt",
+      "Shared equipment",
+      "Fermentation process"
     ],
     "safe": [
       "Tamari (labeled GF)",
-      "Coconut aminos"
+      "Coconut aminos",
+      "Rice vinegar",
+      "Dedicated GF prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Is this made with wheat-based soy sauce or gluten-free tamari?"
+    "preview": "Is your light soy sauce gluten-free or made with wheat?"
   },
   "safe_alternatives": [
     "Tamari",
     "Coconut aminos",
-    "Salt + citrus"
+    "Homemade sauces using gluten-free ingredients",
+    "Rice-based sauces"
   ],
   "faq": [
     {

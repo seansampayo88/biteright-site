@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Fried Rice and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Fried rice can be at risk for gluten contamination due to the use of soy sauce and potential cross-contact during preparation. Care should be taken to ensure all ingredients are gluten-free and prepared in a dedicated area."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,26 @@
   "ingredients": {
     "risk": [
       "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat-based seasoning",
+      "Shared fryer"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Tamari (labeled GF)",
+      "Rice",
+      "Vegetables",
+      "Eggs",
+      "Dedicated GF prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the soy sauce used is gluten-free?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Quinoa salad",
+    "Stir-fried vegetables with rice",
+    "Zucchini noodles",
+    "Cauliflower rice",
+    "Polenta"
   ],
   "faq": [
     {

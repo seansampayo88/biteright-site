@@ -7,12 +7,12 @@
   "heading": "Are Udon Noodles gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Udon Noodles and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "status": "unsafe",
+    "summary": "Udon noodles are traditionally made from wheat flour, which contains gluten, making them unsafe for individuals with coeliac disease. Cross-contamination during preparation can also pose additional risks."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour",
+      "Shared cooking utensils",
+      "Shared fryer",
+      "Soy sauce (unless labeled GF)",
+      "Broth containing gluten"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Rice noodles",
+      "Shirataki noodles",
+      "Zucchini noodles",
+      "Dedicated GF prep area",
+      "Tamari (labeled GF)"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Are the udon noodles made from wheat or are there gluten-free options available?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Rice vermicelli",
+    "Soba noodles made from buckwheat (check for GF certification)",
+    "Quinoa pasta",
+    "Polenta",
+    "Spaghetti squash"
   ],
   "faq": [
     {

@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Couscous and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "Couscous is typically made from wheat, which contains gluten, making it unsafe for individuals with coeliac disease. Cross-contamination during preparation can also pose additional risks."
+    "summary": "Couscous is traditionally made from wheat, which contains gluten, making it unsafe for individuals with coeliac disease. Cross-contamination during preparation can also pose additional risks."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,16 +30,18 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat semolina",
       "Wheat flour",
-      "Malt (if used in seasoning or sauces)"
+      "Traditional couscous",
+      "Shared cooking utensils",
+      "Shared cooking surfaces",
+      "Wheat-based flavorings"
     ],
     "safe": [
-      "Gluten-free couscous (made from corn or rice)",
-      "Quinoa (as a couscous substitute)",
-      "Buckwheat (as a couscous alternative)",
-      "Couscous made from gluten-free grains (e.g., chickpea couscous)",
-      "Pre-packaged gluten-free couscous brands (e.g., Ancient Harvest)"
+      "Gluten-free grains (e.g., quinoa, rice)",
+      "Dedicated gluten-free cooking utensils",
+      "Gluten-free pasta",
+      "Gluten-free flour blends",
+      "Fresh vegetables"
     ]
   },
   "waiter_script": {
@@ -49,8 +51,8 @@
     "Quinoa salad",
     "Rice pilaf",
     "Polenta",
-    "Gluten-free pasta",
-    "Cauliflower rice"
+    "Buckwheat dish",
+    "Gluten-free pasta"
   ],
   "faq": [
     {

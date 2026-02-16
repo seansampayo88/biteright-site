@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Gyoza and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "Gyoza typically contains wheat flour in the dumpling wrappers, which poses a significant gluten risk for individuals with coeliac disease. Additionally, cross-contamination during preparation can further increase gluten exposure."
+    "summary": "Gyoza typically contains wheat-based wrappers, which pose a significant gluten risk. Cross-contamination during preparation can also be a concern."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,29 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour (in dumpling wrappers)",
-      "Soy sauce (often contains wheat)",
-      "Miso paste (may contain barley)",
-      "Panko breadcrumbs (if used in fillings)",
-      "Pre-marinated meats (may contain gluten)"
+      "Wheat flour (in the gyoza wrappers)",
+      "Soy sauce (unless labeled gluten-free)",
+      "Shared fryer (for frying gyoza)",
+      "Certain fillings (if made with gluten-containing ingredients)",
+      "Thickeners or sauces used in preparation"
     ],
     "safe": [
-      "Rice flour wrappers (if available)",
-      "Tamari (labeled GF) for dipping sauce",
-      "Gluten-free miso paste",
-      "Fresh, unprocessed meats without marinades",
-      "Vegetable fillings without gluten-containing sauces"
+      "Rice flour (for gluten-free wrappers)",
+      "Vegetable fillings (without gluten-containing sauces)",
+      "Tamari (labeled GF)",
+      "Dedicated GF prep area",
+      "Steamed instead of fried preparation"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if the gyoza wrappers are made with wheat flour or if there are gluten-free options available?"
+    "preview": "Can you confirm if the gyoza wrappers are gluten-free and if there is a dedicated prep area?"
   },
   "safe_alternatives": [
-    "Gluten-free dumplings",
-    "Rice paper rolls",
+    "Rice paper dumplings",
     "Stuffed bell peppers",
-    "Zucchini noodles with gluten-free sauce",
-    "Sushi made with rice and gluten-free fillings"
+    "Gluten-free pasta dishes",
+    "Quinoa salads",
+    "Sushi (with gluten-free ingredients)"
   ],
   "faq": [
     {

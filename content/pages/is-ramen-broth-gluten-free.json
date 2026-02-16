@@ -7,12 +7,12 @@
   "heading": "Is Ramen Broth gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Ramen Broth and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This dish is often high risk due to broth bases and fermented ingredients that may include barley or wheat."
+    "status": "caution",
+    "summary": "Ramen broth may contain gluten due to the use of soy sauce and certain flavoring agents. Cross-contamination is also a concern if prepared in shared spaces."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,23 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Barley koji",
-      "Wheat soy sauce",
-      "Seasoning packets"
+      "Soy sauce",
+      "Wheat-based miso",
+      "Barley malt extract",
+      "Noodles (if included)",
+      "Shared cooking utensils or pots"
     ],
     "safe": [
-      "Plain tofu",
-      "Wakame",
-      "Rice noodles (if separate pot)"
+      "Tamari (labeled GF)",
+      "Homemade broth using gluten-free ingredients",
+      "Seaweed",
+      "Vegetables",
+      "Gluten-free noodles"
     ]
   },
   "waiter_script": {
-    "preview": "Is the broth or paste made with barley, wheat, or regular soy sauce?"
+    "preview": "Is the broth made with gluten-free soy sauce or tamari?"
   },
   "safe_alternatives": [
-    "Clear broth",
-    "Steamed rice",
-    "Sashimi (no sauce)"
+    "Rice noodle soup",
+    "Pho",
+    "Gluten-free udon",
+    "Vegetable broth",
+    "Coconut curry soup"
   ],
   "faq": [
     {

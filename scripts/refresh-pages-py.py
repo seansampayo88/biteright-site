@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Refresh specific pages with OpenAI-derived ingredient analysis. Run with OPENAI_API_KEY set."""
+"""Refresh pages with OpenAI-derived ingredient analysis. Run with OPENAI_API_KEY set.
+By default refreshes ALL pages. Set REFRESH_SLUGS=slug1,slug2 to limit."""
 import json
 import os
 import re
@@ -8,29 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / "content" / "pages"
-
-REFRESH_SLUGS = [
-    "is-granola-gluten-free",
-    "are-tortilla-chips-gluten-free",
-    "are-flour-tortillas-gluten-free",
-    "are-corn-tortillas-gluten-free",
-    "are-bagels-gluten-free",
-    "are-pretzels-gluten-free",
-    "is-beer-gluten-free",
-    "is-licorice-gluten-free",
-    "is-soy-milk-gluten-free",
-    "is-seitan-gluten-free",
-    "is-tempeh-gluten-free",
-    "is-couscous-gluten-free",
-    "is-bulgur-gluten-free",
-    "is-imitation-crab-gluten-free",
-    "is-gravy-gluten-free",
-    "is-stuffing-gluten-free",
-    "is-matzo-gluten-free",
-    "is-tzatziki-gluten-free",
-    "is-hummus-gluten-free",
-    "is-gyoza-gluten-free",
-]
+EXCLUDED = {"is-test-gluten-free", "are-test-gluten-free"}
 
 
 def title_case(s):
@@ -50,12 +29,13 @@ def fetch_profile_from_openai(topic_name, api_key):
 Return a JSON object with exactly these keys (no extra fields):
 - verdict: "safe" | "caution" | "unsafe" — overall gluten risk
 - summary: 1–2 sentence explanation of the main gluten risks or why it's safe
-- risk: array of 3–5 specific ingredients or prep methods in "{topic_name}" that commonly contain gluten (e.g. for soy sauce: "Wheat", "Barley"; for bagels: "Wheat flour", "Malt")
-- safe: array of 3–5 specific ingredients, brands, or prep methods for "{topic_name}" that are typically gluten-free (e.g. for soy sauce: "Tamari (labeled GF)", "Coconut aminos"; for bagels: "GF-certified bagels", "Separate toaster"). Do NOT use generic items like "Plain rice" or "Fresh vegetables" — be specific to this food.
-- alternatives: array of 3–5 gluten-free alternatives diners could order instead
+- risk: array of 3–5 specific ingredients or prep methods in "{topic_name}" that commonly contain gluten. NO brand names. (e.g. "Wheat flour", "Barley malt", "Shared fryer")
+- safe: array of 3–5 specific ingredients or prep methods for "{topic_name}" that are typically gluten-free. NO brand names — only ingredient types or prep (e.g. "Tamari (labeled GF)", "Coconut aminos", "GF-certified oats", "Dedicated GF prep area")
+- alternatives: array of 3–5 gluten-free alternatives diners could order instead (other foods, not brands)
+- known_gf_brands: optional array of 0–5 brand names that offer gluten-free versions of "{topic_name}" (e.g. ["San-J Tamari", "Kikkoman GF"]). Omit or empty array if not applicable.
 - waiter: one short question a diner could ask the kitchen to confirm gluten safety
 
-Be specific to "{topic_name}" for both risk and safe. No generic lists.'''
+Be specific to "{topic_name}". No brand names in risk or safe.'''
 
     body = json.dumps({
         "model": "gpt-4o-mini",
@@ -91,12 +71,18 @@ Be specific to "{topic_name}" for both risk and safe. No generic lists.'''
     if verdict not in ("safe", "caution", "unsafe"):
         verdict = "caution"
 
+    known_gf_brands = parsed.get("known_gf_brands")
+    if not isinstance(known_gf_brands, list):
+        known_gf_brands = []
+    known_gf_brands = [x for x in known_gf_brands[:6] if x]
+
     return {
         "verdict": verdict,
         "summary": parsed["summary"],
         "risk": [x for x in parsed["risk"][:6] if x],
         "safe": [x for x in parsed["safe"][:6] if x],
         "alternatives": [x for x in parsed["alternatives"][:6] if x],
+        "known_gf_brands": known_gf_brands,
         "waiter": parsed["waiter"],
     }
 
@@ -115,6 +101,10 @@ def apply_profile(page, profile, topic_name):
     page["ingredients"] = {"risk": profile["risk"], "safe": profile["safe"]}
     page["waiter_script"] = {"preview": profile["waiter"]}
     page["safe_alternatives"] = profile["alternatives"]
+    if profile.get("known_gf_brands"):
+        page["known_gf_brands"] = profile["known_gf_brands"]
+    elif "known_gf_brands" in page:
+        del page["known_gf_brands"]
     page["meta"] = page.get("meta", {})
     page["meta"]["updated_at"] = __import__("datetime").datetime.now().strftime("%Y-%m-%d")
     return page
@@ -139,7 +129,18 @@ def main():
         print("Run: OPENAI_API_KEY=sk-your-key python3 scripts/refresh-pages-py.py")
         exit(1)
 
-    for slug in REFRESH_SLUGS:
+    refresh_slugs_env = os.environ.get("REFRESH_SLUGS", "")
+    if refresh_slugs_env:
+        slugs = [s.strip() for s in refresh_slugs_env.split(",") if s.strip()]
+    else:
+        slugs = sorted(
+            f.stem for f in PAGES_DIR.glob("*.json")
+            if f.stem not in EXCLUDED
+        )
+
+    print(f"Refreshing {len(slugs)} pages...")
+
+    for slug in slugs:
         path = PAGES_DIR / f"{slug}.json"
         if not path.exists():
             print(f"Skip {slug} (file not found)")

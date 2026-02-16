@@ -7,12 +7,12 @@
   "heading": "Are Scrambled Eggs gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Scrambled Eggs and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "status": "safe",
+    "summary": "Scrambled eggs are generally safe for individuals with coeliac disease, provided they are prepared without gluten-containing ingredients or cross-contamination. The main risks arise from added ingredients or cooking methods that may introduce gluten."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Cream or milk with gluten additives",
+      "Seasoning mixes containing gluten",
+      "Shared cooking utensils or surfaces"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Fresh eggs",
+      "Butter or oil for cooking",
+      "Salt and pepper",
+      "Dedicated cooking utensils",
+      "Fresh herbs for seasoning"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm that the scrambled eggs are made without any gluten-containing ingredients or cross-contamination?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Omelette",
+    "Frittata",
+    "Eggs Benedict on gluten-free bread",
+    "Quiche with gluten-free crust",
+    "Egg salad"
   ],
   "faq": [
     {

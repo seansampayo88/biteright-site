@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Katsu Chicken and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Katsu Chicken typically involves breading that contains wheat flour, posing a gluten risk. Cross-contamination is also a concern if prepared in shared spaces."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour (for breading)",
+      "Panko breadcrumbs",
+      "Shared fryer"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Chicken breast",
+      "Gluten-free breadcrumbs",
+      "Dedicated GF prep area",
+      "Vegetable oil (for frying)",
+      "Cabbage (for slaw)"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Is the Katsu Chicken prepared with gluten-free breadcrumbs and in a dedicated gluten-free area?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Grilled chicken",
+    "Rice bowls",
+    "Salads with chicken",
+    "Sushi (without soy sauce)",
+    "Stir-fried vegetables"
   ],
   "faq": [
     {

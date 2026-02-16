@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Chicken Nuggets and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Chicken nuggets can pose a gluten risk due to breading and potential cross-contamination during preparation. Care should be taken to ensure that gluten-free ingredients are used and that they are cooked in a dedicated space."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour (used in breading)",
+      "Breadcrumbs",
+      "Shared fryer",
+      "Seasoning mixes (may contain gluten)",
+      "Marinades (may contain gluten)"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Chicken (unbreaded)",
+      "Cornstarch (for breading)",
+      "Dedicated gluten-free fryer",
+      "Gluten-free breadcrumbs",
+      "Simple seasonings (salt, pepper)"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the chicken nuggets are made with gluten-free breading and cooked in a dedicated fryer?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Grilled chicken strips",
+    "Vegetable sticks with dip",
+    "Rice-based dishes",
+    "Salads with protein",
+    "Quinoa bowls"
   ],
   "faq": [
     {

@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Beef Stir Fry and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Beef Stir Fry can be at risk for gluten contamination due to the use of soy sauce and potential cross-contamination in shared cooking equipment. Careful ingredient selection and preparation methods are essential for safety."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,26 @@
   "ingredients": {
     "risk": [
       "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour (used in some marinades)",
+      "Shared cooking utensils or surfaces"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Tamari (labeled GF)",
+      "Fresh vegetables",
+      "Beef",
+      "Rice or gluten-free noodles",
+      "Dedicated GF cooking equipment"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the soy sauce used is gluten-free?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Chicken Stir Fry",
+    "Vegetable Stir Fry",
+    "Shrimp Stir Fry",
+    "Quinoa Bowl",
+    "Gluten-free Tacos"
   ],
   "faq": [
     {

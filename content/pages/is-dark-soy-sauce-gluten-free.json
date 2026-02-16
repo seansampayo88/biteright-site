@@ -7,12 +7,12 @@
   "heading": "Is Dark Soy Sauce gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Dark Soy Sauce and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "Traditional soy sauce is usually high risk because it is commonly brewed with wheat."
+    "status": "caution",
+    "summary": "Dark soy sauce often contains wheat as a primary ingredient, which poses a gluten risk for individuals with coeliac disease. However, some varieties may be gluten-free, so careful selection is essential."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,22 @@
   "ingredients": {
     "risk": [
       "Wheat",
-      "Barley",
-      "Hydrolyzed wheat protein"
+      "Barley malt",
+      "Soy sauce made with wheat"
     ],
     "safe": [
       "Tamari (labeled GF)",
-      "Coconut aminos"
+      "Coconut aminos",
+      "GF-certified soy sauce"
     ]
   },
   "waiter_script": {
-    "preview": "Is this made with wheat-based soy sauce or gluten-free tamari?"
+    "preview": "Is the dark soy sauce made without wheat?"
   },
   "safe_alternatives": [
-    "Tamari",
-    "Coconut aminos",
-    "Salt + citrus"
+    "Tamari stir-fry",
+    "Coconut aminos marinade",
+    "Rice vinegar dressing"
   ],
   "faq": [
     {

@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Doenjang and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Doenjang is traditionally made from fermented soybeans, which are gluten-free, but there is a risk of cross-contamination with gluten-containing ingredients during production or preparation. It's important to verify the source and preparation methods to ensure safety for those with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,26 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat-based soy sauce",
+      "Barley malt extract",
+      "Shared preparation surfaces"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Fermented soybeans",
+      "Salt",
+      "Water",
+      "Dedicated gluten-free preparation area"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Is this Doenjang made without any wheat or barley ingredients?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Miso (gluten-free)",
+    "Tamari (labeled GF)",
+    "Coconut aminos",
+    "Homemade bean paste",
+    "Vegetable-based sauces"
   ],
   "faq": [
     {

@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Hash Browns and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Hash browns can be at risk for gluten contamination due to shared cooking surfaces and potential use of gluten-containing additives. Care should be taken to ensure they are prepared in a gluten-free environment."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Shared fryer",
+      "Seasoning mixes",
+      "Pre-packaged hash browns with additives"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Freshly grated potatoes",
+      "Salt",
+      "Oil for frying",
+      "Dedicated gluten-free fryer",
+      "Homemade seasoning"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Are the hash browns cooked in a dedicated gluten-free fryer?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Sweet potato fries",
+    "Roasted vegetables",
+    "Quinoa salad",
+    "Oven-baked potato wedges",
+    "Polenta cakes"
   ],
   "faq": [
     {

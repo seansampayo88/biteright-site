@@ -7,12 +7,12 @@
   "heading": "Is Miso Soup gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Miso Soup and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This dish is often high risk due to broth bases and fermented ingredients that may include barley or wheat."
+    "status": "caution",
+    "summary": "Miso soup can be at risk for gluten due to the use of certain miso pastes and dashi stock, which may contain gluten. Care should be taken to ensure all ingredients are gluten-free."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,23 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Barley koji",
-      "Wheat soy sauce",
-      "Seasoning packets"
+      "Miso paste (if made with barley)",
+      "Dashi stock (if made with soy sauce containing wheat)",
+      "Soy sauce (if not labeled gluten-free)"
     ],
     "safe": [
-      "Plain tofu",
-      "Wakame",
-      "Rice noodles (if separate pot)"
+      "Miso paste (made from rice or labeled gluten-free)",
+      "Seaweed",
+      "Tofu",
+      "Vegetables",
+      "Water"
     ]
   },
   "waiter_script": {
-    "preview": "Is the broth or paste made with barley, wheat, or regular soy sauce?"
+    "preview": "Can you confirm that the miso paste and dashi used are gluten-free?"
   },
   "safe_alternatives": [
-    "Clear broth",
-    "Steamed rice",
-    "Sashimi (no sauce)"
+    "Rice noodle soup",
+    "Vegetable broth",
+    "Clear broth with gluten-free ingredients",
+    "Coconut soup",
+    "Rice porridge"
   ],
   "faq": [
     {

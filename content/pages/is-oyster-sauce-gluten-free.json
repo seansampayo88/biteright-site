@@ -7,12 +7,12 @@
   "heading": "Is Oyster Sauce gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Oyster Sauce and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "status": "caution",
+    "summary": "Oyster sauce may contain gluten due to the use of wheat-based ingredients in its production. It's important to verify the specific ingredients and preparation methods to ensure safety for those with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,26 @@
   "ingredients": {
     "risk": [
       "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Soy sauce (if made with wheat)",
+      "Barley malt extract"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Oyster extract",
+      "Sugar",
+      "Salt",
+      "Cornstarch (if labeled gluten-free)",
+      "Vinegar (if labeled gluten-free)"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Can you confirm if the oyster sauce contains any wheat or gluten ingredients?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Tamari (labeled GF)",
+    "Coconut aminos",
+    "Homemade oyster sauce using gluten-free ingredients",
+    "Fish sauce",
+    "Gluten-free soy sauce"
   ],
   "faq": [
     {

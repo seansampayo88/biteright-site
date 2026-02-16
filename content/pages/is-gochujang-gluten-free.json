@@ -7,12 +7,12 @@
   "heading": "Is Gochujang gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Gochujang and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "status": "caution",
+    "summary": "Gochujang can pose a gluten risk primarily due to the potential inclusion of wheat-based ingredients. It's important to verify the specific formulation and preparation methods used."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,24 @@
   "ingredients": {
     "risk": [
       "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Barley malt",
+      "Soy sauce (if not gluten-free)"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Rice-based ingredients",
+      "Gluten-free soy sauce",
+      "Fermented soybean paste (if labeled GF)"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Can you confirm if your Gochujang is gluten-free or contains any wheat ingredients?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Sriracha",
+    "Chili paste",
+    "Harissa",
+    "Hot sauce",
+    "Homemade chili sauce"
   ],
   "faq": [
     {

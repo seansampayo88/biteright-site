@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Seitan and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "Seitan is made from wheat gluten, making it inherently unsafe for individuals with coeliac disease. Even trace amounts of gluten can trigger symptoms in sensitive individuals."
+    "summary": "Seitan is primarily made from wheat gluten, making it inherently unsafe for individuals with coeliac disease. Cross-contamination during preparation can further increase gluten exposure risks."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -32,27 +32,27 @@
     "risk": [
       "Wheat gluten",
       "Wheat flour",
-      "Soy sauce (if not labeled gluten-free)",
-      "Malt vinegar (if used in preparation)",
-      "Broth or stock containing gluten"
+      "Soy sauce (unless labeled GF)",
+      "Shared cooking utensils",
+      "Shared fryer"
     ],
     "safe": [
-      "Gluten-free tamari (labeled GF)",
-      "Chickpea-based seitan alternatives",
-      "Tofu (plain, without added sauces)",
-      "Quinoa-based meat substitutes",
-      "Lentil-based meat alternatives"
+      "Tamari (labeled GF)",
+      "Coconut aminos",
+      "Vegetable broth (labeled GF)",
+      "Dedicated GF prep area",
+      "Gluten-free grains"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if the seitan is made from wheat gluten or if there are any gluten-containing ingredients in the dish?"
+    "preview": "Is the seitan prepared in a dedicated gluten-free area?"
   },
   "safe_alternatives": [
-    "Grilled chicken",
-    "Stuffed bell peppers with quinoa",
-    "Vegetable stir-fry with tofu",
-    "Black bean burgers",
-    "Zucchini noodles with marinara sauce"
+    "Tofu",
+    "Chickpea-based products",
+    "Lentil patties",
+    "Quinoa",
+    "Vegetable stir-fry"
   ],
   "faq": [
     {

@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Hoisin Sauce and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Hoisin sauce may contain gluten due to the presence of wheat-based ingredients. It's important to verify the specific ingredients used, as some brands may include gluten-containing components."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Soy sauce (made with wheat)",
+      "Wheat flour",
+      "Barley malt",
+      "Modified food starch (if derived from wheat)",
+      "Vinegar (if malt vinegar is used)"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Tamari (labeled GF)",
+      "Coconut aminos",
+      "Rice vinegar",
+      "Sugar",
+      "Garlic"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the hoisin sauce contains any wheat or gluten ingredients?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Homemade gluten-free sauce",
+    "Gluten-free teriyaki sauce",
+    "Chili garlic sauce",
+    "Sweet and sour sauce",
+    "Peanut sauce"
   ],
   "faq": [
     {

@@ -7,12 +7,12 @@
   "heading": "Is Soy Sauce gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Soy Sauce and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "Traditional soy sauce is usually high risk because it is commonly brewed with wheat."
+    "status": "caution",
+    "summary": "Traditional soy sauce is typically made from fermented wheat, which poses a significant gluten risk for individuals with coeliac disease. However, gluten-free alternatives are available, making it important to verify the specific product used."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -32,20 +32,24 @@
     "risk": [
       "Wheat",
       "Barley",
-      "Hydrolyzed wheat protein"
+      "Fermented soy sauce made with wheat"
     ],
     "safe": [
       "Tamari (labeled GF)",
-      "Coconut aminos"
+      "Coconut aminos",
+      "Gluten-free soy sauce",
+      "Dedicated GF prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Is this made with wheat-based soy sauce or gluten-free tamari?"
+    "preview": "Is the soy sauce made with wheat or is it gluten-free?"
   },
   "safe_alternatives": [
     "Tamari",
     "Coconut aminos",
-    "Salt + citrus"
+    "Rice vinegar",
+    "Miso (gluten-free)",
+    "Homemade sauces using gluten-free ingredients"
   ],
   "faq": [
     {

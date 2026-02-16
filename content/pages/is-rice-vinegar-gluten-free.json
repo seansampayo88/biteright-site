@@ -7,12 +7,12 @@
   "heading": "Is Rice Vinegar gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Rice Vinegar and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "This can be gluten-free, but ingredient brands and prep methods vary by kitchen and region."
+    "status": "safe",
+    "summary": "Rice vinegar is generally considered safe for individuals with coeliac disease as it is typically made from fermented rice and does not contain gluten. However, cross-contamination during processing can be a concern."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -29,24 +29,22 @@
     }
   ],
   "ingredients": {
-    "risk": [
-      "Added soy sauce",
-      "Flavoring blends",
-      "Cross-contact prep"
-    ],
+    "risk": [],
     "safe": [
-      "Simple fermentation ingredients",
-      "Rice vinegar",
-      "Plain fish extract"
+      "Fermented rice",
+      "Water",
+      "Acetic acid",
+      "No gluten-containing additives"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm there is no wheat, barley, rye, or regular soy sauce in this?"
+    "preview": "Can you confirm that the rice vinegar used is gluten-free and not cross-contaminated?"
   },
   "safe_alternatives": [
-    "Plain pickled vegetables",
-    "Steamed sides",
-    "Fresh salad"
+    "Apple cider vinegar",
+    "White vinegar",
+    "Balsamic vinegar",
+    "Lemon juice"
   ],
   "faq": [
     {

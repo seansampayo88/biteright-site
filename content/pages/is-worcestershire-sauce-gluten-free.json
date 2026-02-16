@@ -7,12 +7,12 @@
   "heading": "Is Worcestershire Sauce gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Worcestershire Sauce and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "status": "caution",
+    "summary": "Worcestershire sauce may contain gluten due to the presence of ingredients like malt vinegar and certain flavorings. It's important to check labels or inquire about specific brands to ensure they are gluten-free."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,23 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Malt vinegar",
+      "Soy sauce (if made with wheat)",
+      "Barley malt extract"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Distilled vinegar",
+      "Tamari (labeled GF)",
+      "Spices and seasonings (gluten-free)"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Can you confirm if your Worcestershire sauce is gluten-free?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Homemade gluten-free sauce",
+    "Coconut aminos",
+    "Balsamic vinegar"
   ],
   "faq": [
     {

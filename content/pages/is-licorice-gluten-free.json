@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Licorice and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "Licorice can be at risk for gluten contamination due to the use of malt extract and cross-contamination during production. Always check labels to ensure gluten-free certification."
+    "summary": "Licorice can be at risk for gluten contamination due to potential use of malt or shared equipment. It's important to verify the specific ingredients and preparation methods used."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,27 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Malt extract",
-      "Wheat flour (in some recipes)",
-      "Barley (in certain flavored varieties)"
+      "Barley malt extract",
+      "Wheat flour",
+      "Shared equipment with gluten-containing products"
     ],
     "safe": [
-      "Red Vines (original)",
-      "Twizzlers (original)",
-      "Panda All Natural Licorice",
-      "Haribo Licorice Wheels",
-      "Licorice root extract (pure)"
+      "Natural licorice extract",
+      "Corn syrup",
+      "Sugar",
+      "Gelatin",
+      "Dedicated gluten-free preparation area"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if this licorice is gluten-free and free from cross-contamination?"
+    "preview": "Can you confirm if the licorice is made without barley malt or wheat?"
   },
   "safe_alternatives": [
     "Fruit chews",
-    "Gummy bears",
-    "Chocolate-covered pretzels (gluten-free)",
-    "Rice cakes with chocolate",
-    "Gluten-free candy bars"
+    "Gummy candies",
+    "Chocolate",
+    "Marshmallows",
+    "Nut-based snacks"
   ],
   "faq": [
     {

@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Curry Sauce and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Curry sauce can be at risk for gluten contamination, particularly if it contains wheat-based thickeners or is prepared in a shared kitchen. Care should be taken to ensure all ingredients are gluten-free and that there is no cross-contamination."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour (used as a thickener)",
+      "Soy sauce (if not labeled gluten-free)",
+      "Malt vinegar",
+      "Pre-packaged curry paste (may contain gluten)",
+      "Shared cooking equipment"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Coconut milk",
+      "Spices (pure, without additives)",
+      "Fresh vegetables",
+      "Dedicated gluten-free curry paste",
+      "Homemade curry sauce using gluten-free ingredients"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the curry sauce is made without any wheat or gluten-containing ingredients?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Grilled chicken with gluten-free seasoning",
+    "Vegetable stir-fry with gluten-free sauce",
+    "Rice and beans with spices",
+    "Quinoa salad with fresh vegetables",
+    "Gluten-free pasta with tomato sauce"
   ],
   "faq": [
     {

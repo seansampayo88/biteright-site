@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Overnight Oats and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Overnight oats can be a gluten-free option if made with certified gluten-free oats, but there is a risk of cross-contamination with gluten-containing ingredients or shared equipment. Care should be taken to ensure all components are gluten-free."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,28 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Regular oats",
+      "Wheat-based toppings (e.g., granola)",
+      "Barley malt syrup",
+      "Shared utensils or containers"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Gluten-free oats",
+      "Chia seeds",
+      "Nut butters (labeled GF)",
+      "Dairy or plant-based milk (labeled GF)",
+      "Fresh fruits"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm that the oats and all toppings are gluten-free?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Smoothie bowls",
+    "Quinoa porridge",
+    "Chia pudding",
+    "Rice cakes with toppings",
+    "Fruit and yogurt parfaits"
   ],
   "faq": [
     {

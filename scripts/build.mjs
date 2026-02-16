@@ -69,6 +69,7 @@ function renderPage(pageData) {
     ingredients = {},
     waiter_script: waiterScript,
     safe_alternatives: safeAlternatives,
+    known_gf_brands: knownGfBrands = [],
   } = pageData;
 
   const status = normalizeStatus(verdict?.status);
@@ -349,6 +350,16 @@ function renderPage(pageData) {
               ${renderIngredientPills(safeIngredients, "safe")}
             </div>
           </section>
+          ${(Array.isArray(knownGfBrands) && knownGfBrands.length > 0)
+    ? `
+          <section class="glass-card">
+            <h2>Known gluten-free brands</h2>
+            <p>Some brands that offer gluten-free versions:</p>
+            <ul class="safe-list">
+              ${knownGfBrands.map((b) => `<li>${b}</li>`).join("")}
+            </ul>
+          </section>`
+    : ""}
 
           <section class="glass-card">
             <h2>Waiter Script</h2>

@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Pretzels and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "Traditional pretzels are typically made from wheat flour, which contains gluten, posing a significant risk for individuals with coeliac disease. Cross-contamination during preparation is also a concern."
+    "summary": "Traditional pretzels are typically made with wheat flour, which contains gluten, posing a significant risk for individuals with coeliac disease. Cross-contamination during preparation is also a concern."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -31,28 +31,24 @@
   "ingredients": {
     "risk": [
       "Wheat flour",
-      "Malt (often derived from barley)",
-      "Brewer's yeast",
-      "Barley malt extract",
-      "Seasoning blends (may contain gluten)"
+      "Barley malt",
+      "Shared fryer"
     ],
     "safe": [
-      "Gluten-free pretzel brands (e.g., Glutino, Snyder's of Hanover GF pretzels)",
-      "Almond flour pretzels",
-      "Rice flour pretzels",
-      "Corn-based pretzels",
-      "Homemade gluten-free pretzels using certified GF ingredients"
+      "Gluten-free flour blends",
+      "Dedicated gluten-free prep area",
+      "Gluten-free baking powder"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm if your pretzels are made with gluten-free ingredients and prepared in a gluten-free environment?"
+    "preview": "Can you confirm if the pretzels are made with gluten-free ingredients and prepared in a dedicated area?"
   },
   "safe_alternatives": [
     "Gluten-free crackers",
-    "Popcorn",
     "Rice cakes",
-    "Chickpea snacks",
-    "Vegetable chips"
+    "Popcorn",
+    "Corn tortilla chips",
+    "Gluten-free breadsticks"
   ],
   "faq": [
     {

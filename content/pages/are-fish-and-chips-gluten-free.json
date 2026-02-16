@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Fish And Chips and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Fish and chips can pose a gluten risk primarily due to the batter used on the fish and the potential for cross-contamination in the frying process. Care should be taken to ensure that gluten-free options are properly prepared."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,24 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Batter made from wheat flour",
+      "Shared fryer with gluten-containing items",
+      "Breadcrumbs on fish"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Fresh fish (unbreaded)",
+      "Potatoes (freshly cut and fried)",
+      "Dedicated gluten-free fryer"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Is the fish battered with gluten-free flour and cooked in a dedicated fryer?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Grilled fish with vegetables",
+    "Baked potatoes with toppings",
+    "Gluten-free fish tacos",
+    "Rice bowls with fish and vegetables"
   ],
   "faq": [
     {

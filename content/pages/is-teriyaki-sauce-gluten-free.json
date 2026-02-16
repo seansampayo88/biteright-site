@@ -7,12 +7,12 @@
   "heading": "Is Teriyaki Sauce gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Teriyaki Sauce and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This sauce is frequently high risk because many recipes include wheat-based thickeners or soy sauce."
+    "status": "caution",
+    "summary": "Teriyaki sauce often contains soy sauce, which can be made from wheat, posing a gluten risk for those with coeliac disease. It's important to verify the specific ingredients used, as some brands offer gluten-free options."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-09"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Regular soy sauce",
-      "Malt vinegar"
+      "Soy sauce (made with wheat)",
+      "Wheat flour (as a thickener)",
+      "Barley malt (in some recipes)"
     ],
     "safe": [
-      "Certified GF version",
-      "Homemade alternate sauce"
+      "Tamari (labeled GF)",
+      "Coconut aminos",
+      "Rice vinegar",
+      "Honey",
+      "Dedicated GF prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Is this sauce made with wheat flour, regular soy sauce, or malt vinegar?"
+    "preview": "Can you confirm if the soy sauce used in the teriyaki sauce is gluten-free?"
   },
   "safe_alternatives": [
-    "Salt + sesame oil",
-    "GF tamari blend",
-    "Fresh herb dressing"
+    "Grilled chicken with gluten-free marinade",
+    "Stir-fried vegetables with gluten-free sauce",
+    "Rice bowls with gluten-free protein",
+    "Sushi made with gluten-free ingredients",
+    "Salads with gluten-free dressing"
   ],
   "faq": [
     {

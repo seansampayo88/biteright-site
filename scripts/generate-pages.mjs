@@ -71,12 +71,13 @@ async function fetchProfileFromOpenAI(topicName) {
 Return a JSON object with exactly these keys (no extra fields):
 - verdict: "safe" | "caution" | "unsafe" — overall gluten risk
 - summary: 1–2 sentence explanation of the main gluten risks or why it's safe
-- risk: array of 3–5 specific ingredients or prep methods in "${topicName}" that commonly contain gluten (e.g. for soy sauce: "Wheat", "Barley"; for bagels: "Wheat flour", "Malt")
-- safe: array of 3–5 specific ingredients, brands, or prep methods for "${topicName}" that are typically gluten-free (e.g. for soy sauce: "Tamari (labeled GF)", "Coconut aminos"; for bagels: "GF-certified bagels", "Separate toaster"). Do NOT use generic items like "Plain rice" or "Fresh vegetables" — be specific to this food.
-- alternatives: array of 3–5 gluten-free alternatives diners could order instead
+- risk: array of 3–5 specific ingredients or prep methods in "${topicName}" that commonly contain gluten. NO brand names. (e.g. "Wheat flour", "Barley malt", "Shared fryer")
+- safe: array of 3–5 specific ingredients or prep methods for "${topicName}" that are typically gluten-free. NO brand names — only ingredient types or prep (e.g. "Tamari (labeled GF)", "Coconut aminos", "GF-certified oats", "Dedicated GF prep area")
+- alternatives: array of 3–5 gluten-free alternatives diners could order instead (other foods, not brands)
+- known_gf_brands: optional array of 0–5 brand names that offer gluten-free versions of "${topicName}" (e.g. ["San-J Tamari", "Kikkoman GF"]). Omit or empty array if not applicable.
 - waiter: one short question a diner could ask the kitchen to confirm gluten safety
 
-Be specific to "${topicName}" for both risk and safe. No generic lists.`;
+Be specific to "${topicName}". No brand names in risk or safe.`;
 
   try {
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -120,12 +121,17 @@ Be specific to "${topicName}" for both risk and safe. No generic lists.`;
       parsed.verdict = "caution";
     }
 
+    const knownGfBrands = Array.isArray(parsed.known_gf_brands)
+      ? parsed.known_gf_brands.slice(0, 6).filter(Boolean)
+      : [];
+
     return {
       verdict: String(parsed.verdict).toLowerCase(),
       summary: parsed.summary,
       risk: parsed.risk.slice(0, 6).filter(Boolean),
       safe: parsed.safe.slice(0, 6).filter(Boolean),
       alternatives: parsed.alternatives.slice(0, 6).filter(Boolean),
+      known_gf_brands: knownGfBrands,
       waiter: parsed.waiter,
     };
   } catch (err) {
@@ -241,6 +247,9 @@ function buildPage(topicName, existingPage = {}, profile = null) {
       preview: resolvedProfile.waiter,
     },
     safe_alternatives: resolvedProfile.alternatives,
+    ...(resolvedProfile.known_gf_brands?.length
+      ? { known_gf_brands: resolvedProfile.known_gf_brands }
+      : {}),
     faq: [
       {
         question: `Can BiteRight confirm if ${titleTopic} ${verb} gluten free?`,

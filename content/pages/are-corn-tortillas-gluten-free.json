@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Corn Tortillas and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "Corn tortillas are generally gluten-free, but there is a risk of cross-contamination during processing or preparation. It's important to ensure that they are made in a gluten-free facility or are labeled as gluten-free."
+    "summary": "Corn tortillas are primarily made from corn, which is gluten-free; however, cross-contamination with gluten-containing grains during processing or preparation can pose a risk for individuals with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,25 +30,24 @@
   ],
   "ingredients": {
     "risk": [
-      "Cross-contamination with wheat flour during production",
-      "Shared cooking surfaces or utensils with gluten-containing products",
-      "Certain brands that may use additives containing gluten"
+      "Shared equipment with wheat products",
+      "Cross-contamination during frying or grilling",
+      "Added flavorings or preservatives that may contain gluten"
     ],
     "safe": [
-      "Corn tortillas labeled gluten-free (e.g., Mission Gluten Free Corn Tortillas)",
-      "Tortillas made from 100% corn without additives",
-      "Brands like La Banderita Corn Tortillas that specify gluten-free"
+      "Pure corn masa",
+      "Dedicated gluten-free preparation area",
+      "Corn tortillas made from certified gluten-free ingredients"
     ]
   },
   "waiter_script": {
-    "preview": "Are your corn tortillas made in a gluten-free facility?"
+    "preview": "Can you confirm if the corn tortillas are made in a gluten-free facility?"
   },
   "safe_alternatives": [
+    "Rice tortillas",
     "Lettuce wraps",
-    "Rice paper wraps",
-    "Gluten-free taco shells",
     "Quinoa tortillas",
-    "Polenta rounds"
+    "Chickpea flour wraps"
   ],
   "faq": [
     {

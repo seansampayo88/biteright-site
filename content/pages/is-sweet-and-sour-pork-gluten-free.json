@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Sweet And Sour Pork and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Sweet and Sour Pork may contain gluten due to the use of soy sauce and possible breading on the pork. Cross-contamination is also a concern if prepared in a shared kitchen."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -31,21 +31,28 @@
   "ingredients": {
     "risk": [
       "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Cornstarch (if not labeled gluten-free)",
+      "Breading or batter on the pork",
+      "Shared fryer",
+      "Marinades that may contain gluten"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Pork (unbreaded)",
+      "Fresh vegetables",
+      "Homemade sweet and sour sauce (using gluten-free ingredients)",
+      "Rice",
+      "Dedicated gluten-free prep area"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the soy sauce used is gluten-free?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Grilled chicken with vegetables",
+    "Stir-fried tofu with gluten-free sauce",
+    "Sweet and sour chicken (with gluten-free sauce)",
+    "Vegetable stir-fry with rice",
+    "Gluten-free dumplings"
   ],
   "faq": [
     {

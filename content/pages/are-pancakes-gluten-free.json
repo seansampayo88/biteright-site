@@ -8,11 +8,11 @@
   "intro": "This public analysis report explains the biggest gluten risks in Pancakes and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Pancakes are often made with wheat flour, which contains gluten, posing a risk for individuals with coeliac disease. Cross-contamination during preparation can also be a concern."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour",
+      "Barley flour",
+      "Rye flour",
+      "Shared cooking surfaces",
+      "Shared utensils"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Almond flour",
+      "Coconut flour",
+      "Rice flour",
+      "Dedicated gluten-free cooking surfaces",
+      "Eggs"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the pancakes are made with gluten-free flour and prepared in a dedicated area?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Gluten-free waffles",
+    "Omelets",
+    "Smoothie bowls",
+    "Fruit salads",
+    "Gluten-free muffins"
   ],
   "faq": [
     {

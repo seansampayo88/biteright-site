@@ -7,12 +7,12 @@
   "heading": "Are Ramen Noodles gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Ramen Noodles and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "These items is often high risk due to broth bases and fermented ingredients that may include barley or wheat."
+    "status": "caution",
+    "summary": "Traditional ramen noodles are typically made from wheat flour, which contains gluten, posing a risk for individuals with coeliac disease. However, gluten-free options are available, so it's essential to verify the specific product used."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-17"
   },
   "sections": [
     {
@@ -30,23 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Barley koji",
-      "Wheat soy sauce",
-      "Seasoning packets"
+      "Wheat flour",
+      "Barley malt",
+      "Soy sauce (unless labeled gluten-free)",
+      "Shared cooking equipment",
+      "Broth containing gluten-based ingredients"
     ],
     "safe": [
-      "Plain tofu",
-      "Wakame",
-      "Rice noodles (if separate pot)"
+      "Rice noodles",
+      "Gluten-free soy sauce",
+      "Tamari (labeled GF)",
+      "Dedicated gluten-free broth",
+      "Vegetables and proteins prepared separately"
     ]
   },
   "waiter_script": {
-    "preview": "Is the broth or paste made with barley, wheat, or regular soy sauce?"
+    "preview": "Can you confirm if the ramen noodles are gluten-free and if they are prepared in a gluten-free environment?"
   },
   "safe_alternatives": [
-    "Clear broth",
-    "Steamed rice",
-    "Sashimi (no sauce)"
+    "Rice noodle soup",
+    "Zucchini noodles",
+    "Quinoa salad",
+    "Gluten-free pasta",
+    "Soba noodles made from 100% buckwheat"
   ],
   "faq": [
     {
