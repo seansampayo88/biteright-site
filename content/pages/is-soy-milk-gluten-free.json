@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Soy Milk and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Soy milk is generally gluten-free, but cross-contamination can occur during processing or if additives containing gluten are used. It's important to check labels and choose brands that guarantee gluten-free status."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,22 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Barley malt (used as a sweetener in some brands)",
+      "Wheat (in flavored or fortified varieties)",
+      "Oats (if processed in facilities that also handle gluten-containing grains)"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Silk Soy Milk (labeled gluten-free)",
+      "Almond Breeze Soy Milk (labeled gluten-free)",
+      "So Delicious Soy Milk (labeled gluten-free)",
+      "Edensoy Organic Soy Milk (labeled gluten-free)",
+      "Unsweetened soy milk without additives"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if this soy milk is labeled gluten-free and processed in a gluten-free facility?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Almond milk",
+    "Coconut milk",
+    "Rice milk",
+    "Oat milk (certified gluten-free)",
+    "Hemp milk"
   ],
   "faq": [
     {

@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Granola and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "Granola can pose a gluten risk due to the potential presence of oats that are not certified gluten-free and the use of malt flavoring. Care should be taken to choose brands that specifically label their products as gluten-free."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,22 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
+      "Oats (if not certified gluten-free)",
       "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour (used in some granola recipes)",
+      "Barley (in some malted ingredients)",
+      "Cross-contamination during processing"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Certified gluten-free oats",
+      "Nature Valley Crunchy Granola Bars (GF labeled)",
+      "Purely Elizabeth Granola (GF labeled)",
+      "Granola made with quinoa or buckwheat",
+      "Homemade granola using gluten-free ingredients"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if your granola is made with certified gluten-free oats?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Chia seed pudding",
+    "Coconut yogurt with fruit and nuts",
+    "Gluten-free muesli",
+    "Rice cakes with nut butter",
+    "Smoothie bowls topped with gluten-free seeds and fruits"
   ],
   "faq": [
     {

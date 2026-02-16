@@ -8,7 +8,7 @@
   "intro": "This public analysis report explains the biggest gluten risks in Beer and how to order more safely.",
   "verdict": {
     "status": "unsafe",
-    "summary": "Traditional beer is made from barley and is not gluten-free."
+    "summary": "Most traditional beers are brewed from gluten-containing grains, making them unsafe for individuals with coeliac disease. Even gluten-free beers may carry a risk of cross-contamination during production."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,24 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Barley malt",
+      "Barley",
       "Wheat",
-      "Rye"
+      "Rye",
+      "Malt",
+      "Hops (if processed in shared facilities)"
     ],
     "safe": [
-      "Gluten-free beer",
-      "Cider",
-      "Wine"
+      "Gluten-free beer (labeled GF)",
+      "Cider (not fermented with gluten ingredients)",
+      "Sorghum-based beer",
+      "Rice-based beer",
+      "Buckwheat beer"
     ]
   },
   "waiter_script": {
-    "preview": "Do you have gluten-free beer or cider?"
+    "preview": "Can you confirm if this beer is gluten-free and if it's brewed in a gluten-free facility?"
   },
   "safe_alternatives": [
-    "GF beer",
-    "Hard cider",
-    "Wine",
-    "Spirits"
+    "Cider",
+    "Hard seltzer",
+    "Kombucha",
+    "Sparkling water",
+    "Gluten-free cocktails"
   ],
   "faq": [
     {

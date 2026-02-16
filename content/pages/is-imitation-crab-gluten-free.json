@@ -7,8 +7,8 @@
   "heading": "Is Imitation Crab gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Imitation Crab and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "Imitation crab often contains wheat starch as a binder."
+    "status": "caution",
+    "summary": "Imitation crab may contain gluten due to the presence of surimi and added flavorings or fillers that can include wheat. It's important to check labels and inquire about specific brands and preparation methods."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,22 +30,25 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat starch",
-      "Wheat flour"
+      "Surimi (may contain wheat starch)",
+      "Flavorings (may contain gluten)",
+      "Fillers (may include wheat-based ingredients)"
     ],
     "safe": [
-      "Real crab",
-      "Shrimp",
-      "Certified GF surimi"
+      "Imitation crab labeled gluten-free (e.g., certain brands like 'SeaPak' or 'Trans-Ocean')",
+      "Surimi made from 100% fish protein without fillers",
+      "Gluten-free sauces or dressings served with imitation crab"
     ]
   },
   "waiter_script": {
-    "preview": "Is the imitation crab made with wheat? Do you have real crab?"
+    "preview": "Can you confirm if the imitation crab contains any wheat or gluten ingredients?"
   },
   "safe_alternatives": [
-    "Real crab",
+    "Real crab meat",
     "Shrimp",
-    "Tuna"
+    "Lobster",
+    "Fish fillets",
+    "Gluten-free seafood salads"
   ],
   "faq": [
     {

@@ -7,8 +7,8 @@
   "heading": "Is Stuffing gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Stuffing and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This is typically made with wheat flour or bread."
+    "status": "caution",
+    "summary": "Stuffing often contains bread, which is a significant source of gluten. Additionally, some seasonings and broths may contain gluten, so careful ingredient selection is crucial."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,23 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Bread",
-      "Roux"
+      "Bread cubes (often made from wheat)",
+      "Seasoned bread crumbs (may contain wheat)",
+      "Soy sauce (if used in flavoring)",
+      "Malt (if included in any seasoning)",
+      "Broth (if not labeled gluten-free)"
     ],
     "safe": [
-      "GF gravy",
-      "Pan juices",
-      "GF stuffing"
+      "Gluten-free bread cubes (such as Udi's or Canyon Bakehouse)",
+      "Gluten-free broth (like Swanson's or homemade)",
+      "Herbs and spices (fresh or labeled gluten-free)",
+      "Rice or quinoa as a base instead of bread",
+      "Gluten-free stuffing mixes (like Bob's Red Mill or Trader Joe's)"
     ]
   },
   "waiter_script": {
-    "preview": "Is the gravy/stuffing made with wheat flour? Do you have GF options?"
+    "preview": "Can you confirm if the stuffing is made with gluten-free bread and broth?"
   },
   "safe_alternatives": [
-    "Pan juices",
-    "GF gravy",
-    "Skip the stuffing"
+    "Quinoa salad",
+    "Stuffed peppers with gluten-free grains",
+    "Roasted vegetables with herbs",
+    "Cauliflower rice stuffing",
+    "Polenta with herbs and vegetables"
   ],
   "faq": [
     {

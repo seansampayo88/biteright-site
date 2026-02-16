@@ -7,8 +7,8 @@
   "heading": "Are Flour Tortillas gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Flour Tortillas and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "status": "unsafe",
+    "summary": "Flour tortillas are typically made with wheat flour, which contains gluten, posing a significant risk for individuals with coeliac disease. Cross-contamination during preparation can also increase gluten exposure."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,22 +30,28 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Wheat flour",
+      "Enriched flour",
+      "Malt (if used in some recipes)",
+      "Wheat starch"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Corn tortillas (100% corn)",
+      "Gluten-free flour tortillas (made with rice flour or almond flour)",
+      "Brands like Mission Gluten Free Tortillas",
+      "Tortillas made with tapioca flour",
+      "Homemade tortillas using gluten-free ingredients"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Can you confirm if the flour tortillas are made with wheat flour or if there are gluten-free options available?"
   },
   "safe_alternatives": [
-    "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Corn tortillas",
+    "Lettuce wraps",
+    "Rice paper wraps",
+    "Gluten-free pita bread",
+    "Chickpea flour wraps"
   ],
   "faq": [
     {

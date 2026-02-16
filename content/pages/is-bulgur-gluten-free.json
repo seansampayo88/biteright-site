@@ -7,8 +7,8 @@
   "heading": "Is Bulgur gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Bulgur and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This grain is made from wheat and is not gluten-free."
+    "status": "caution",
+    "summary": "Bulgur is made from cracked wheat, which contains gluten, posing a risk for individuals with coeliac disease. Cross-contamination during processing or preparation can also increase gluten exposure."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,20 +30,24 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat"
+      "Wheat (the main ingredient in bulgur)",
+      "Barley (if mixed in during processing)",
+      "Wheat-based seasonings or broths used in preparation"
     ],
     "safe": [
-      "Quinoa",
-      "Rice",
-      "Millet"
+      "Certified gluten-free bulgur (if available)",
+      "Bulgur cooked in gluten-free broth",
+      "Bulgur prepared in a dedicated gluten-free kitchen"
     ]
   },
   "waiter_script": {
-    "preview": "Can this be made with rice or quinoa instead?"
+    "preview": "Can you confirm if the bulgur is gluten-free and prepared in a gluten-safe environment?"
   },
   "safe_alternatives": [
     "Quinoa",
-    "Rice",
+    "Rice (brown or white)",
+    "Millet",
+    "Buckwheat",
     "Cauliflower rice"
   ],
   "faq": [

@@ -7,8 +7,8 @@
   "heading": "Is Gravy gluten free?",
   "intro": "This public analysis report explains the biggest gluten risks in Gravy and how to order more safely.",
   "verdict": {
-    "status": "unsafe",
-    "summary": "This is typically made with wheat flour or bread."
+    "status": "caution",
+    "summary": "Gravy can pose a gluten risk primarily due to the use of wheat-based thickeners and broths. It is essential to verify the ingredients and preparation methods to ensure safety for those with coeliac disease."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -30,23 +30,29 @@
   ],
   "ingredients": {
     "risk": [
-      "Wheat flour",
-      "Bread",
-      "Roux"
+      "Wheat flour (used as a thickener)",
+      "Barley (in some broths or stocks)",
+      "Soy sauce (if not labeled gluten-free)",
+      "Malt vinegar (sometimes used for flavoring)",
+      "Commercial gravy mixes (often contain gluten)"
     ],
     "safe": [
-      "GF gravy",
-      "Pan juices",
-      "GF stuffing"
+      "Cornstarch (as a thickener)",
+      "Gluten-free broth (homemade or labeled GF)",
+      "Arrowroot powder (as a thickener)",
+      "Gluten-free gravy mixes (specific brands like McCormick Gluten-Free Gravy Mix)",
+      "Homemade gravy using gluten-free ingredients"
     ]
   },
   "waiter_script": {
-    "preview": "Is the gravy/stuffing made with wheat flour? Do you have GF options?"
+    "preview": "Can you confirm if your gravy is made with any gluten-containing ingredients?"
   },
   "safe_alternatives": [
-    "Pan juices",
-    "GF gravy",
-    "Skip the stuffing"
+    "Mashed potatoes with gluten-free gravy",
+    "Vegetable-based sauces",
+    "Salsa or pico de gallo",
+    "Cream sauces made with gluten-free ingredients",
+    "Herb-infused oils or dressings"
   ],
   "faq": [
     {
