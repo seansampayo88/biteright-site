@@ -172,6 +172,13 @@ async function generatePages() {
 
   await fsp.mkdir(outDir, { recursive: true });
 
+  const testSlug = "is-test-gluten-free";
+  const testPath = path.join(outDir, `${testSlug}.json`);
+  if (fs.existsSync(testPath)) {
+    fs.unlinkSync(testPath);
+    console.log(`Removed ${testSlug}.json`);
+  }
+
   const existingFiles = fs.readdirSync(outDir).filter((file) => file.endsWith(".json"));
   const existingSlugs = new Set(existingFiles.map((file) => file.replace(/\.json$/, "")));
 
@@ -189,6 +196,7 @@ async function generatePages() {
     if (!refreshExisting && created >= maxNew) break;
 
     const topicKey = slugify(topic);
+    if (topicKey === "test") continue;
     const slug = `is-${topicKey}-gluten-free`;
     const outputPath = path.join(outDir, `${slug}.json`);
 
@@ -209,6 +217,7 @@ async function generatePages() {
 
   if (refreshAllExisting) {
     for (const file of existingFiles) {
+      if (file === `${testSlug}.json`) continue;
       const fullPath = path.join(outDir, file);
       const existingPage = JSON.parse(await fsp.readFile(fullPath, "utf-8"));
       const topicName = topicFromPage(existingPage);

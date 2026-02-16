@@ -28,9 +28,12 @@ if (!fs.existsSync(pagesDir)) {
 const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith(".json"));
 const urls = [{ loc: `${SITE_ORIGIN}/`, lastmod: today() }];
 
+const EXCLUDED_SLUGS = new Set(["is-test-gluten-free"]);
+
 for (const file of files) {
   const json = JSON.parse(fs.readFileSync(path.join(pagesDir, file), "utf-8"));
   const slug = json.slug || file.replace(/\.json$/, "");
+  if (EXCLUDED_SLUGS.has(slug)) continue;
   const lastmod = json.meta?.updated_at || today();
   const loc = json.canonical || `${SITE_ORIGIN}/${slug}/`;
   urls.push({ loc, lastmod });
