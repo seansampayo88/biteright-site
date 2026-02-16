@@ -26,6 +26,9 @@ npm run generate-pages
 
 # Refresh specific pages with OpenAI (e.g. after adding generic pages)
 npm run refresh-pages
+
+# Or use Python (no Node required) — set OPENAI_API_KEY or add to .env
+python3 scripts/refresh-pages-py.py
 ```
 
-Without `OPENAI_API_KEY`, the script uses fallback profiles with generic ingredient lists. With OpenAI, each page gets unique risk/safe ingredients and gluten assessments.
+Without `OPENAI_API_KEY`, the script uses fallback profiles with generic ingredient lists. With OpenAI, each page gets unique risk/safe ingredients and gluten assessments. Create `.env` with `OPENAI_API_KEY=sk-...` to avoid passing the key each time.
