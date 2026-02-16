@@ -21,6 +21,22 @@ function slugify(topic) {
     .replace(/(^-|-$)+/g, "");
 }
 
+/** True if the topic is grammatically plural (use "are" in URL and copy). */
+function isTopicPlural(topicKey) {
+  const k = String(topicKey).toLowerCase();
+  const pluralEndings = [
+    "noodles", "waffles", "pancakes", "croissants", "breadcrumbs", "wrappers",
+    "browns", "nuggets", "meatballs", "sausages", "chips", "eggs", "oats",
+  ];
+  if (pluralEndings.some((e) => k === e || k.endsWith("-" + e))) return true;
+  const pluralExact = new Set([
+    "fish-and-chips", "bacon-and-eggs", "scrambled-eggs", "overnight-oats",
+    "hash-browns", "chicken-nuggets", "spring-roll-wrappers", "dumpling-wrappers",
+    "panko-breadcrumbs",
+  ]);
+  return pluralExact.has(k);
+}
+
 function titleCase(topic) {
   return topic
     .split(/\s+/)
@@ -34,7 +50,7 @@ function topicFromPage(page) {
   }
 
   const slug = String(page.slug || "")
-    .replace(/^is-/, "")
+    .replace(/^(is|are)-/, "")
     .replace(/-gluten-free$/, "")
     .replace(/-/g, " ");
 
@@ -98,21 +114,27 @@ function profileForTopic(topicLower) {
 
 function buildPage(topicName, existingPage = {}) {
   const topicKey = slugify(topicName);
-  const slug = `is-${topicKey}-gluten-free`;
+  const plural = isTopicPlural(topicKey);
+  const verb = plural ? "are" : "is";
+  const verbCap = plural ? "Are" : "Is";
+  const slug = `${verb}-${topicKey}-gluten-free`;
   const titleTopic = titleCase(topicName);
   const profile = profileForTopic(topicName.toLowerCase());
+  const summary = plural
+    ? profile.summary.replace(/^This (item|dish|sauce) /i, "These items ")
+    : profile.summary;
 
   return {
     schema_version: 1,
     topic_key: topicKey,
     slug,
-    title: `Is ${titleTopic} Gluten Free? | BiteRight`,
+    title: `${verbCap} ${titleTopic} Gluten Free? | BiteRight`,
     description: `Public gluten safety analysis for ${titleTopic}. See major risks, safer alternatives, and what to ask before ordering.`,
-    heading: `Is ${titleTopic} gluten free?`,
+    heading: `${verbCap} ${titleTopic} gluten free?`,
     intro: `This public analysis report explains the biggest gluten risks in ${titleTopic} and how to order more safely.`,
     verdict: {
       status: profile.verdict,
-      summary: profile.summary,
+      summary,
     },
     disclaimer:
       "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
@@ -144,7 +166,7 @@ function buildPage(topicName, existingPage = {}) {
     safe_alternatives: profile.alternatives,
     faq: [
       {
-        question: `Can BiteRight confirm if ${titleTopic} is gluten free?`,
+        question: `Can BiteRight confirm if ${titleTopic} ${verb} gluten free?`,
         answer:
           "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease.",
       },
@@ -197,19 +219,32 @@ async function generatePages() {
 
     const topicKey = slugify(topic);
     if (topicKey === "test") continue;
-    const slug = `is-${topicKey}-gluten-free`;
+    const page = buildPage(topic, {});
+    const slug = page.slug;
     const outputPath = path.join(outDir, `${slug}.json`);
 
-    const exists = existingSlugs.has(slug);
+    const existedAsIs = existingSlugs.has(`is-${topicKey}-gluten-free`);
+    const existedAsAre = existingSlugs.has(`are-${topicKey}-gluten-free`);
+    const oldPath = existedAsIs
+      ? path.join(outDir, `is-${topicKey}-gluten-free.json`)
+      : existedAsAre
+        ? path.join(outDir, `are-${topicKey}-gluten-free.json`)
+        : null;
+    const exists = existedAsIs || existedAsAre;
+
     if (exists && !refreshExisting) continue;
 
     let existingPage = {};
-    if (exists) {
-      existingPage = JSON.parse(await fsp.readFile(outputPath, "utf-8"));
+    if (oldPath && fs.existsSync(oldPath)) {
+      existingPage = JSON.parse(await fsp.readFile(oldPath, "utf-8"));
     }
 
-    const page = buildPage(topic, existingPage);
-    await fsp.writeFile(outputPath, `${JSON.stringify(page, null, 2)}\n`);
+    const finalPage = buildPage(topic, existingPage);
+    const finalPath = path.join(outDir, `${finalPage.slug}.json`);
+    if (oldPath && oldPath !== finalPath && fs.existsSync(oldPath)) {
+      fs.unlinkSync(oldPath);
+    }
+    await fsp.writeFile(finalPath, `${JSON.stringify(finalPage, null, 2)}\n`);
 
     if (exists) updated += 1;
     else created += 1;
@@ -222,7 +257,11 @@ async function generatePages() {
       const existingPage = JSON.parse(await fsp.readFile(fullPath, "utf-8"));
       const topicName = topicFromPage(existingPage);
       const page = buildPage(topicName, existingPage);
-      await fsp.writeFile(fullPath, `${JSON.stringify(page, null, 2)}\n`);
+      const newPath = path.join(outDir, `${page.slug}.json`);
+      if (newPath !== fullPath) {
+        fs.unlinkSync(fullPath);
+      }
+      await fsp.writeFile(newPath, `${JSON.stringify(page, null, 2)}\n`);
       updated += 1;
     }
   }

@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "dumpling-wrappers",
-  "slug": "is-dumpling-wrappers-gluten-free",
-  "title": "Is Dumpling Wrappers Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Dumpling Wrappers. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Dumpling Wrappers gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Dumpling Wrappers and how to order more safely.",
+  "topic_key": "overnight-oats",
+  "slug": "are-overnight-oats-gluten-free",
+  "title": "Are Overnight Oats Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Overnight Oats. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Overnight Oats gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Overnight Oats and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-13"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Dumpling Wrappers can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Overnight Oats can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Dumpling Wrappers is gluten free?",
+      "question": "Can BiteRight confirm if Overnight Oats are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

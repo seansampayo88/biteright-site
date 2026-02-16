@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "topic_key": "scrambled-eggs",
-  "slug": "is-scrambled-eggs-gluten-free",
-  "title": "Is Scrambled Eggs Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Scrambled Eggs. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Scrambled Eggs gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Scrambled Eggs and how to order more safely.",
+  "topic_key": "waffles",
+  "slug": "are-waffles-gluten-free",
+  "title": "Are Waffles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Waffles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Waffles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Waffles and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -17,7 +17,7 @@
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Scrambled Eggs can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Waffles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Scrambled Eggs is gluten free?",
+      "question": "Can BiteRight confirm if Waffles are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "overnight-oats",
-  "slug": "is-overnight-oats-gluten-free",
-  "title": "Is Overnight Oats Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Overnight Oats. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Overnight Oats gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Overnight Oats and how to order more safely.",
+  "topic_key": "ramen-noodles",
+  "slug": "are-ramen-noodles-gluten-free",
+  "title": "Are Ramen Noodles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Ramen Noodles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Ramen Noodles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Ramen Noodles and how to order more safely.",
   "verdict": {
-    "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "status": "unsafe",
+    "summary": "These items is often high risk due to broth bases and fermented ingredients that may include barley or wheat."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-10"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Overnight Oats can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Ramen Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -30,26 +30,27 @@
   ],
   "ingredients": {
     "risk": [
-      "Soy sauce",
-      "Malt flavoring",
-      "Shared fryer oil"
+      "Barley koji",
+      "Wheat soy sauce",
+      "Seasoning packets"
     ],
     "safe": [
-      "Plain rice",
-      "Fresh vegetables"
+      "Plain tofu",
+      "Wakame",
+      "Rice noodles (if separate pot)"
     ]
   },
   "waiter_script": {
-    "preview": "Can you confirm this has no wheat, barley, rye, regular soy sauce, or shared fryer contamination?"
+    "preview": "Is the broth or paste made with barley, wheat, or regular soy sauce?"
   },
   "safe_alternatives": [
+    "Clear broth",
     "Steamed rice",
-    "Plain salad",
-    "Grilled protein without sauce"
+    "Sashimi (no sauce)"
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Overnight Oats is gluten free?",
+      "question": "Can BiteRight confirm if Ramen Noodles are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

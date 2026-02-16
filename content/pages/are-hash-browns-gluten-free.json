@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "rice-noodles",
-  "slug": "is-rice-noodles-gluten-free",
-  "title": "Is Rice Noodles Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Rice Noodles. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Rice Noodles gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Rice Noodles and how to order more safely.",
+  "topic_key": "hash-browns",
+  "slug": "are-hash-browns-gluten-free",
+  "title": "Are Hash Browns Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Hash Browns. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Hash Browns gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Hash Browns and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-13"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Rice Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Hash Browns can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Rice Noodles is gluten free?",
+      "question": "Can BiteRight confirm if Hash Browns are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

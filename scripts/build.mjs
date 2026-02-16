@@ -82,7 +82,7 @@ function renderPage(pageData) {
     : ["Plain rice", "Fresh vegetables"];
 
   const waiterPreview = waiterScript?.preview
-    || `Can you confirm whether ${heading.replace(/^Is\s+/i, "").replace(/\?$/, "")} has any wheat, barley, rye, or regular soy sauce?`;
+    || `Can you confirm whether ${heading.replace(/^(Is|Are)\s+/i, "").replace(/\?$/, "")} has any wheat, barley, rye, or regular soy sauce?`;
 
   const alternatives = safeAlternatives?.length
     ? safeAlternatives

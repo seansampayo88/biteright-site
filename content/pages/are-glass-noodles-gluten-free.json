@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "pancakes",
-  "slug": "is-pancakes-gluten-free",
-  "title": "Is Pancakes Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Pancakes. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Pancakes gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Pancakes and how to order more safely.",
+  "topic_key": "glass-noodles",
+  "slug": "are-glass-noodles-gluten-free",
+  "title": "Are Glass Noodles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Glass Noodles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Glass Noodles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Glass Noodles and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-10"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Pancakes can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Glass Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Pancakes is gluten free?",
+      "question": "Can BiteRight confirm if Glass Noodles are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "chicken-nuggets",
-  "slug": "is-chicken-nuggets-gluten-free",
-  "title": "Is Chicken Nuggets Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Chicken Nuggets. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Chicken Nuggets gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Chicken Nuggets and how to order more safely.",
+  "topic_key": "soba-noodles",
+  "slug": "are-soba-noodles-gluten-free",
+  "title": "Are Soba Noodles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Soba Noodles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Soba Noodles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Soba Noodles and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-13"
+    "updated_at": "2026-02-10"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Chicken Nuggets can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Soba Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Chicken Nuggets is gluten free?",
+      "question": "Can BiteRight confirm if Soba Noodles are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

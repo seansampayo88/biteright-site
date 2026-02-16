@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "topic_key": "sausages",
-  "slug": "is-sausages-gluten-free",
-  "title": "Is Sausages Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Sausages. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Sausages gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Sausages and how to order more safely.",
+  "topic_key": "pancakes",
+  "slug": "are-pancakes-gluten-free",
+  "title": "Are Pancakes Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Pancakes. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Pancakes gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Pancakes and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
@@ -17,7 +17,7 @@
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Sausages can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Pancakes can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Sausages is gluten free?",
+      "question": "Can BiteRight confirm if Pancakes are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

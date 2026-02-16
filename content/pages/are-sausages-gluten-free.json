@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
-  "topic_key": "soba-noodles",
-  "slug": "is-soba-noodles-gluten-free",
-  "title": "Is Soba Noodles Gluten Free? | BiteRight",
-  "description": "Public gluten safety analysis for Soba Noodles. See major risks, safer alternatives, and what to ask before ordering.",
-  "heading": "Is Soba Noodles gluten free?",
-  "intro": "This public analysis report explains the biggest gluten risks in Soba Noodles and how to order more safely.",
+  "topic_key": "sausages",
+  "slug": "are-sausages-gluten-free",
+  "title": "Are Sausages Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Sausages. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Sausages gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Sausages and how to order more safely.",
   "verdict": {
     "status": "caution",
-    "summary": "This item may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
+    "summary": "These items may be gluten-free in some kitchens, but ingredients and preparation can still introduce risk."
   },
   "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
   "meta": {
-    "updated_at": "2026-02-10"
+    "updated_at": "2026-02-13"
   },
   "sections": [
     {
       "title": "Quick answer",
-      "body": "Soba Noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+      "body": "Sausages can vary by recipe, ingredients, and cross-contact controls in the kitchen."
     },
     {
       "title": "Common gluten risks",
@@ -49,7 +49,7 @@
   ],
   "faq": [
     {
-      "question": "Can BiteRight confirm if Soba Noodles is gluten free?",
+      "question": "Can BiteRight confirm if Sausages are gluten free?",
       "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
     },
     {

@@ -26,9 +26,14 @@ if (!fs.existsSync(pagesDir)) {
 }
 
 const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith(".json"));
-const urls = [{ loc: `${SITE_ORIGIN}/`, lastmod: today() }];
+const urls = [
+  { loc: `${SITE_ORIGIN}/`, lastmod: today() },
+  { loc: `${SITE_ORIGIN}/knowledge-hub/`, lastmod: today() },
+  { loc: `${SITE_ORIGIN}/newly-diagnosed/`, lastmod: today() },
+  { loc: `${SITE_ORIGIN}/hidden-gluten/`, lastmod: today() },
+];
 
-const EXCLUDED_SLUGS = new Set(["is-test-gluten-free"]);
+const EXCLUDED_SLUGS = new Set(["is-test-gluten-free", "are-test-gluten-free"]);
 
 for (const file of files) {
   const json = JSON.parse(fs.readFileSync(path.join(pagesDir, file), "utf-8"));
