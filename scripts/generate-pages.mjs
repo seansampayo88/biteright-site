@@ -8,6 +8,9 @@ const outDir = path.join(root, "content", "pages");
 const maxNew = Number.parseInt(process.env.MAX_NEW_PAGES ?? "10", 10);
 const refreshExisting = process.env.REFRESH_EXISTING === "1";
 const refreshAllExisting = process.env.REFRESH_ALL_EXISTING === "1";
+const refreshSlugs = process.env.REFRESH_SLUGS
+  ? new Set(process.env.REFRESH_SLUGS.split(",").map((s) => s.trim()).filter(Boolean))
+  : null;
 
 function die(message) {
   console.error(message);
@@ -32,7 +35,8 @@ function isTopicPlural(topicKey) {
   const pluralExact = new Set([
     "fish-and-chips", "bacon-and-eggs", "scrambled-eggs", "overnight-oats",
     "hash-browns", "chicken-nuggets", "spring-roll-wrappers", "dumpling-wrappers",
-    "panko-breadcrumbs",
+    "panko-breadcrumbs", "tortilla-chips", "flour-tortillas", "corn-tortillas",
+    "egg-rolls", "bagels", "pretzels",
   ]);
   return pluralExact.has(k);
 }
@@ -55,6 +59,79 @@ function topicFromPage(page) {
     .replace(/-/g, " ");
 
   return titleCase(slug);
+}
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+async function fetchProfileFromOpenAI(topicName) {
+  if (!OPENAI_API_KEY) return null;
+
+  const prompt = `You are a gluten safety expert for people with coeliac disease. Analyze "${topicName}" for gluten risks.
+
+Return a JSON object with exactly these keys (no extra fields):
+- verdict: "safe" | "caution" | "unsafe" — overall gluten risk
+- summary: 1–2 sentence explanation of the main gluten risks or why it's safe
+- risk: array of 3–5 specific ingredients or prep methods that commonly contain gluten (e.g. "Wheat flour", "Soy sauce", "Shared fryer")
+- safe: array of 3–5 ingredients or variants that are typically gluten-free
+- alternatives: array of 3–5 gluten-free alternatives diners could order instead
+- waiter: one short question a diner could ask the kitchen to confirm gluten safety
+
+Be specific to "${topicName}". Do not use generic lists. Focus on real ingredients and preparation methods for this exact food.`;
+
+  try {
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: prompt }],
+        response_format: { type: "json_object" },
+        temperature: 0.3,
+      }),
+    });
+
+    if (!res.ok) {
+      const err = await res.text();
+      console.warn(`OpenAI API error for "${topicName}": ${res.status} ${err}`);
+      return null;
+    }
+
+    const data = await res.json();
+    const text = data.choices?.[0]?.message?.content;
+    if (!text) return null;
+
+    const parsed = JSON.parse(text);
+    if (
+      !Array.isArray(parsed.risk) ||
+      !Array.isArray(parsed.safe) ||
+      !Array.isArray(parsed.alternatives) ||
+      typeof parsed.waiter !== "string" ||
+      typeof parsed.summary !== "string"
+    ) {
+      console.warn(`OpenAI invalid structure for "${topicName}"`);
+      return null;
+    }
+
+    const validVerdicts = ["safe", "caution", "unsafe"];
+    if (!validVerdicts.includes(String(parsed.verdict).toLowerCase())) {
+      parsed.verdict = "caution";
+    }
+
+    return {
+      verdict: String(parsed.verdict).toLowerCase(),
+      summary: parsed.summary,
+      risk: parsed.risk.slice(0, 6).filter(Boolean),
+      safe: parsed.safe.slice(0, 6).filter(Boolean),
+      alternatives: parsed.alternatives.slice(0, 6).filter(Boolean),
+      waiter: parsed.waiter,
+    };
+  } catch (err) {
+    console.warn(`OpenAI fetch failed for "${topicName}":`, err.message);
+    return null;
+  }
 }
 
 function profileForTopic(topicLower) {
@@ -112,17 +189,17 @@ function profileForTopic(topicLower) {
   };
 }
 
-function buildPage(topicName, existingPage = {}) {
+function buildPage(topicName, existingPage = {}, profile = null) {
   const topicKey = slugify(topicName);
   const plural = isTopicPlural(topicKey);
   const verb = plural ? "are" : "is";
   const verbCap = plural ? "Are" : "Is";
   const slug = `${verb}-${topicKey}-gluten-free`;
   const titleTopic = titleCase(topicName);
-  const profile = profileForTopic(topicName.toLowerCase());
+  const resolvedProfile = profile ?? profileForTopic(topicName.toLowerCase());
   const summary = plural
-    ? profile.summary.replace(/^This (item|dish|sauce) /i, "These items ")
-    : profile.summary;
+    ? resolvedProfile.summary.replace(/^This (item|dish|sauce) /i, "These items ")
+    : resolvedProfile.summary;
 
   return {
     schema_version: 1,
@@ -133,7 +210,7 @@ function buildPage(topicName, existingPage = {}) {
     heading: `${verbCap} ${titleTopic} gluten free?`,
     intro: `This public analysis report explains the biggest gluten risks in ${titleTopic} and how to order more safely.`,
     verdict: {
-      status: profile.verdict,
+      status: resolvedProfile.verdict,
       summary,
     },
     disclaimer:
@@ -157,13 +234,13 @@ function buildPage(topicName, existingPage = {}) {
       },
     ],
     ingredients: {
-      risk: profile.risk,
-      safe: profile.safe,
+      risk: resolvedProfile.risk,
+      safe: resolvedProfile.safe,
     },
     waiter_script: {
-      preview: profile.waiter,
+      preview: resolvedProfile.waiter,
     },
-    safe_alternatives: profile.alternatives,
+    safe_alternatives: resolvedProfile.alternatives,
     faq: [
       {
         question: `Can BiteRight confirm if ${titleTopic} ${verb} gluten free?`,
@@ -207,11 +284,12 @@ async function generatePages() {
   console.log(`Seed topics loaded: ${topics.length}`);
   console.log(`Existing pages: ${existingFiles.length}`);
   console.log(`Mode: refreshExisting=${refreshExisting} refreshAllExisting=${refreshAllExisting}`);
+  console.log(`OpenAI: ${OPENAI_API_KEY ? "enabled" : "disabled (using fallback profiles)"}`);
 
   let created = 0;
   let updated = 0;
 
-  const shouldCreateOrRefreshFromSeeds = !refreshAllExisting;
+  const shouldCreateOrRefreshFromSeeds = !refreshAllExisting && !refreshSlugs;
 
   for (const topic of topics) {
     if (!shouldCreateOrRefreshFromSeeds) break;
@@ -219,9 +297,6 @@ async function generatePages() {
 
     const topicKey = slugify(topic);
     if (topicKey === "test") continue;
-    const page = buildPage(topic, {});
-    const slug = page.slug;
-    const outputPath = path.join(outDir, `${slug}.json`);
 
     const existedAsIs = existingSlugs.has(`is-${topicKey}-gluten-free`);
     const existedAsAre = existingSlugs.has(`are-${topicKey}-gluten-free`);
@@ -239,15 +314,35 @@ async function generatePages() {
       existingPage = JSON.parse(await fsp.readFile(oldPath, "utf-8"));
     }
 
-    const finalPage = buildPage(topic, existingPage);
-    const finalPath = path.join(outDir, `${finalPage.slug}.json`);
+    const profile = await fetchProfileFromOpenAI(topic);
+    const page = buildPage(topic, existingPage, profile);
+    const finalPath = path.join(outDir, `${page.slug}.json`);
     if (oldPath && oldPath !== finalPath && fs.existsSync(oldPath)) {
       fs.unlinkSync(oldPath);
     }
-    await fsp.writeFile(finalPath, `${JSON.stringify(finalPage, null, 2)}\n`);
+    await fsp.writeFile(finalPath, `${JSON.stringify(page, null, 2)}\n`);
 
     if (exists) updated += 1;
     else created += 1;
+  }
+
+  if (refreshSlugs) {
+    for (const file of existingFiles) {
+      const slug = file.replace(/\.json$/, "");
+      if (!refreshSlugs.has(slug)) continue;
+      const fullPath = path.join(outDir, file);
+      const existingPage = JSON.parse(await fsp.readFile(fullPath, "utf-8"));
+      const topicName = topicFromPage(existingPage);
+      const profile = await fetchProfileFromOpenAI(topicName);
+      const page = buildPage(topicName, existingPage, profile);
+      const newPath = path.join(outDir, `${page.slug}.json`);
+      if (newPath !== fullPath && fs.existsSync(fullPath)) {
+        fs.unlinkSync(fullPath);
+      }
+      await fsp.writeFile(newPath, `${JSON.stringify(page, null, 2)}\n`);
+      updated += 1;
+      console.log(`Refreshed ${slug} (OpenAI: ${profile ? "yes" : "fallback"})`);
+    }
   }
 
   if (refreshAllExisting) {
@@ -256,7 +351,8 @@ async function generatePages() {
       const fullPath = path.join(outDir, file);
       const existingPage = JSON.parse(await fsp.readFile(fullPath, "utf-8"));
       const topicName = topicFromPage(existingPage);
-      const page = buildPage(topicName, existingPage);
+      const profile = await fetchProfileFromOpenAI(topicName);
+      const page = buildPage(topicName, existingPage, profile);
       const newPath = path.join(outDir, `${page.slug}.json`);
       if (newPath !== fullPath) {
         fs.unlinkSync(fullPath);

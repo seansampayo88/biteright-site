@@ -15,8 +15,17 @@ npm install
 npm run build
 ```
 
-## Cloudflare Pages settings
+## Generating programmatic pages
 
-- **Framework preset:** None
-- **Build command:** `npm run build`
-- **Output directory:** `dist`
+```bash
+# Set OPENAI_API_KEY for topic-specific ingredient analysis (recommended)
+export OPENAI_API_KEY=sk-...
+
+# Create new pages from content/seeds/topics.txt
+npm run generate-pages
+
+# Refresh specific pages with OpenAI (e.g. after adding generic pages)
+npm run refresh-pages
+```
+
+Without `OPENAI_API_KEY`, the script uses fallback profiles with generic ingredient lists. With OpenAI, each page gets unique risk/safe ingredients and gluten assessments.
