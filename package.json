@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "python3 scripts/generate-knowledge-hub.py && node scripts/validate-pages.mjs && node scripts/build.mjs",
+    "build": "python3 scripts/generate-knowledge-hub.py && python3 scripts/build-pages.py",
+    "build:legacy": "python3 scripts/generate-knowledge-hub.py && node scripts/validate-pages.mjs && node scripts/build.mjs",
     "generate-pages": "MAX_NEW_PAGES=20 node scripts/generate-pages.mjs",
     "refresh-pages": "REFRESH_SLUGS=is-granola-gluten-free,are-tortilla-chips-gluten-free,are-flour-tortillas-gluten-free,are-corn-tortillas-gluten-free,are-bagels-gluten-free,are-pretzels-gluten-free,is-beer-gluten-free,is-licorice-gluten-free,is-soy-milk-gluten-free,is-seitan-gluten-free,is-tempeh-gluten-free,is-couscous-gluten-free,is-bulgur-gluten-free,is-imitation-crab-gluten-free,is-gravy-gluten-free,is-stuffing-gluten-free,is-matzo-gluten-free,is-tzatziki-gluten-free,is-hummus-gluten-free,is-gyoza-gluten-free node scripts/generate-pages.mjs",
     "generate-knowledge-hub": "python3 scripts/generate-knowledge-hub.py",
-    "refresh-pages-py": "python3 scripts/refresh-pages-py.py"
+    "refresh-pages-py": "python3 scripts/refresh-pages-py.py",
+    "verify-links": "python3 scripts/verify-links.py"
   }
 }
