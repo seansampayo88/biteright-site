@@ -493,16 +493,18 @@ def main():
     # Load all pages
     all_pages = load_all_pages()
     page_categories = categorize_pages(all_pages)
-    
-    # Create dist directory
+
+    # Recreate dist directory
+    if DIST_DIR.exists():
+        shutil.rmtree(DIST_DIR)
     DIST_DIR.mkdir(parents=True, exist_ok=True)
-    
-    # Copy index.html if exists
-    index_src = ROOT / "index.html"
-    if index_src.exists():
-        shutil.copy(index_src, DIST_DIR / "index.html")
-    
-    # Build each page
+
+    # Copy static site files from src/ into dist/ (home page, resource pages, images, robots.txt, etc.)
+    src_dir = ROOT / "src"
+    if src_dir.exists():
+        shutil.copytree(src_dir, DIST_DIR, dirs_exist_ok=True)
+
+    # Build each programmatic SEO page
     built_count = 0
     for page in all_pages:
         page_dir = DIST_DIR / page['slug']
