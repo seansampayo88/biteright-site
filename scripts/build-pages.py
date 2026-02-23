@@ -236,6 +236,15 @@ def build_page_html(page_data, related_pages):
     return f'''<!doctype html>
 <html lang="en">
   <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFPKT4GJ0P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-NFPKT4GJ0P');
+  </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
     new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
