@@ -6,6 +6,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+SRC_DIR = ROOT / "src"
 PAGES_DIR = ROOT / "content" / "pages"
 DIST_DIR = ROOT / "dist"
 EXCLUDED = {"is-test-gluten-free", "are-test-gluten-free"}
@@ -494,15 +495,12 @@ def main():
     all_pages = load_all_pages()
     page_categories = categorize_pages(all_pages)
     
-    # Create dist directory
-    DIST_DIR.mkdir(parents=True, exist_ok=True)
+    # Copy src/ to dist/ (homepage, knowledge-hub, static pages, img, etc.)
+    if DIST_DIR.exists():
+        shutil.rmtree(DIST_DIR)
+    shutil.copytree(SRC_DIR, DIST_DIR)
     
-    # Copy index.html if exists
-    index_src = ROOT / "index.html"
-    if index_src.exists():
-        shutil.copy(index_src, DIST_DIR / "index.html")
-    
-    # Build each page
+    # Build each programmatic page
     built_count = 0
     for page in all_pages:
         page_dir = DIST_DIR / page['slug']
