@@ -93,6 +93,7 @@ def main():
           <a href="/#features">Features</a>
           <a href="/#how-it-works">How it works</a>
           <a href="/knowledge-hub/">Knowledge Hub</a>
+          <a href="/gluten-free-diet/">Gluten‑free diet</a>
           <a href="/newly-diagnosed/">Newly diagnosed?</a>
           <a href="/#faq">FAQ</a>
         </div>
@@ -103,6 +104,7 @@ def main():
           <a href="/#features">Features</a>
           <a href="/#how-it-works">How it works</a>
           <a href="/knowledge-hub/">Knowledge Hub</a>
+          <a href="/gluten-free-diet/">Gluten‑free diet</a>
           <a href="/newly-diagnosed/">Newly diagnosed?</a>
           <a href="/#faq">FAQ</a>
         </div>
