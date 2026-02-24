@@ -55,9 +55,10 @@ export default {
             ok: true,
             namespace: COUNTER_NS,
             counters: {
-              tt_clicks: tt,
-              app_clicks: app,
-              go_clicks: go
+              // Return numeric 0 when a key has never been hit yet
+              tt_clicks: tt ?? 0,
+              app_clicks: app ?? 0,
+              go_clicks: go ?? 0
             },
             fetchedAt: new Date().toISOString()
           },
