@@ -3,6 +3,7 @@ const APP_STORE_URL = "https://apps.apple.com/app/biteright-gluten-scanner/id675
 // Cloudflare KV-backed counters (binding name: CLICK_COUNTERS)
 const COUNTER_KEYS = {
   tt: "tt_clicks",
+  ig: "ig_clicks",
   app: "app_clicks",
   go: "go_clicks"
 };
@@ -46,8 +47,9 @@ export default {
     // JSON stats endpoint for daily tracking
     if (url.pathname === "/tt-stats") {
       const kv = env.CLICK_COUNTERS;
-      const [tt, app, go] = await Promise.all([
+      const [tt, ig, app, go] = await Promise.all([
         getCounterValue(kv, COUNTER_KEYS.tt),
+        getCounterValue(kv, COUNTER_KEYS.ig),
         getCounterValue(kv, COUNTER_KEYS.app),
         getCounterValue(kv, COUNTER_KEYS.go)
       ]);
@@ -59,6 +61,7 @@ export default {
             backend: kv ? "cloudflare-kv" : "missing-kv-binding",
             counters: {
               tt_clicks: tt ?? 0,
+              ig_clicks: ig ?? 0,
               app_clicks: app ?? 0,
               go_clicks: go ?? 0
             },
@@ -85,6 +88,11 @@ export default {
     if (url.pathname === "/tt") {
       ctx?.waitUntil(incrementCounter(env.CLICK_COUNTERS, COUNTER_KEYS.tt));
       return Response.redirect(withTrackingParams(APP_STORE_URL, "tiktok_bio"), 302);
+    }
+
+    if (url.pathname === "/ig") {
+      ctx?.waitUntil(incrementCounter(env.CLICK_COUNTERS, COUNTER_KEYS.ig));
+      return Response.redirect(withTrackingParams(APP_STORE_URL, "instagram_bio"), 302);
     }
 
     return env.ASSETS.fetch(request);
