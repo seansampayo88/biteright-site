@@ -176,6 +176,26 @@ def main():
         }});
       }}
     }})();
+
+    // GA4 key event: any App Store CTA / bio-link click
+    document.addEventListener('click', function (e) {{
+      var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!link) return;
+
+      var href = link.getAttribute('href') || '';
+      var isAppStore = href.indexOf('apps.apple.com/app/biteright-gluten-scanner') !== -1;
+      var isBioRoute = href === '/tt' || href === '/go' || href === '/app' || href.indexOf('/tt?') === 0 || href.indexOf('/go?') === 0 || href.indexOf('/app?') === 0;
+      if (!isAppStore && !isBioRoute) return;
+
+      if (typeof window.gtag === 'function') {{
+        window.gtag('event', 'app_store_cta_click', {{
+          event_category: 'engagement',
+          event_label: href,
+          link_url: href,
+          link_text: (link.textContent || '').trim().slice(0, 120)
+        }});
+      }}
+    }}, true);
   </script>
 </body>
 </html>
