@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "tapioca",
+  "slug": "is-tapioca-gluten-free",
+  "title": "Is Tapioca Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Tapioca. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Tapioca gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Tapioca and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Tapioca is derived from cassava and is naturally gluten-free. However, cross-contamination during processing or preparation can pose a risk for those with coeliac disease."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-02-26"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Tapioca can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Cross-contamination with wheat flour",
+      "Shared cooking equipment",
+      "Tapioca products mixed with gluten-containing ingredients"
+    ],
+    "safe": [
+      "Pure tapioca starch or flour",
+      "Dedicated gluten-free cooking equipment",
+      "Tapioca pearls prepared in a gluten-free environment"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the tapioca is prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Rice noodles",
+    "Quinoa",
+    "Corn-based products",
+    "Potato starch",
+    "Gluten-free pasta"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Tapioca is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
