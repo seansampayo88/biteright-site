@@ -145,14 +145,6 @@
         0% { transform: translate(0, 0) scale(1); }
         100% { transform: translate(2%, 2%) scale(1.05); }
       }
-      /* Hero illustrated decorations (floating food elements) */
-      .hero-illus { position: absolute; z-index: 5; opacity: 0.85; transition: transform 0.5s var(--ease-smooth); }
-      .hero-illus:hover { transform: scale(1.1) rotate(5deg); }
-      .hero-illus-wheat { top: 15%; right: 8%; width: 48px; height: 64px; animation: floatIllus 4s ease-in-out infinite; }
-      .hero-illus-plate { bottom: 25%; left: 5%; width: 56px; height: 56px; animation: floatIllus 5s ease-in-out infinite 0.5s; }
-      .hero-illus-utensil { top: 40%; right: 2%; width: 40px; height: 48px; animation: floatIllus 4.5s ease-in-out infinite 1s; }
-      .hero-illus-leaf { bottom: 15%; right: 15%; width: 44px; height: 44px; animation: floatIllus 4s ease-in-out infinite 0.3s; }
-      @keyframes floatIllus { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
       h1 { font-family: 'Outfit', sans-serif; font-size: 56px; line-height: 1.05; margin: 0 0 24px 0; letter-spacing: -0.02em; color: var(--navy); font-weight: 700; }
       .section-title { font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.025em; color: var(--navy); line-height: 1.15; }
@@ -800,7 +792,6 @@
         .reveal-stagger-children .feature-card,
         .reveal-stagger-children .how-it-works-step { opacity: 1; transform: none; transition: none; }
         .hero::before { animation: none; }
-        .hero-illus { animation: none !important; }
         .how-it-works-icon-wrapper::before,
         .how-it-works-icon-wrapper::after { animation: none !important; }
         .blob:hover { transform: none; }
@@ -885,31 +876,6 @@
           
         </div>
 
-        <!-- Hero illustrated decorations (floating food elements) -->
-        <div class="hero-illus hero-illus-wheat" aria-hidden="true">
-          <svg viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 4v56M20 8c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4M28 16c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4M24 24c1.5 0 3 1.5 3 3s-1.5 3-3 3-3-1.5-3-3 1.5-3 3-3" stroke="#00A36F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-            <path d="M18 12l4 8 4-8M22 32l-2 12 4-8 4 8" stroke="#F4C16E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-          </svg>
-        </div>
-        <div class="hero-illus hero-illus-plate" aria-hidden="true">
-          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="28" cy="28" r="24" stroke="#FF6D5E" stroke-width="2.5" fill="none" opacity="0.9"/>
-            <circle cx="28" cy="28" r="18" stroke="#F4C16E" stroke-width="1.5" fill="none" opacity="0.6"/>
-          </svg>
-        </div>
-        <div class="hero-illus hero-illus-utensil" aria-hidden="true">
-          <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 4v20c0 4.4 3.6 8 8 8M20 4v20c0 4.4-3.6 8-8 8M20 24v20" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
-            <path d="M12 32h16" stroke="#5F6B7A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-        </div>
-        <div class="hero-illus hero-illus-leaf" aria-hidden="true">
-          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 4C12 12 6 22 6 30c0 6 4 10 10 10 4 0 10-4 16-12-6 8-10 14-10 18 0 2 2 4 4 4s4-2 4-6c0-4 4-10 10-16-8 6-14 8-18 8-6 0-10-4-10-10 0-8 6-18 16-26z" fill="#00A36F" opacity="0.7"/>
-          </svg>
-        </div>
-
         <!-- CSS Phone Mockup -->
         <div class="phone-container hero-reveal-phone" id="phone-container">
           <div class="phone-frame phone-parallax" id="phone-frame">
@@ -917,7 +883,7 @@
             <div class="anim-beam"></div> <!-- Scanning Laser -->
             
             <div class="phone-content" id="phone-demo-content">
-              <div class="phone-demo-state state-home active" data-demo-state="0" aria-hidden="false">
+              <div>
               <!-- Top Bar -->
               <div class="phone-top-bar">
                 <div class="phone-country">
@@ -995,50 +961,6 @@
                 </div>
               </div>
               </div>
-              <!-- State 1: Menu scan -->
-              <div class="phone-demo-state state-menu" data-demo-state="1" aria-hidden="true">
-                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div><div class="phone-chef-card-btn"><i data-feather="creditcard" style="width:16px; color:var(--navy);"></i></div></div>
-                <div class="phone-header"><h2>Scanning menu...</h2><p>Point at the menu</p></div>
-                <div class="phone-mode-card" style="background: rgba(244,193,110,0.2);"><div class="phone-mode-card-text"><h3 style="color:var(--apricot);">Analyzing</h3><p>Finding gluten risks</p></div><i data-feather="cpu" style="width:24px; color:var(--apricot);"></i></div>
-                <div style="background: white; border-radius: 16px; padding: 12px; font-size: 13px;">
-                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Caesar Salad</span><span style="color:var(--primary-teal);font-weight:700;">Safe</span></div>
-                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Pasta Carbonara</span><span style="color:var(--coral);font-weight:700;">Unsafe</span></div>
-                  <div style="display:flex;justify-content:space-between;"><span>Grilled Salmon</span><span style="color:var(--primary-teal);font-weight:700;">Safe</span></div>
-                </div>
-              </div>
-              <!-- State 2: Plate scan -->
-              <div class="phone-demo-state state-plate" data-demo-state="2" aria-hidden="true">
-                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div></div>
-                <div class="phone-header"><h2>Plate scan result</h2><p>Analysis complete</p></div>
-                <div style="flex:1;background: linear-gradient(135deg, #FFD5C0 0%, #FFE8D6 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">🍽️</div>
-                <div style="background: rgba(0,163,111,0.15); border-radius: 20px; padding: 16px; text-align: center;">
-                  <span style="font-size: 18px; font-weight: 800; color: var(--primary-teal);">Safe to eat</span>
-                  <p style="font-size: 12px; color: var(--text-body); margin: 4px 0 0 0;">No gluten detected</p>
-                </div>
-              </div>
-              <!-- State 3: Chef card -->
-              <div class="phone-demo-state state-chef" data-demo-state="3" aria-hidden="true">
-                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇮🇹</div><span>Italiano</span></div></div>
-                <div class="phone-header"><h2>Chef Card</h2><p>Show to restaurant staff</p></div>
-                <div style="background: white; border-radius: 20px; padding: 20px; font-size: 14px; line-height: 1.6; color: var(--navy); box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
-                  <p style="margin: 0 0 12px 0; font-weight: 700;">Ho la malattia celiaca.</p>
-                  <p style="margin: 0; opacity: 0.9;">Non posso mangiare glutine. Per favore, i miei piatti devono essere preparati senza contaminazione con farina o prodotti contenenti glutine.</p>
-                </div>
-                <p style="font-size: 12px; color: var(--text-body);">Available in 20+ languages</p>
-              </div>
-              <!-- State 4: Search -->
-              <div class="phone-demo-state state-search" data-demo-state="4" aria-hidden="true">
-                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div></div>
-                <div class="phone-header"><h2>Is it gluten free?</h2><p>Search ingredient or meal</p></div>
-                <div class="phone-search" style="border: 2px solid var(--primary-teal);">
-                  <i data-feather="search" style="width:16px; color:var(--primary-teal);"></i>
-                  <input type="text" value="soy sauce" readonly style="color: var(--navy);">
-                </div>
-                <div style="background: rgba(244,193,110,0.2); border-radius: 20px; padding: 16px;">
-                  <div style="font-weight: 700; color: var(--apricot); margin-bottom: 4px;">Soy sauce</div>
-                  <p style="font-size: 13px; color: var(--text-body); margin: 0;">Caution — most soy sauce contains wheat. Look for tamari or gluten-free labelled.</p>
-                </div>
-              </div>
             </div>
 
             <!-- Bottom Nav -->
@@ -1057,13 +979,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="phone-demo-dots" aria-label="Demo steps">
-          <button type="button" class="phone-demo-dot active" data-demo-index="0" aria-label="Home screen"></button>
-          <button type="button" class="phone-demo-dot" data-demo-index="1" aria-label="Menu scan"></button>
-          <button type="button" class="phone-demo-dot" data-demo-index="2" aria-label="Plate scan"></button>
-          <button type="button" class="phone-demo-dot" data-demo-index="3" aria-label="Chef card"></button>
-          <button type="button" class="phone-demo-dot" data-demo-index="4" aria-label="Search"></button>
         </div>
       </section>
 
@@ -1172,19 +1087,17 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="features reveal-on-scroll" id="testimonials" style="padding-top: 20px; overflow: hidden;">
-        <div style="max-width: 860px; margin: 0 auto; width: 100%;">
-          <div class="feature-card" style="padding: 36px; border-left: 6px solid var(--primary-teal); width: 100%;">
-            <div class="pill" style="margin-bottom: 14px;">User testimonial</div>
-            <p style="font-size: 28px; line-height: 1.45; color: var(--navy); margin: 0 0 16px; font-family: 'Outfit', sans-serif;">
-              “Using this app has made my life so much easier, and I feel confident that the food I’m eating is safe for me.”
-            </p>
-            <div style="display: flex; align-items: center; gap: 10px; margin-top: 2px;">
-              <img src="img/testimonials/margarita-profile.jpg" alt="Margarita Kovalenko Instagram profile" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(13,27,42,0.12);" />
-              <p style="margin: 0; color: var(--text-body); font-weight: 700;">
-                Margarita Kovalenko <span style="font-weight: 600; opacity: 0.85;">(@margaritakov)</span>
-              </p>
+      <section class="testimonials reveal-on-scroll" id="testimonials">
+        <h2>Loved by people who eat safely</h2>
+        <p class="sub">See how others use BiteRight to dine with confidence.</p>
+        <div class="testimonials-grid" style="max-width: 560px;">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img src="img/testimonials/margarita-profile.jpg" alt="Margarita Kovalenko" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover;" />
             </div>
+            <p class="testimonial-quote">“Using this app has made my life so much easier, and I feel confident that the food I’m eating is safe for me.”</p>
+            <div class="testimonial-name">Margarita Kovalenko</div>
+            <div class="testimonial-role"><a href="https://www.instagram.com/margaritakov" target="_blank" rel="noopener noreferrer" style="color: var(--primary-teal); text-decoration: none; font-weight: 600;">@margaritakov</a></div>
           </div>
         </div>
       </section>
@@ -1425,41 +1338,6 @@
         onScrollParallax();
       }
 
-      // Phone demo carousel (multi-state)
-      const demoStates = document.querySelectorAll('.phone-demo-state');
-      const demoDots = document.querySelectorAll('.phone-demo-dot');
-      const DEMO_INTERVAL = 9000;
-      let demoIndex = 0;
-      let demoTimer = null;
-      let demoPaused = false;
-      function setDemoState(index) {
-        demoIndex = index >= 0 && index < demoStates.length ? index : 0;
-        demoStates.forEach((el, i) => {
-          const active = i === demoIndex;
-          el.classList.toggle('active', active);
-          el.setAttribute('aria-hidden', !active);
-        });
-        demoDots.forEach((dot, i) => {
-          dot.classList.toggle('active', i === demoIndex);
-        });
-      }
-      function advanceDemo() {
-        if (demoPaused) return;
-        setDemoState((demoIndex + 1) % demoStates.length);
-      }
-      const phoneContainer = document.getElementById('phone-container');
-      if (phoneContainer && demoStates.length) {
-        phoneContainer.addEventListener('mouseenter', function() { demoPaused = true; });
-        phoneContainer.addEventListener('mouseleave', function() { demoPaused = false; });
-        demoTimer = setInterval(advanceDemo, DEMO_INTERVAL);
-        demoDots.forEach(function(dot, i) {
-          dot.addEventListener('click', function() {
-            setDemoState(i);
-            clearInterval(demoTimer);
-            demoTimer = setInterval(advanceDemo, DEMO_INTERVAL);
-          });
-        });
-      }
       
       // FAQ Accordion (click and keyboard)
       function toggleFaqItem(item) {
