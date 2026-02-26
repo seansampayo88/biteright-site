@@ -29,6 +29,12 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Generate new seeds (when all seeds have pages)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MAX_NEW_SEEDS: "15"
+        run: node scripts/generate-seeds.mjs
+
       - name: Generate pages
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
