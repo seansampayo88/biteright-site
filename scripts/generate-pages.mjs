@@ -373,7 +373,7 @@ async function generatePages() {
 
   console.log(`Done. Created ${created} new pages. Updated ${updated} pages.`);
   if (created === 0 && updated === 0) {
-    die("No pages changed. Set REFRESH_EXISTING=1 or REFRESH_ALL_EXISTING=1 to regenerate existing pages.");
+    console.log("No pages changed (all seeds already have pages). Set REFRESH_EXISTING=1 or REFRESH_ALL_EXISTING=1 to regenerate existing pages.");
   }
 }
 
