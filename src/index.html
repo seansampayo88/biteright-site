@@ -89,8 +89,9 @@
       .logo:hover { color: var(--primary-teal); }
       .logo-mark { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; display: block; flex-shrink: 0; }
       
-      .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 24px; font-size: 15px; transition: color 0.2s; }
+      .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; margin-left: 24px; font-size: 15px; transition: color 0.2s; border-radius: 8px; padding: 4px 8px; }
       .nav-links a:hover { color: var(--primary-teal); }
+      .nav-links a:focus-visible { outline: 2px solid var(--primary-teal); outline-offset: 2px; }
 
       /* Kebab menu (mobile) */
       .nav-kebab { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--navy); border-radius: 8px; transition: background 0.2s; }
@@ -112,7 +113,12 @@
       }
 
       h1 { font-family: 'Outfit', sans-serif; font-size: 56px; line-height: 1.05; margin: 0 0 24px 0; letter-spacing: -0.02em; color: var(--navy); font-weight: 700; }
+      .section-title { font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.025em; color: var(--navy); line-height: 1.15; }
+      .section-subtitle { font-size: 18px; color: var(--text-body); line-height: 1.55; max-width: 600px; }
       p.hero-text { font-size: 20px; line-height: 1.6; color: var(--text-body); margin-bottom: 40px; max-width: 480px; }
+      /* Typography reveal: subtle animation when section is revealed */
+      .heading-reveal { opacity: 0; letter-spacing: 0.02em; transition: opacity var(--duration-reveal) var(--ease-smooth), letter-spacing 0.6s var(--ease-smooth); }
+      .reveal-on-scroll.revealed .heading-reveal { opacity: 1; letter-spacing: -0.02em; }
 
       .pill { 
         display: inline-flex; align-items: center; gap: 8px;
@@ -152,9 +158,11 @@
         border-radius: var(--radius-pill); 
         text-decoration: none; 
         font-weight: 700; font-size: 17px;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        transition: transform var(--duration-micro) var(--ease-bounce), box-shadow var(--duration-micro) var(--ease-smooth);
       }
       .btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 28px rgba(13, 27, 42, 0.25); }
+      .btn:active { transform: translateY(-1px) scale(1.01); }
+      .btn:focus-visible { outline: 2px solid var(--primary-teal); outline-offset: 3px; }
       
       .btn-primary { 
         background: var(--navy); color: #fff; 
@@ -265,6 +273,9 @@
       }
       .phone-search input::placeholder {
         color: #999;
+      }
+      .phone-search:focus-within {
+        box-shadow: 0 0 0 2px var(--primary-teal), 0 2px 8px rgba(0,0,0,0.04);
       }
       
       .phone-mode-card {
@@ -624,7 +635,8 @@
         box-shadow: var(--shadow-card);
         transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       }
-      .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-float); border-color: rgba(0,163,111,0.2); }
+      .feature-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 163, 111, 0.12); border-color: rgba(0,163,111,0.2); }
+      .feature-card:focus-within { border-color: rgba(0,163,111,0.3); box-shadow: 0 0 0 3px rgba(0,163,111,0.08); }
       
       .icon-box {
         width: 56px; height: 56px; border-radius: 16px;
@@ -694,7 +706,7 @@
         border-right: 2px solid var(--primary-teal);
         border-bottom: 2px solid var(--primary-teal);
         transform: rotate(45deg);
-        transition: transform 0.3s ease;
+        transition: transform 0.35s var(--ease-smooth);
         flex-shrink: 0;
       }
       .faq-item.open .faq-question::after {
@@ -706,17 +718,51 @@
         line-height: 1.6;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
+        transition: max-height 0.35s var(--ease-smooth), padding 0.35s var(--ease-smooth);
         padding: 0 24px;
       }
       .faq-item.open .faq-answer {
         max-height: 300px;
         padding: 0 24px 24px 24px;
       }
+      .faq-question:focus-visible { outline: 2px solid var(--primary-teal); outline-offset: 2px; border-radius: 8px; }
+
+      /* MARK: - Testimonials */
+      .testimonials { padding: 80px 0; background: linear-gradient(180deg, #fff 0%, var(--paper-color) 100%); }
+      .testimonials h2 { font-family: 'Outfit', sans-serif; font-size: 32px; color: var(--navy); text-align: center; margin-bottom: 16px; font-weight: 700; }
+      .testimonials .sub { text-align: center; color: var(--text-body); margin-bottom: 48px; max-width: 560px; margin-left: auto; margin-right: auto; }
+      .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; }
+      .testimonial-card {
+        background: white; border-radius: 24px; padding: 32px;
+        border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-card);
+        transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+      }
+      .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.08); }
+      .testimonial-avatar { width: 56px; height: 56px; border-radius: 50%; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+      .testimonial-avatar svg { width: 100%; height: 100%; }
+      .testimonial-quote { font-size: 16px; line-height: 1.6; color: var(--navy); margin-bottom: 16px; font-style: italic; }
+      .testimonial-name { font-weight: 700; color: var(--navy); font-size: 15px; }
+      .testimonial-role { font-size: 13px; color: var(--text-body); }
 
       /* Footer */
       footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-body); font-size: 14px; }
       .footer-content { display: flex; justify-content: space-between; align-items: center; }
+
+      /* Reduced motion: respect user preference */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        .hero-reveal, .hero-reveal-phone { animation: none; opacity: 1; transform: none; }
+        .reveal-on-scroll { opacity: 1; transform: none; transition: none; }
+        .reveal-on-scroll.revealed .heading-reveal { letter-spacing: -0.02em; }
+        .reveal-stagger-children .feature-card,
+        .reveal-stagger-children .how-it-works-step { opacity: 1; transform: none; transition: none; }
+        .hero::before { animation: none; }
+        .hero-illus { animation: none !important; }
+        .how-it-works-icon-wrapper::before,
+        .how-it-works-icon-wrapper::after { animation: none !important; }
+        .blob:hover { transform: none; }
+        .anim-beam { animation: none; opacity: 0.5; }
+      }
 
       /* Responsive */
       @media (max-width: 768px) {
@@ -796,7 +842,7 @@
         </div>
 
         <!-- CSS Phone Mockup -->
-        <div class="phone-container hero-reveal-phone">
+        <div class="phone-container hero-reveal-phone" id="phone-container">
           <div class="phone-frame">
             <!-- Simulated App Interface -->
             <div class="anim-beam"></div> <!-- Scanning Laser -->
@@ -878,6 +924,51 @@
                   </div>
                 </div>
               </div>
+              </div>
+              <!-- State 1: Menu scan -->
+              <div class="phone-demo-state state-menu" data-demo-state="1" aria-hidden="true">
+                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div><div class="phone-chef-card-btn"><i data-feather="creditcard" style="width:16px; color:var(--navy);"></i></div></div>
+                <div class="phone-header"><h2>Scanning menu...</h2><p>Point at the menu</p></div>
+                <div class="phone-mode-card" style="background: rgba(244,193,110,0.2);"><div class="phone-mode-card-text"><h3 style="color:var(--apricot);">Analyzing</h3><p>Finding gluten risks</p></div><i data-feather="cpu" style="width:24px; color:var(--apricot);"></i></div>
+                <div style="background: white; border-radius: 16px; padding: 12px; font-size: 13px;">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Caesar Salad</span><span style="color:var(--primary-teal);font-weight:700;">Safe</span></div>
+                  <div style="display:flex;justify-content:space-between;margin-bottom:8px;"><span>Pasta Carbonara</span><span style="color:var(--coral);font-weight:700;">Unsafe</span></div>
+                  <div style="display:flex;justify-content:space-between;"><span>Grilled Salmon</span><span style="color:var(--primary-teal);font-weight:700;">Safe</span></div>
+                </div>
+              </div>
+              <!-- State 2: Plate scan -->
+              <div class="phone-demo-state state-plate" data-demo-state="2" aria-hidden="true">
+                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div></div>
+                <div class="phone-header"><h2>Plate scan result</h2><p>Analysis complete</p></div>
+                <div style="flex:1;background: linear-gradient(135deg, #FFD5C0 0%, #FFE8D6 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">🍽️</div>
+                <div style="background: rgba(0,163,111,0.15); border-radius: 20px; padding: 16px; text-align: center;">
+                  <span style="font-size: 18px; font-weight: 800; color: var(--primary-teal);">Safe to eat</span>
+                  <p style="font-size: 12px; color: var(--text-body); margin: 4px 0 0 0;">No gluten detected</p>
+                </div>
+              </div>
+              <!-- State 3: Chef card -->
+              <div class="phone-demo-state state-chef" data-demo-state="3" aria-hidden="true">
+                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇮🇹</div><span>Italiano</span></div></div>
+                <div class="phone-header"><h2>Chef Card</h2><p>Show to restaurant staff</p></div>
+                <div style="background: white; border-radius: 20px; padding: 20px; font-size: 14px; line-height: 1.6; color: var(--navy); box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+                  <p style="margin: 0 0 12px 0; font-weight: 700;">Ho la malattia celiaca.</p>
+                  <p style="margin: 0; opacity: 0.9;">Non posso mangiare glutine. Per favore, i miei piatti devono essere preparati senza contaminazione con farina o prodotti contenenti glutine.</p>
+                </div>
+                <p style="font-size: 12px; color: var(--text-body);">Available in 20+ languages</p>
+              </div>
+              <!-- State 4: Search -->
+              <div class="phone-demo-state state-search" data-demo-state="4" aria-hidden="true">
+                <div class="phone-top-bar"><div class="phone-country"><div class="phone-country-flag">🇳🇿</div><span>New Zealand</span></div></div>
+                <div class="phone-header"><h2>Is it gluten free?</h2><p>Search ingredient or meal</p></div>
+                <div class="phone-search" style="border: 2px solid var(--primary-teal);">
+                  <i data-feather="search" style="width:16px; color:var(--primary-teal);"></i>
+                  <input type="text" value="soy sauce" readonly style="color: var(--navy);">
+                </div>
+                <div style="background: rgba(244,193,110,0.2); border-radius: 20px; padding: 16px;">
+                  <div style="font-weight: 700; color: var(--apricot); margin-bottom: 4px;">Soy sauce</div>
+                  <p style="font-size: 13px; color: var(--text-body); margin: 0;">Caution — most soy sauce contains wheat. Look for tamari or gluten-free labelled.</p>
+                </div>
+              </div>
             </div>
 
             <!-- Bottom Nav -->
@@ -897,11 +988,18 @@
             </div>
           </div>
         </div>
+        <div class="phone-demo-dots" aria-label="Demo steps">
+          <button type="button" class="phone-demo-dot active" data-demo-index="0" aria-label="Home screen"></button>
+          <button type="button" class="phone-demo-dot" data-demo-index="1" aria-label="Menu scan"></button>
+          <button type="button" class="phone-demo-dot" data-demo-index="2" aria-label="Plate scan"></button>
+          <button type="button" class="phone-demo-dot" data-demo-index="3" aria-label="Chef card"></button>
+          <button type="button" class="phone-demo-dot" data-demo-index="4" aria-label="Search"></button>
+        </div>
       </section>
 
       <!-- HOW IT WORKS -->
       <section class="how-it-works reveal-on-scroll" id="how-it-works">
-        <h2>How it works</h2>
+        <h2 class="heading-reveal">How it works</h2>
         <div class="how-it-works-steps">
           <div class="how-it-works-step">
             <div class="how-it-works-step-number">1</div>
@@ -933,7 +1031,7 @@
       <!-- HOW THE AI WORKS (TRUST) -->
       <section class="how-it-works reveal-on-scroll" style="background: var(--paper-color);">
         <div style="text-align:center; margin-bottom: 60px;">
-          <h2 style="font-size: 32px; color: var(--navy);">Safety First AI. No Guessing.</h2>
+          <h2 class="heading-reveal section-title" style="font-size: 32px; color: var(--navy);">Safety First AI. No Guessing.</h2>
           <p style="color: var(--text-body); max-width: 600px; margin: 0 auto;">
             Trust is our priority.
             BiteRight doesn't guess — it follows strict safety rules and clear decision boundaries.
@@ -991,7 +1089,7 @@
       <!-- UNFAIR ADVANTAGES (VISUALS) -->
       <section class="features reveal-on-scroll" id="features">
         <div style="text-align:center; margin-bottom: 60px;">
-          <h2 style="font-size: 32px; color: var(--navy);">More than a barcode scanner</h2>
+          <h2 class="heading-reveal" style="font-size: 32px; color: var(--navy);">More than a barcode scanner</h2>
           <p style="color: var(--text-body);">The only app with Plate Scan, Menu Scan, and Chef Cards in one.</p>
         </div>
 
@@ -1074,9 +1172,41 @@
         </div>
       </section>
 
+      <!-- Testimonials -->
+      <section class="testimonials reveal-on-scroll" id="testimonials">
+        <h2 class="heading-reveal">Loved by people who eat safely</h2>
+        <p class="sub">See how others use BiteRight to dine with confidence.</p>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--soft-mint) 0%, rgba(0,163,111,0.2) 100%);">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#00A36F" opacity="0.8"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#00A36F" opacity="0.6"/></svg>
+            </div>
+            <p class="testimonial-quote">"Finally I can check a menu before asking the waiter. Game changer for eating out with coeliac."</p>
+            <div class="testimonial-name">Sarah M.</div>
+            <div class="testimonial-role">Coeliac, Wellington</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--peachy) 0%, rgba(255,109,94,0.15) 100%);">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#FF6D5E" opacity="0.8"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#FF6D5E" opacity="0.6"/></svg>
+            </div>
+            <p class="testimonial-quote">"The Chef Cards saved our trip to Italy. Restaurants understood straight away."</p>
+            <div class="testimonial-name">James &amp; Kate</div>
+            <div class="testimonial-role">Travelling with dietary needs</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar" style="background: linear-gradient(135deg, rgba(244,193,110,0.3) 0%, var(--apricot) 100%);">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#F4C16E" opacity="0.9"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#F4C16E" opacity="0.6"/></svg>
+            </div>
+            <p class="testimonial-quote">"I use it for my son's school lunches. Quick scan and I know what's safe. So much less stress."</p>
+            <div class="testimonial-name">Rachel T.</div>
+            <div class="testimonial-role">Parent, Auckland</div>
+          </div>
+        </div>
+      </section>
+
       <!-- FAQ -->
       <section class="faq reveal-on-scroll" id="faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="heading-reveal">Frequently Asked Questions</h2>
         <div class="faq-list">
           <div class="faq-item">
             <div class="faq-question">What is BiteRight?</div>
@@ -1198,6 +1328,42 @@
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
       revealEls.forEach(el => revealObserver.observe(el));
+
+      // Phone demo carousel (multi-state)
+      const demoStates = document.querySelectorAll('.phone-demo-state');
+      const demoDots = document.querySelectorAll('.phone-demo-dot');
+      const DEMO_INTERVAL = 9000;
+      let demoIndex = 0;
+      let demoTimer = null;
+      let demoPaused = false;
+      function setDemoState(index) {
+        demoIndex = index >= 0 && index < demoStates.length ? index : 0;
+        demoStates.forEach((el, i) => {
+          const active = i === demoIndex;
+          el.classList.toggle('active', active);
+          el.setAttribute('aria-hidden', !active);
+        });
+        demoDots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === demoIndex);
+        });
+      }
+      function advanceDemo() {
+        if (demoPaused) return;
+        setDemoState((demoIndex + 1) % demoStates.length);
+      }
+      const phoneContainer = document.getElementById('phone-container');
+      if (phoneContainer && demoStates.length) {
+        phoneContainer.addEventListener('mouseenter', function() { demoPaused = true; });
+        phoneContainer.addEventListener('mouseleave', function() { demoPaused = false; });
+        demoTimer = setInterval(advanceDemo, DEMO_INTERVAL);
+        demoDots.forEach(function(dot, i) {
+          dot.addEventListener('click', function() {
+            setDemoState(i);
+            clearInterval(demoTimer);
+            demoTimer = setInterval(advanceDemo, DEMO_INTERVAL);
+          });
+        });
+      }
       
       // FAQ Accordion
       document.querySelectorAll('.faq-question').forEach(question => {
