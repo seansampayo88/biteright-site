@@ -50,11 +50,25 @@
         --coral: #FF6D5E;
         --apricot: #F4C16E;
         --text-body: #5F6B7A;
-        
+        --peachy: #FFE5D9;
+        --soft-mint: #D4EDE1;
+        --warm-lavender: #E8E0F0;
         --radius-lg: 24px;
         --radius-pill: 999px;
         --shadow-card: 0 10px 30px rgba(13, 27, 42, 0.05);
         --shadow-float: 0 20px 40px rgba(0, 163, 111, 0.15);
+        --gradient-hero: linear-gradient(135deg, var(--paper-color) 0%, var(--soft-mint) 30%, var(--peachy) 60%, var(--paper-color) 100%);
+        --gradient-teal-apricot: linear-gradient(135deg, var(--primary-teal) 0%, var(--apricot) 100%);
+        --gradient-coral-apricot: linear-gradient(135deg, var(--coral) 0%, var(--apricot) 100%);
+        --gradient-card-overlay: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.6) 100%);
+        --gradient-blob-1: radial-gradient(ellipse 80% 80% at 50% 50%, var(--apricot), var(--peachy));
+        --gradient-blob-2: radial-gradient(ellipse 80% 80% at 50% 50%, var(--primary-teal), var(--soft-mint));
+        --gradient-btn-primary: linear-gradient(135deg, var(--navy) 0%, #1a2d42 100%);
+        --gradient-btn-hover: linear-gradient(135deg, #1a2d42 0%, var(--navy) 100%);
+        --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        --duration-reveal: 0.6s;
+        --duration-micro: 0.25s;
       }
 
       * { box-sizing: border-box; }
@@ -80,6 +94,10 @@
         z-index: 1;
       }
 
+      /* Skip link (accessibility) */
+      .skip-link { position: absolute; top: -100px; left: 24px; padding: 12px 20px; background: var(--navy); color: #fff; font-weight: 700; border-radius: var(--radius-lg); z-index: 100; transition: top 0.2s; }
+      .skip-link:focus { top: 24px; outline: 2px solid var(--primary-teal); outline-offset: 3px; }
+
       /* Layout Utilities */
       .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
       
@@ -103,14 +121,38 @@
       .nav-menu-mobile a:hover { background: rgba(0,163,111,0.08); color: var(--primary-teal); }
       .nav-wrapper { position: relative; }
 
-      /* MARK: - Hero Section */
+      /* MARK: - Hero Section (mesh gradient) */
       .hero { 
         display: grid; 
         grid-template-columns: 1fr 1fr; 
         gap: 60px; 
         align-items: center; 
         padding: 40px 0 100px 0;
+        position: relative;
       }
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: -20%;
+        background: var(--gradient-hero);
+        opacity: 0.7;
+        z-index: -1;
+        border-radius: 50%;
+        filter: blur(60px);
+        animation: meshShift 15s ease-in-out infinite alternate;
+      }
+      @keyframes meshShift {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(2%, 2%) scale(1.05); }
+      }
+      /* Hero illustrated decorations (floating food elements) */
+      .hero-illus { position: absolute; z-index: 5; opacity: 0.85; transition: transform 0.5s var(--ease-smooth); }
+      .hero-illus:hover { transform: scale(1.1) rotate(5deg); }
+      .hero-illus-wheat { top: 15%; right: 8%; width: 48px; height: 64px; animation: floatIllus 4s ease-in-out infinite; }
+      .hero-illus-plate { bottom: 25%; left: 5%; width: 56px; height: 56px; animation: floatIllus 5s ease-in-out infinite 0.5s; }
+      .hero-illus-utensil { top: 40%; right: 2%; width: 40px; height: 48px; animation: floatIllus 4.5s ease-in-out infinite 1s; }
+      .hero-illus-leaf { bottom: 15%; right: 15%; width: 44px; height: 44px; animation: floatIllus 4s ease-in-out infinite 0.3s; }
+      @keyframes floatIllus { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
       h1 { font-family: 'Outfit', sans-serif; font-size: 56px; line-height: 1.05; margin: 0 0 24px 0; letter-spacing: -0.02em; color: var(--navy); font-weight: 700; }
       .section-title { font-family: 'Outfit', sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.025em; color: var(--navy); line-height: 1.15; }
@@ -433,11 +475,13 @@
       }
       @keyframes scan { 0% {top:250px; opacity:0;} 20%{opacity:1;} 80%{opacity:1;} 100% {top: 480px; opacity:0;} }
 
-      /* Background Blobs — organic depth, brand colors */
-      .blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; transition: transform 0.8s ease; }
-      .blob-1 { width: 420px; height: 420px; background: var(--apricot); top: -120px; right: -80px; opacity: 0.45; }
-      .blob-2 { width: 320px; height: 320px; background: var(--primary-teal); bottom: 10%; left: -120px; opacity: 0.18; }
-      .blob:hover { transform: scale(1.05); }
+      /* Background Blobs — gradient, parallax */
+      .blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; transition: transform 0.8s var(--ease-smooth); }
+      .blob-1 { width: 420px; height: 420px; background: var(--gradient-blob-1); top: -120px; right: -80px; opacity: 0.5; }
+      .blob-2 { width: 320px; height: 320px; background: var(--gradient-blob-2); bottom: 10%; left: -120px; opacity: 0.22; }
+      .blob:hover { transform: scale(1.08); }
+      .blob.parallax-slow, .blob.parallax-fast { will-change: transform; }
+      .phone-frame.phone-parallax { will-change: transform; transition: transform 0.2s var(--ease-smooth); }
 
       /* MARK: - How It Works Section */
       .how-it-works {
@@ -500,18 +544,13 @@
       .how-it-works-icon-wrapper.step-3 {
         background: linear-gradient(135deg, rgba(255,109,94,0.15) 0%, rgba(0,163,111,0.1) 100%);
       }
-      .how-it-works-icon-wrapper svg,
       .how-it-works-icon-wrapper i {
         width: 48px;
         height: 48px;
         z-index: 2;
       }
-      .how-it-works-icon-wrapper.step-1 svg,
-      .how-it-works-icon-wrapper.step-1 i { color: var(--primary-teal); }
-      .how-it-works-icon-wrapper.step-2 svg,
-      .how-it-works-icon-wrapper.step-2 i { color: var(--apricot); }
-      .how-it-works-icon-wrapper.step-3 svg,
-      .how-it-works-icon-wrapper.step-3 i { color: var(--primary-teal); }
+      .how-it-works-illus { display: block; width: 80px; height: 80px; margin: 0 auto; }
+      .how-it-works-icon-wrapper .how-it-works-illus svg { width: 100%; height: 100%; z-index: 2; }
       
       /* Animated particles/decorations */
       .how-it-works-icon-wrapper::before {
@@ -634,9 +673,13 @@
         border: 1px solid rgba(0,0,0,0.03);
         box-shadow: var(--shadow-card);
         transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
       }
       .feature-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0, 163, 111, 0.12); border-color: rgba(0,163,111,0.2); }
       .feature-card:focus-within { border-color: rgba(0,163,111,0.3); box-shadow: 0 0 0 3px rgba(0,163,111,0.08); }
+      .feature-card-illus { position: absolute; right: 16px; top: 16px; width: 40px; height: 40px; opacity: 0.25; pointer-events: none; }
+      .feature-card-illus svg { width: 100%; height: 100%; }
       
       .icon-box {
         width: 56px; height: 56px; border-radius: 16px;
@@ -785,12 +828,13 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM5CZKKT"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+    <a href="#main" class="skip-link">Skip to main content</a>
     
-    <!-- Decor Blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <!-- Decor Blobs (parallax) -->
+    <div class="blob blob-1 parallax-slow" id="blob1" aria-hidden="true"></div>
+    <div class="blob blob-2 parallax-fast" id="blob2" aria-hidden="true"></div>
 
-    <div class="container">
+    <div class="container" id="main">
       <nav>
         <a href="/" class="logo" aria-label="BiteRight home">
           <img class="logo-mark" src="img/biteright-icon.png" alt="" width="32" height="32" />
@@ -841,13 +885,39 @@
           
         </div>
 
+        <!-- Hero illustrated decorations (floating food elements) -->
+        <div class="hero-illus hero-illus-wheat" aria-hidden="true">
+          <svg viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4v56M20 8c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4M28 16c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4M24 24c1.5 0 3 1.5 3 3s-1.5 3-3 3-3-1.5-3-3 1.5-3 3-3" stroke="#00A36F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            <path d="M18 12l4 8 4-8M22 32l-2 12 4-8 4 8" stroke="#F4C16E" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="hero-illus hero-illus-plate" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="24" stroke="#FF6D5E" stroke-width="2.5" fill="none" opacity="0.9"/>
+            <circle cx="28" cy="28" r="18" stroke="#F4C16E" stroke-width="1.5" fill="none" opacity="0.6"/>
+          </svg>
+        </div>
+        <div class="hero-illus hero-illus-utensil" aria-hidden="true">
+          <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4v20c0 4.4 3.6 8 8 8M20 4v20c0 4.4-3.6 8-8 8M20 24v20" stroke="#0D1B2A" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+            <path d="M12 32h16" stroke="#5F6B7A" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="hero-illus hero-illus-leaf" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 4C12 12 6 22 6 30c0 6 4 10 10 10 4 0 10-4 16-12-6 8-10 14-10 18 0 2 2 4 4 4s4-2 4-6c0-4 4-10 10-16-8 6-14 8-18 8-6 0-10-4-10-10 0-8 6-18 16-26z" fill="#00A36F" opacity="0.7"/>
+          </svg>
+        </div>
+
         <!-- CSS Phone Mockup -->
         <div class="phone-container hero-reveal-phone" id="phone-container">
-          <div class="phone-frame">
+          <div class="phone-frame phone-parallax" id="phone-frame">
             <!-- Simulated App Interface -->
             <div class="anim-beam"></div> <!-- Scanning Laser -->
             
-            <div class="phone-content">
+            <div class="phone-content" id="phone-demo-content">
+              <div class="phone-demo-state state-home active" data-demo-state="0" aria-hidden="false">
               <!-- Top Bar -->
               <div class="phone-top-bar">
                 <div class="phone-country">
@@ -998,13 +1068,23 @@
       </section>
 
       <!-- HOW IT WORKS -->
-      <section class="how-it-works reveal-on-scroll" id="how-it-works">
+      <section class="how-it-works reveal-on-scroll reveal-stagger-children" id="how-it-works">
         <h2 class="heading-reveal">How it works</h2>
         <div class="how-it-works-steps">
           <div class="how-it-works-step">
             <div class="how-it-works-step-number">1</div>
             <div class="how-it-works-icon-wrapper step-1">
-              <i data-feather="camera"></i>
+              <span class="how-it-works-illus" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="24" y="12" width="32" height="52" rx="4" stroke="#00A36F" stroke-width="2.5" fill="none"/>
+                  <circle cx="40" cy="28" r="8" stroke="#00A36F" stroke-width="1.5" fill="none"/>
+                  <path d="M28 44h24M28 50h16" stroke="#F4C16E" stroke-width="1.5" stroke-linecap="round"/>
+                  <rect x="30" y="56" width="20" height="4" rx="2" fill="#00A36F" opacity="0.6"/>
+                  <path d="M36 8l2-4h4l2 4" stroke="#5F6B7A" stroke-width="1" fill="none"/>
+                  <rect x="20" y="20" width="16" height="12" rx="1" stroke="#FF6D5E" stroke-width="1.2" fill="none" opacity="0.9"/>
+                  <path d="M22 24h12M22 27h8" stroke="#FF6D5E" stroke-width="0.8" opacity="0.7"/>
+                </svg>
+              </span>
             </div>
             <h3>Snap or Type</h3>
             <p>Take a photo of a menu, meal, or type an ingredient. BiteRight works with menus, plated food, ingredient lists, and barcodes.</p>
@@ -1012,7 +1092,17 @@
           <div class="how-it-works-step">
             <div class="how-it-works-step-number">2</div>
             <div class="how-it-works-icon-wrapper step-2">
-              <i data-feather="cpu"></i>
+              <span class="how-it-works-illus" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="20" stroke="#F4C16E" stroke-width="2" fill="none" opacity="0.8"/>
+                  <circle cx="40" cy="40" r="12" stroke="#00A36F" stroke-width="1.5" fill="none" opacity="0.9"/>
+                  <path d="M32 32l8 8 16-16" stroke="#00A36F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="28" cy="28" r="4" fill="#F4C16E" opacity="0.5"/>
+                  <circle cx="52" cy="30" r="3" fill="#FF6D5E" opacity="0.4"/>
+                  <circle cx="50" cy="52" r="3" fill="#00A36F" opacity="0.4"/>
+                  <circle cx="26" cy="48" r="2.5" fill="#F4C16E" opacity="0.4"/>
+                </svg>
+              </span>
             </div>
             <h3>AI Analysis</h3>
             <p>BiteRight's AI identifies hidden gluten risks instantly. We analyze ingredients, cross-contamination risks, and local food practices.</p>
@@ -1020,7 +1110,16 @@
           <div class="how-it-works-step">
             <div class="how-it-works-step-number">3</div>
             <div class="how-it-works-icon-wrapper step-3">
-              <i data-feather="check-circle"></i>
+              <span class="how-it-works-illus" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="22" fill="rgba(0,163,111,0.12)" stroke="#00A36F" stroke-width="2"/>
+                  <path d="M28 40l8 8 16-18" stroke="#00A36F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="24" cy="26" r="2" fill="#F4C16E"/>
+                  <circle cx="56" cy="28" r="1.5" fill="#FF6D5E"/>
+                  <circle cx="58" cy="50" r="2" fill="#F4C16E"/>
+                  <circle cx="22" cy="52" r="1.5" fill="#00A36F"/>
+                </svg>
+              </span>
             </div>
             <h3>Get Your Answer</h3>
             <p>See safe, caution, or unsafe results with clear explanations. Always double-check with kitchen staff for the final word.</p>
@@ -1029,7 +1128,7 @@
       </section>
 
       <!-- HOW THE AI WORKS (TRUST) -->
-      <section class="how-it-works reveal-on-scroll" style="background: var(--paper-color);">
+      <section class="how-it-works reveal-on-scroll reveal-stagger-children" style="background: var(--paper-color);">
         <div style="text-align:center; margin-bottom: 60px;">
           <h2 class="heading-reveal section-title" style="font-size: 32px; color: var(--navy);">Safety First AI. No Guessing.</h2>
           <p style="color: var(--text-body); max-width: 600px; margin: 0 auto;">
@@ -1040,23 +1139,27 @@
 
         <div class="grid" style="max-width: 1000px; margin: 0 auto;">
           <div class="feature-card">
+            <span class="feature-card-illus" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 4L8 10v10l12 6 12-6V10L20 4z" stroke="#00A36F" stroke-width="1.2" fill="none" opacity="0.6"/></svg></span>
             <div class="icon-box ib-teal"><i data-feather="shield"></i></div>
             <h3>We don't guess ingredients. Ever.</h3>
             <p class="card-text">BiteRight looks only at what's visible or clearly declared.<br>
             If something can't be confirmed, we play it safe and mark it as likely unsafe.</p>
           </div>
           <div class="feature-card">
+            <span class="feature-card-illus" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 8c-4 0-8 3-8 8 0 6 8 14 8 14s8-8 8-14c0-5-4-8-8-8z" stroke="#FF6D5E" stroke-width="1.2" fill="none" opacity="0.5"/></svg></span>
             <div class="icon-box ib-coral"><i data-feather="alert-triangle"></i></div>
             <h3>Coeliac Safe Mode</h3>
             <p class="card-text">Built for caution. We flag cross-contamination risks like shared fryers and soy sauce that others miss.</p>
           </div>
           <div class="feature-card">
+            <span class="feature-card-illus" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="#F4C16E" stroke-width="1.2" fill="none" opacity="0.5"/><path d="M16 20l3 3 6-6" stroke="#F4C16E" stroke-width="1" opacity="0.7"/></svg></span>
             <div class="icon-box ib-apricot"><i data-feather="message-circle"></i></div>
             <h3>Clear Safety Signals</h3>
             <p class="card-text">Clear green / yellow / red risk levels across plates, menus, and labels.<br>
             No vague explanations. No interpretation required.</p>
           </div>
           <div class="feature-card">
+            <span class="feature-card-illus" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="#0D1B2A" stroke-width="1" fill="none" opacity="0.4"/><path d="M20 8v4M20 28v4M8 20h4M28 20h4M12 12l2.8 2.8M25.2 25.2l2.8 2.8M12 28l2.8-2.8M25.2 14.8l2.8-2.8" stroke="#0D1B2A" stroke-width="0.8" opacity="0.4"/></svg></span>
             <div class="icon-box ib-navy"><i data-feather="globe"></i></div>
             <h3>Locale Aware</h3>
             <p class="card-text">We adapt to local labeling laws (e.g. EU wheat starch vs US gluten-free) for safer travel.</p>
@@ -1068,8 +1171,8 @@
         </div>
       </section>
 
-      <!-- TESTIMONIAL -->
-      <section class="features reveal-on-scroll" id="testimonial" style="padding-top: 20px; overflow: hidden;">
+      <!-- Testimonials -->
+      <section class="features reveal-on-scroll" id="testimonials" style="padding-top: 20px; overflow: hidden;">
         <div style="max-width: 860px; margin: 0 auto; width: 100%;">
           <div class="feature-card" style="padding: 36px; border-left: 6px solid var(--primary-teal); width: 100%;">
             <div class="pill" style="margin-bottom: 14px;">User testimonial</div>
@@ -1168,38 +1271,6 @@
             <div class="icon-box ib-navy" style="background: rgba(255,255,255,0.2); color: white;"><i data-feather="arrow-right"></i></div>
             <h3 style="color: white;">Browse Full Database</h3>
             <p class="card-text" style="color: rgba(255,255,255,0.9);">Search hundreds of ingredients and dishes.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section class="testimonials reveal-on-scroll" id="testimonials">
-        <h2 class="heading-reveal">Loved by people who eat safely</h2>
-        <p class="sub">See how others use BiteRight to dine with confidence.</p>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--soft-mint) 0%, rgba(0,163,111,0.2) 100%);">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#00A36F" opacity="0.8"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#00A36F" opacity="0.6"/></svg>
-            </div>
-            <p class="testimonial-quote">"Finally I can check a menu before asking the waiter. Game changer for eating out with coeliac."</p>
-            <div class="testimonial-name">Sarah M.</div>
-            <div class="testimonial-role">Coeliac, Wellington</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--peachy) 0%, rgba(255,109,94,0.15) 100%);">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#FF6D5E" opacity="0.8"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#FF6D5E" opacity="0.6"/></svg>
-            </div>
-            <p class="testimonial-quote">"The Chef Cards saved our trip to Italy. Restaurants understood straight away."</p>
-            <div class="testimonial-name">James &amp; Kate</div>
-            <div class="testimonial-role">Travelling with dietary needs</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar" style="background: linear-gradient(135deg, rgba(244,193,110,0.3) 0%, var(--apricot) 100%);">
-              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="22" r="10" fill="#F4C16E" opacity="0.9"/><path d="M14 56c0-8 6-14 14-14s14 6 14 14" fill="#F4C16E" opacity="0.6"/></svg>
-            </div>
-            <p class="testimonial-quote">"I use it for my son's school lunches. Quick scan and I know what's safe. So much less stress."</p>
-            <div class="testimonial-name">Rachel T.</div>
-            <div class="testimonial-role">Parent, Auckland</div>
           </div>
         </div>
       </section>
@@ -1329,6 +1400,31 @@
       }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
       revealEls.forEach(el => revealObserver.observe(el));
 
+      // Parallax blobs and phone (progress-based scroll; respect reduced motion)
+      var blob1El = document.getElementById('blob1');
+      var blob2El = document.getElementById('blob2');
+      var phoneFrameEl = document.getElementById('phone-frame');
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function onScrollParallax() {
+        if (prefersReducedMotion) return;
+        var y = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var progress = docHeight > 0 ? Math.min(y / docHeight, 1) : 0;
+        if (blob1El) blob1El.style.transform = 'translateY(' + (y * 0.12) + 'px) scale(' + (1 + progress * 0.05) + ')';
+        if (blob2El) blob2El.style.transform = 'translateY(' + (y * -0.08) + 'px) translateX(' + (y * 0.05) + 'px) scale(' + (1 + progress * 0.03) + ')';
+        if (phoneFrameEl) {
+          var heroEl = document.querySelector('.hero');
+          var heroH = heroEl ? heroEl.offsetHeight : 500;
+          var tilt = y < heroH ? (y / heroH) * 2 : 2;
+          var scale = y < heroH ? 1 + (y / heroH) * 0.02 : 1.02;
+          phoneFrameEl.style.transform = 'rotate(' + (-3 + tilt) + 'deg) scale(' + scale + ')';
+        }
+      }
+      if (!prefersReducedMotion && (blob1El || blob2El || phoneFrameEl)) {
+        window.addEventListener('scroll', onScrollParallax, { passive: true });
+        onScrollParallax();
+      }
+
       // Phone demo carousel (multi-state)
       const demoStates = document.querySelectorAll('.phone-demo-state');
       const demoDots = document.querySelectorAll('.phone-demo-dot');
@@ -1365,20 +1461,22 @@
         });
       }
       
-      // FAQ Accordion
-      document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-          const item = question.parentElement;
-          const isOpen = item.classList.contains('open');
-          
-          // Close all other items
-          document.querySelectorAll('.faq-item').forEach(faqItem => {
-            faqItem.classList.remove('open');
-          });
-          
-          // Toggle current item
-          if (!isOpen) {
-            item.classList.add('open');
+      // FAQ Accordion (click and keyboard)
+      function toggleFaqItem(item) {
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(faqItem) {
+          faqItem.classList.remove('open');
+        });
+        if (!isOpen) item.classList.add('open');
+      }
+      document.querySelectorAll('.faq-question').forEach(function(question) {
+        question.setAttribute('tabindex', '0');
+        question.setAttribute('role', 'button');
+        question.addEventListener('click', function() { toggleFaqItem(question.parentElement); });
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleFaqItem(question.parentElement);
           }
         });
       });
