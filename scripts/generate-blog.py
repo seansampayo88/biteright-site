@@ -212,6 +212,15 @@ def base_styles():
     .logo-mark { width:32px; height:32px; border-radius:8px; object-fit:cover; }
     .nav-links a { text-decoration:none; color:var(--navy); font-weight:700; margin-left:20px; }
     .nav-links a:hover { color:var(--primary-teal); }
+    .nav-kebab { display:none; background:none; border:none; cursor:pointer; padding:8px; color:var(--navy); border-radius:8px; transition:background 0.2s; }
+    .nav-kebab:hover { background: rgba(0,0,0,0.05); }
+    .nav-kebab svg { width:24px; height:24px; }
+    .nav-menu-mobile { display:none; position:absolute; top:100%; right:0; margin-top:8px; background:white; border-radius:16px; box-shadow:0 10px 40px rgba(13,27,42,0.15); padding:12px; min-width:200px; z-index:100; border:1px solid rgba(0,0,0,0.06); }
+    .nav-menu-mobile.open { display:flex; flex-direction:column; gap:4px; }
+    .nav-menu-mobile a { display:block; padding:12px 16px; text-decoration:none; color:var(--navy); font-weight:700; font-size:15px; border-radius:10px; transition:background 0.2s, color 0.2s; }
+    .nav-menu-mobile a:hover { background: rgba(0,163,111,0.08); color: var(--primary-teal); }
+    .nav-wrapper { position:relative; }
+    @media (max-width: 768px) { .nav-links { display:none; } .nav-kebab { display:flex; align-items:center; justify-content:center; } }
     .main { background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px; margin-bottom:28px; }
     h1,h2,h3 { line-height:1.2; }
     p,li { color:#334155; line-height:1.75; }
@@ -233,12 +242,28 @@ def nav_html():
         <img class="logo-mark" src="/img/biteright-icon.png" alt="" width="32" height="32" />
         BiteRight
       </a>
-      <div class="nav-links">
-        <a href="/#features">Features</a>
-        <a href="/knowledge-hub/">Knowledge Hub</a>
-        <a href="/blog/">Blog</a>
-        <a href="/gluten-free-diet/">Gluten‑free diet</a>
-        <a href="/newly-diagnosed/">Newly diagnosed?</a>
+      <div class="nav-wrapper">
+        <div class="nav-links">
+          <a href="/#features">Features</a>
+          <a href="/#how-it-works">How it works</a>
+          <a href="/knowledge-hub/">Knowledge Hub</a>
+          <a href="/blog/">Blog</a>
+          <a href="/gluten-free-diet/">Gluten‑free diet</a>
+          <a href="/newly-diagnosed/">Newly diagnosed?</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+        <button class="nav-kebab" type="button" aria-label="Open menu" aria-expanded="false" aria-haspopup="true">
+          <i data-feather="more-vertical"></i>
+        </button>
+        <div class="nav-menu-mobile" id="nav-menu-mobile">
+          <a href="/#features">Features</a>
+          <a href="/#how-it-works">How it works</a>
+          <a href="/knowledge-hub/">Knowledge Hub</a>
+          <a href="/blog/">Blog</a>
+          <a href="/gluten-free-diet/">Gluten‑free diet</a>
+          <a href="/newly-diagnosed/">Newly diagnosed?</a>
+          <a href="/#faq">FAQ</a>
+        </div>
       </div>
     </nav>
     """
@@ -282,6 +307,7 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
   <style>{base_styles()}</style>
   <script type="application/ld+json">{json.dumps(article_schema)}</script>
 </head>
@@ -296,6 +322,25 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
     </article>
     <footer>© BiteRight</footer>
   </div>
+  <script>
+    feather.replace();
+    (function() {{
+      var kebab = document.querySelector('.nav-kebab');
+      var menu = document.getElementById('nav-menu-mobile');
+      if (kebab && menu) {{
+        kebab.addEventListener('click', function() {{
+          var isOpen = menu.classList.toggle('open');
+          kebab.setAttribute('aria-expanded', isOpen);
+        }});
+        document.addEventListener('click', function(e) {{
+          if (!kebab.contains(e.target) && !menu.contains(e.target)) {{
+            menu.classList.remove('open');
+            kebab.setAttribute('aria-expanded', 'false');
+          }}
+        }});
+      }}
+    }})();
+  </script>
 </body>
 </html>
 '''
@@ -328,6 +373,7 @@ def index_template(items_html: str):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
   <style>{base_styles()}</style>
   <script type="application/ld+json">{json.dumps(webpage_schema)}</script>
 </head>
@@ -341,6 +387,25 @@ def index_template(items_html: str):
     </section>
     <footer>© BiteRight</footer>
   </div>
+  <script>
+    feather.replace();
+    (function() {{
+      var kebab = document.querySelector('.nav-kebab');
+      var menu = document.getElementById('nav-menu-mobile');
+      if (kebab && menu) {{
+        kebab.addEventListener('click', function() {{
+          var isOpen = menu.classList.toggle('open');
+          kebab.setAttribute('aria-expanded', isOpen);
+        }});
+        document.addEventListener('click', function(e) {{
+          if (!kebab.contains(e.target) && !menu.contains(e.target)) {{
+            menu.classList.remove('open');
+            kebab.setAttribute('aria-expanded', 'false');
+          }}
+        }});
+      }}
+    }})();
+  </script>
 </body>
 </html>
 '''
