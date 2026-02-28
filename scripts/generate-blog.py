@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Generate blog index + post HTML pages from content/blog/*.md."""
+"""Generate SEO-ready blog index + post HTML pages from content/blog/*.md."""
 from __future__ import annotations
 
 import html
+import json
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content" / "blog"
 SRC_BLOG_DIR = ROOT / "src" / "blog"
+SITE_ORIGIN = "https://biterightgluten.com"
 
 
 def parse_frontmatter(raw: str):
@@ -33,8 +35,7 @@ def parse_frontmatter(raw: str):
         elif value == "false":
             value = False
         elif value.startswith("[") and value.endswith("]"):
-            parts = [p.strip().strip('"') for p in value[1:-1].split(",") if p.strip()]
-            value = parts
+            value = [p.strip().strip('"') for p in value[1:-1].split(",") if p.strip()]
         data[key] = value
     return data, body
 
@@ -48,6 +49,20 @@ def slug_from_filename(path: Path):
 def slugify_heading(text: str):
     s = re.sub(r"[^a-zA-Z0-9\s-]", "", text).strip().lower()
     return re.sub(r"\s+", "-", s)
+
+
+def render_inline(text: str):
+    esc = html.escape(text)
+    esc = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", esc)
+    esc = re.sub(r"\*(.+?)\*", r"<em>\1</em>", esc)
+
+    def link_repl(m):
+        label = html.escape(m.group(1))
+        href = html.escape(m.group(2), quote=True)
+        return f'<a href="{href}">{label}</a>'
+
+    esc = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_repl, esc)
+    return esc
 
 
 def md_to_html(md: str):
@@ -67,8 +82,7 @@ def md_to_html(md: str):
             in_ol = False
 
     for line in lines:
-        raw = line.rstrip("\n")
-        s = raw.strip()
+        s = line.strip()
 
         if s.startswith("```"):
             close_lists()
@@ -81,7 +95,7 @@ def md_to_html(md: str):
             continue
 
         if in_code:
-            out.append(html.escape(raw))
+            out.append(html.escape(line))
             continue
 
         if not s:
@@ -93,35 +107,34 @@ def md_to_html(md: str):
             out.append("<hr />")
             continue
 
-        h = re.match(r"^(#{1,6})\s+(.+)$", s)
-        if h:
+        hm = re.match(r"^(#{1,6})\s+(.+)$", s)
+        if hm:
             close_lists()
-            level = len(h.group(1))
-            text = h.group(2).strip()
-            anchor = slugify_heading(text)
-            out.append(f'<h{level} id="{anchor}">{html.escape(text)}</h{level}>')
+            lvl = len(hm.group(1))
+            text = hm.group(2).strip()
+            out.append(f'<h{lvl} id="{slugify_heading(text)}">{html.escape(text)}</h{lvl}>')
             continue
 
-        m_ol = re.match(r"^(\d+)\.\s+(.+)$", s)
-        if m_ol:
+        olm = re.match(r"^(\d+)\.\s+(.+)$", s)
+        if olm:
             if in_ul:
                 out.append("</ul>")
                 in_ul = False
             if not in_ol:
                 out.append("<ol>")
                 in_ol = True
-            out.append(f"<li>{render_inline(m_ol.group(2))}</li>")
+            out.append(f"<li>{render_inline(olm.group(2))}</li>")
             continue
 
-        m_ul = re.match(r"^[-*]\s+(.+)$", s)
-        if m_ul:
+        ulm = re.match(r"^[-*]\s+(.+)$", s)
+        if ulm:
             if in_ol:
                 out.append("</ol>")
                 in_ol = False
             if not in_ul:
                 out.append("<ul>")
                 in_ul = True
-            out.append(f"<li>{render_inline(m_ul.group(1))}</li>")
+            out.append(f"<li>{render_inline(ulm.group(1))}</li>")
             continue
 
         close_lists()
@@ -133,61 +146,99 @@ def md_to_html(md: str):
     return "\n".join(out)
 
 
-def render_inline(text: str):
-    esc = html.escape(text)
-    esc = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", esc)
-    esc = re.sub(r"\*(.+?)\*", r"<em>\1</em>", esc)
+def base_styles():
+    return """
+    :root { --paper-color:#FDFBF7; --primary-teal:#00A36F; --navy:#0D1B2A; --text-body:#5F6B7A; --radius-lg:24px; --shadow-card:0 10px 30px rgba(13,27,42,.05); }
+    * { box-sizing: border-box; }
+    body { font-family:'Nunito',sans-serif; margin:0; background:var(--paper-color); color:var(--navy); }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:24px 0; }
+    .logo { font-size:22px; font-weight:800; color:var(--navy); display:flex; align-items:center; gap:8px; text-decoration:none; }
+    .logo:hover { color:var(--primary-teal); }
+    .logo-mark { width:32px; height:32px; border-radius:8px; object-fit:cover; }
+    .nav-links a { text-decoration:none; color:var(--navy); font-weight:700; margin-left:20px; }
+    .nav-links a:hover { color:var(--primary-teal); }
+    .main { background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px; margin-bottom:28px; }
+    h1,h2,h3 { line-height:1.2; }
+    p,li { color:#334155; line-height:1.75; }
+    a { color:#0f766e; }
+    .meta { color:#64748b; font-size:14px; margin-bottom:14px; }
+    .hero { width:100%; border-radius:16px; margin: 12px 0 24px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    .card { background:white; border-radius:16px; padding:20px; box-shadow:var(--shadow-card); text-decoration:none; color:inherit; display:block; }
+    .card:hover { transform:translateY(-2px); }
+    .card p { margin:0; }
+    footer { margin:32px 0; color:var(--text-body); font-size:14px; }
+    """
 
-    def repl(m):
-        label = html.escape(m.group(1))
-        href = html.escape(m.group(2), quote=True)
-        return f'<a href="{href}">{label}</a>'
 
-    esc = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", repl, esc)
-    return esc
+def nav_html():
+    return """
+    <nav>
+      <a href="/" class="logo" aria-label="BiteRight home">
+        <img class="logo-mark" src="/img/biteright-icon.png" alt="" width="32" height="32" />
+        BiteRight
+      </a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/knowledge-hub/">Knowledge Hub</a>
+        <a href="/blog/">Blog</a>
+        <a href="/gluten-free-diet/">Gluten‑free diet</a>
+        <a href="/newly-diagnosed/">Newly diagnosed?</a>
+      </div>
+    </nav>
+    """
 
 
-def post_template(title: str, desc: str, date: str, hero: str, content_html: str):
+def post_template(title: str, desc: str, date: str, hero: str, content_html: str, slug: str, tags: list[str]):
+    canonical = f"{SITE_ORIGIN}/blog/{slug}/"
+    image_abs = f"{SITE_ORIGIN}{hero}" if hero.startswith("/") else hero
+    article_schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": desc,
+        "datePublished": date,
+        "dateModified": date,
+        "author": {"@type": "Organization", "name": "BiteRight"},
+        "publisher": {"@type": "Organization", "name": "BiteRight"},
+        "mainEntityOfPage": canonical,
+        "image": [image_abs] if image_abs else [],
+        "keywords": ", ".join(tags or []),
+    }
     return f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{html.escape(title)} | BiteRight Blog</title>
+  <title>{html.escape(title)} | BiteRight</title>
   <meta name="description" content="{html.escape(desc)}" />
-  <link rel="canonical" href="https://biterightgluten.com/blog/" />
+  <link rel="canonical" href="{html.escape(canonical)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{html.escape(title)}" />
+  <meta property="og:description" content="{html.escape(desc)}" />
+  <meta property="og:url" content="{html.escape(canonical)}" />
+  <meta property="og:image" content="{html.escape(image_abs)}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{html.escape(title)}" />
+  <meta name="twitter:description" content="{html.escape(desc)}" />
+  <meta name="twitter:image" content="{html.escape(image_abs)}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body{{font-family:'Nunito',sans-serif;background:#FDFBF7;color:#0D1B2A;margin:0}}
-    .container{{max-width:860px;margin:0 auto;padding:24px}}
-    nav{{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px}}
-    nav a{{text-decoration:none;color:#0D1B2A;font-weight:700}}
-    nav a:hover{{color:#00A36F}}
-    .hero{{width:100%;border-radius:18px;margin:16px 0 24px}}
-    article h1, article h2, article h3{{line-height:1.2}}
-    article p, article li{{line-height:1.7;color:#334155}}
-    article a{{color:#0ea5a5}}
-    hr{{border:none;border-top:1px solid #e5e7eb;margin:24px 0}}
-    .meta{{color:#64748b;font-size:14px;margin-bottom:12px}}
-  </style>
+  <style>{base_styles()}</style>
+  <script type="application/ld+json">{json.dumps(article_schema)}</script>
 </head>
 <body>
   <div class="container">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/knowledge-hub/">Knowledge Hub</a>
-      <a href="/blog/">Blog</a>
-      <a href="/gluten-free-diet/">Gluten-free diet</a>
-      <a href="/newly-diagnosed/">Newly diagnosed?</a>
-    </nav>
-    <article>
+    {nav_html()}
+    <article class="main">
       <h1>{html.escape(title)}</h1>
       <div class="meta">{html.escape(date)}</div>
       {f'<img class="hero" src="{html.escape(hero)}" alt="{html.escape(title)}" />' if hero else ''}
       {content_html}
     </article>
+    <footer>© BiteRight</footer>
   </div>
 </body>
 </html>
@@ -195,39 +246,42 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
 
 
 def index_template(items_html: str):
+    canonical = f"{SITE_ORIGIN}/blog/"
+    webpage_schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "BiteRight Blog",
+        "url": canonical,
+        "description": "Research-backed gluten and coeliac safety content",
+    }
     return f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BiteRight Blog</title>
-  <meta name="description" content="Research-backed gluten safety guides, checklists, and practical coeliac resources." />
-  <link rel="canonical" href="https://biterightgluten.com/blog/" />
-  <style>
-    body{{font-family:'Nunito',sans-serif;background:#FDFBF7;color:#0D1B2A;margin:0}}
-    .container{{max-width:980px;margin:0 auto;padding:24px}}
-    nav{{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px}}
-    nav a{{text-decoration:none;color:#0D1B2A;font-weight:700}}
-    nav a:hover{{color:#00A36F}}
-    .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}}
-    .card{{background:white;border-radius:16px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 8px 25px rgba(13,27,42,.06)}}
-    .card h3{{margin:0 0 8px}}
-    .card p{{margin:0;color:#475569}}
-    .meta{{font-size:13px;color:#64748b;margin-top:8px}}
-  </style>
+  <title>BiteRight Blog | Gluten & Coeliac Safety</title>
+  <meta name="description" content="Research-backed gluten and coeliac safety guides, checklists, and practical label-reading resources." />
+  <link rel="canonical" href="{canonical}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BiteRight Blog" />
+  <meta property="og:description" content="Research-backed gluten and coeliac safety guides." />
+  <meta property="og:url" content="{canonical}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>{base_styles()}</style>
+  <script type="application/ld+json">{json.dumps(webpage_schema)}</script>
 </head>
 <body>
   <div class="container">
-    <nav>
-      <a href="/">Home</a>
-      <a href="/knowledge-hub/">Knowledge Hub</a>
-      <a href="/blog/">Blog</a>
-      <a href="/gluten-free-diet/">Gluten-free diet</a>
-      <a href="/newly-diagnosed/">Newly diagnosed?</a>
-    </nav>
-    <h1>BiteRight Blog</h1>
-    <p>Research-backed gluten and coeliac safety content.</p>
-    <div class="grid">{items_html}</div>
+    {nav_html()}
+    <section class="main">
+      <h1>BiteRight Blog</h1>
+      <p>Research-backed gluten and coeliac safety content.</p>
+      <div class="grid">{items_html}</div>
+    </section>
+    <footer>© BiteRight</footer>
   </div>
 </body>
 </html>
@@ -237,19 +291,27 @@ def index_template(items_html: str):
 def main():
     SRC_BLOG_DIR.mkdir(parents=True, exist_ok=True)
     posts = []
+
     for md_path in sorted(CONTENT_DIR.glob("*.md")):
         raw = md_path.read_text(encoding="utf-8")
         fm, body = parse_frontmatter(raw)
+        if fm.get("draft", False) is True:
+            # keep draft pages generated; set to False in content to publish intent
+            pass
         slug = slug_from_filename(md_path)
         title = fm.get("title", slug.replace("-", " ").title())
         desc = fm.get("description", "")
         date = str(fm.get("date", ""))
         hero = fm.get("image", "")
+        tags = fm.get("tags", []) if isinstance(fm.get("tags", []), list) else []
 
         html_body = md_to_html(body)
         out_dir = SRC_BLOG_DIR / slug
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "index.html").write_text(post_template(title, desc, date, hero, html_body), encoding="utf-8")
+        (out_dir / "index.html").write_text(
+            post_template(title, desc, date, hero, html_body, slug, tags),
+            encoding="utf-8",
+        )
 
         posts.append({"slug": slug, "title": title, "desc": desc, "date": date})
 
@@ -258,7 +320,7 @@ def main():
         cards.append(
             f'<a class="card" href="/blog/{html.escape(p["slug"])}/">'
             f'<h3>{html.escape(p["title"])}</h3>'
-            f'<p>{html.escape(p["desc"][:160])}</p>'
+            f'<p>{html.escape(p["desc"][:170])}</p>'
             f'<div class="meta">{html.escape(p["date"])}</div>'
             f'</a>'
         )

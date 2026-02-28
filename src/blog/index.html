@@ -3,34 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BiteRight Blog</title>
-  <meta name="description" content="Research-backed gluten safety guides, checklists, and practical coeliac resources." />
+  <title>BiteRight Blog | Gluten & Coeliac Safety</title>
+  <meta name="description" content="Research-backed gluten and coeliac safety guides, checklists, and practical label-reading resources." />
   <link rel="canonical" href="https://biterightgluten.com/blog/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BiteRight Blog" />
+  <meta property="og:description" content="Research-backed gluten and coeliac safety guides." />
+  <meta property="og:url" content="https://biterightgluten.com/blog/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body{font-family:'Nunito',sans-serif;background:#FDFBF7;color:#0D1B2A;margin:0}
-    .container{max-width:980px;margin:0 auto;padding:24px}
-    nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px}
-    nav a{text-decoration:none;color:#0D1B2A;font-weight:700}
-    nav a:hover{color:#00A36F}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-    .card{background:white;border-radius:16px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 8px 25px rgba(13,27,42,.06)}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0;color:#475569}
-    .meta{font-size:13px;color:#64748b;margin-top:8px}
-  </style>
+    :root { --paper-color:#FDFBF7; --primary-teal:#00A36F; --navy:#0D1B2A; --text-body:#5F6B7A; --radius-lg:24px; --shadow-card:0 10px 30px rgba(13,27,42,.05); }
+    * { box-sizing: border-box; }
+    body { font-family:'Nunito',sans-serif; margin:0; background:var(--paper-color); color:var(--navy); }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:24px 0; }
+    .logo { font-size:22px; font-weight:800; color:var(--navy); display:flex; align-items:center; gap:8px; text-decoration:none; }
+    .logo:hover { color:var(--primary-teal); }
+    .logo-mark { width:32px; height:32px; border-radius:8px; object-fit:cover; }
+    .nav-links a { text-decoration:none; color:var(--navy); font-weight:700; margin-left:20px; }
+    .nav-links a:hover { color:var(--primary-teal); }
+    .main { background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px; margin-bottom:28px; }
+    h1,h2,h3 { line-height:1.2; }
+    p,li { color:#334155; line-height:1.75; }
+    a { color:#0f766e; }
+    .meta { color:#64748b; font-size:14px; margin-bottom:14px; }
+    .hero { width:100%; border-radius:16px; margin: 12px 0 24px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
+    .card { background:white; border-radius:16px; padding:20px; box-shadow:var(--shadow-card); text-decoration:none; color:inherit; display:block; }
+    .card:hover { transform:translateY(-2px); }
+    .card p { margin:0; }
+    footer { margin:32px 0; color:var(--text-body); font-size:14px; }
+    </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "BiteRight Blog", "url": "https://biterightgluten.com/blog/", "description": "Research-backed gluten and coeliac safety content"}</script>
 </head>
 <body>
   <div class="container">
+    
     <nav>
-      <a href="/">Home</a>
-      <a href="/knowledge-hub/">Knowledge Hub</a>
-      <a href="/blog/">Blog</a>
-      <a href="/gluten-free-diet/">Gluten-free diet</a>
-      <a href="/newly-diagnosed/">Newly diagnosed?</a>
+      <a href="/" class="logo" aria-label="BiteRight home">
+        <img class="logo-mark" src="/img/biteright-icon.png" alt="" width="32" height="32" />
+        BiteRight
+      </a>
+      <div class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/knowledge-hub/">Knowledge Hub</a>
+        <a href="/blog/">Blog</a>
+        <a href="/gluten-free-diet/">Gluten‑free diet</a>
+        <a href="/newly-diagnosed/">Newly diagnosed?</a>
+      </div>
     </nav>
-    <h1>BiteRight Blog</h1>
-    <p>Research-backed gluten and coeliac safety content.</p>
-    <div class="grid"><a class="card" href="/blog/how-to-read-gluten-free-labels/"><h3>How to Read Gluten-Free Labels (Step-by-Step Safety Guide)</h3><p>A practical, evidence-based guide to reading gluten-free labels, spotting risk terms, and making safer shopping decisions for coeliac households.</p><div class="meta">2026-03-01</div></a></div>
+    
+    <section class="main">
+      <h1>BiteRight Blog</h1>
+      <p>Research-backed gluten and coeliac safety content.</p>
+      <div class="grid"><a class="card" href="/blog/how-to-read-gluten-free-labels/"><h3>How to Read Gluten-Free Labels (Step-by-Step Safety Guide)</h3><p>A practical, evidence-based guide to reading gluten-free labels, spotting risk terms, and making safer shopping decisions for coeliac households.</p><div class="meta">2026-03-01</div></a></div>
+    </section>
+    <footer>© BiteRight</footer>
   </div>
 </body>
 </html>

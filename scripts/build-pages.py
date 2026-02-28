@@ -542,6 +542,11 @@ def main():
     if DIST_DIR.exists():
         shutil.rmtree(DIST_DIR)
     shutil.copytree(SRC_DIR, DIST_DIR)
+
+    # Copy public images (blog assets and other runtime static image paths)
+    public_images = ROOT / "public" / "images"
+    if public_images.exists():
+        shutil.copytree(public_images, DIST_DIR / "images", dirs_exist_ok=True)
     
     # Build each programmatic page
     built_count = 0
