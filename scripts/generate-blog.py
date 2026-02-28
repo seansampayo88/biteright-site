@@ -85,6 +85,34 @@ def render_inline(text: str):
     return esc
 
 
+def strip_internal_sections(md: str):
+    lines = md.splitlines()
+    out = []
+    i = 0
+    block_titles = {
+        'fact-check + anti-hallucination reflection log',
+        'reflection log',
+        'anti-hallucination reflection log',
+    }
+    while i < len(lines):
+        line = lines[i]
+        low_line = line.strip().lower()
+        if 'fact-check + anti-hallucination reflection log' in low_line or 'anti-hallucination reflection log' in low_line:
+            i += 1
+            continue
+        m = re.match(r"^##\s+(.+)$", line.strip(), re.I)
+        if m:
+            title = m.group(1).strip().lower()
+            if any(title.startswith(t) for t in block_titles):
+                i += 1
+                while i < len(lines) and not re.match(r"^##\s+", lines[i].strip(), re.I):
+                    i += 1
+                continue
+        out.append(line)
+        i += 1
+    return "\n".join(out)
+
+
 def md_to_html(md: str):
     lines = md.splitlines()
     out = []
@@ -329,7 +357,8 @@ def main():
         hero = fm.get("image", "")
         tags = fm.get("tags", []) if isinstance(fm.get("tags", []), list) else []
 
-        html_body = md_to_html(body)
+        public_body = strip_internal_sections(body)
+        html_body = md_to_html(public_body)
         out_dir = SRC_BLOG_DIR / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / "index.html").write_text(
