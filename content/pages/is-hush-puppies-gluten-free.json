@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "hush-puppies",
+  "slug": "is-hush-puppies-gluten-free",
+  "title": "Is Hush-puppies Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Hush-puppies. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Hush-puppies gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Hush-puppies and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Hush-puppies are typically made with cornmeal, which is gluten-free, but they often contain wheat flour and may be fried in shared oil, posing a risk for cross-contamination. Careful preparation and ingredient sourcing are essential for safety."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-02-28"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Hush-puppies can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour",
+      "Shared fryer",
+      "Breading or coating mixtures"
+    ],
+    "safe": [
+      "Cornmeal",
+      "Baking powder (labeled GF)",
+      "Dedicated GF prep area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the hush-puppies are made with gluten-free ingredients and fried in dedicated oil?"
+  },
+  "safe_alternatives": [
+    "Corn fritters",
+    "Gluten-free cornbread",
+    "Polenta cakes",
+    "Rice balls",
+    "Vegetable tempura (GF)"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Hush-puppies is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
