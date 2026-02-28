@@ -106,9 +106,14 @@ def strip_internal_sections(md: str):
         if '(#seo-package)' in low_line or '(#youtube-enrichment)' in low_line or '(#fact-check--anti-hallucination-reflection-log)' in low_line:
             i += 1
             continue
+
+        # If an internal section starts, skip everything until the next level-2 heading
         if 'fact-check + anti-hallucination reflection log' in low_line or 'anti-hallucination reflection log' in low_line or low_line == 'seo package' or low_line == 'youtube enrichment':
             i += 1
+            while i < len(lines) and not re.match(r"^##\s+", lines[i].strip(), re.I):
+                i += 1
             continue
+
         m = re.match(r"^##\s+(.+)$", line.strip(), re.I)
         if m:
             title = m.group(1).strip().lower()
@@ -117,6 +122,12 @@ def strip_internal_sections(md: str):
                 while i < len(lines) and not re.match(r"^##\s+", lines[i].strip(), re.I):
                     i += 1
                 continue
+
+        # Also remove orphan internal subsection headings if they appear
+        if low_line.startswith('### claim list with confidence') or low_line.startswith('### conservative rewrites applied to uncertain/likely claims') or low_line.startswith('### reflection log'):
+            i += 1
+            continue
+
         out.append(line)
         i += 1
     return "\n".join(out)
