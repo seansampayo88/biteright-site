@@ -3,6 +3,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const pagesDir = path.join(root, "content", "pages");
+const blogDir = path.join(root, "content", "blog");
 const outPath = path.join(root, "dist", "sitemap.xml");
 
 const SITE_ORIGIN = "https://biterightgluten.com";
@@ -49,6 +50,15 @@ for (const file of files) {
   const lastmod = json.meta?.updated_at || today();
   const loc = json.canonical || `${SITE_ORIGIN}/${slug}/`;
   urls.push({ loc, lastmod });
+}
+
+if (fs.existsSync(blogDir)) {
+  const blogFiles = fs.readdirSync(blogDir).filter((f) => f.endsWith(".md"));
+  for (const file of blogFiles) {
+    const slug = file.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
+    if (!slug) continue;
+    urls.push({ loc: `${SITE_ORIGIN}/blog/${slug}/`, lastmod: today() });
+  }
 }
 
 const xml =

@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "python3 scripts/generate-knowledge-hub.py && python3 scripts/build-pages.py && node scripts/generate-sitemap.mjs",
+    "build": "python3 scripts/generate-knowledge-hub.py && python3 scripts/generate-blog.py && python3 scripts/build-pages.py && node scripts/generate-sitemap.mjs",
     "build:legacy": "python3 scripts/generate-knowledge-hub.py && node scripts/validate-pages.mjs && node scripts/build.mjs",
     "generate-seeds": "node scripts/generate-seeds.mjs",
     "generate-pages": "MAX_NEW_PAGES=20 node scripts/generate-pages.mjs",
