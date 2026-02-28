@@ -13,6 +13,26 @@ SRC_BLOG_DIR = ROOT / "src" / "blog"
 SITE_ORIGIN = "https://biterightgluten.com"
 
 
+def clamp_seo_title(title: str, max_len: int = 60):
+    t = (title or '').strip()
+    if len(t) <= max_len:
+        return t
+    cut = t[: max_len - 1]
+    if ' ' in cut:
+        cut = cut.rsplit(' ', 1)[0]
+    return cut.rstrip(' -:;,.')
+
+
+def clamp_meta_description(desc: str, max_len: int = 155):
+    d = re.sub(r"\s+", " ", (desc or '').strip())
+    if len(d) <= max_len:
+        return d
+    cut = d[: max_len - 1]
+    if ' ' in cut:
+        cut = cut.rsplit(' ', 1)[0]
+    return cut.rstrip(' -:;,.') + '…'
+
+
 def parse_frontmatter(raw: str):
     if not raw.startswith("---\n"):
         return {}, raw
@@ -193,11 +213,13 @@ def nav_html():
 def post_template(title: str, desc: str, date: str, hero: str, content_html: str, slug: str, tags: list[str]):
     canonical = f"{SITE_ORIGIN}/blog/{slug}/"
     image_abs = f"{SITE_ORIGIN}{hero}" if hero.startswith("/") else hero
+    seo_title = clamp_seo_title(title)
+    seo_desc = clamp_meta_description(desc)
     article_schema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": title,
-        "description": desc,
+        "headline": seo_title or title,
+        "description": seo_desc,
         "datePublished": date,
         "dateModified": date,
         "author": {"@type": "Organization", "name": "BiteRight"},
@@ -211,17 +233,17 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{html.escape(title)} | BiteRight</title>
-  <meta name="description" content="{html.escape(desc)}" />
+  <title>{html.escape(seo_title)}</title>
+  <meta name="description" content="{html.escape(seo_desc)}" />
   <link rel="canonical" href="{html.escape(canonical)}" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="{html.escape(title)}" />
-  <meta property="og:description" content="{html.escape(desc)}" />
+  <meta property="og:title" content="{html.escape(seo_title)}" />
+  <meta property="og:description" content="{html.escape(seo_desc)}" />
   <meta property="og:url" content="{html.escape(canonical)}" />
   <meta property="og:image" content="{html.escape(image_abs)}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{html.escape(title)}" />
-  <meta name="twitter:description" content="{html.escape(desc)}" />
+  <meta name="twitter:title" content="{html.escape(seo_title)}" />
+  <meta name="twitter:description" content="{html.escape(seo_desc)}" />
   <meta name="twitter:image" content="{html.escape(image_abs)}" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -247,6 +269,8 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
 
 def index_template(items_html: str):
     canonical = f"{SITE_ORIGIN}/blog/"
+    seo_title = clamp_seo_title("BiteRight Blog | Gluten & Coeliac Safety")
+    seo_desc = clamp_meta_description("Research-backed gluten and coeliac safety guides, checklists, and practical label-reading resources.")
     webpage_schema = {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
@@ -259,12 +283,12 @@ def index_template(items_html: str):
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BiteRight Blog | Gluten & Coeliac Safety</title>
-  <meta name="description" content="Research-backed gluten and coeliac safety guides, checklists, and practical label-reading resources." />
+  <title>{html.escape(seo_title)}</title>
+  <meta name="description" content="{html.escape(seo_desc)}" />
   <link rel="canonical" href="{canonical}" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="BiteRight Blog" />
-  <meta property="og:description" content="Research-backed gluten and coeliac safety guides." />
+  <meta property="og:title" content="{html.escape(seo_title)}" />
+  <meta property="og:description" content="{html.escape(seo_desc)}" />
   <meta property="og:url" content="{canonical}" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,6 +338,9 @@ def main():
         )
 
         posts.append({"slug": slug, "title": title, "desc": desc, "date": date})
+
+        if len(clamp_seo_title(title)) > 60 or len(clamp_meta_description(desc)) > 155:
+            print(f"SEO clamp applied for {slug}")
 
     cards = []
     for p in sorted(posts, key=lambda x: x["date"], reverse=True):
