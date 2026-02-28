@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "ice-cream",
+  "slug": "is-ice-cream-gluten-free",
+  "title": "Is Ice-cream Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Ice-cream. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Ice-cream gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Ice-cream and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Ice cream can be safe for individuals with coeliac disease, but there are risks associated with certain ingredients and cross-contamination. It's important to check for gluten-containing additives and ensure proper preparation methods."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-02-28"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Ice-cream can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Barley malt extract",
+      "Cookie pieces or mix-ins",
+      "Wheat-based flavorings"
+    ],
+    "safe": [
+      "Pure cream and milk",
+      "Sugar",
+      "Natural flavorings",
+      "Fruit purees",
+      "Dedicated GF preparation area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the ice cream contains any gluten or is made in a dedicated gluten-free area?"
+  },
+  "safe_alternatives": [
+    "Sorbet",
+    "Frozen yogurt (labeled GF)",
+    "Gelato (labeled GF)",
+    "Coconut ice cream",
+    "Fruit popsicles"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Ice-cream is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
