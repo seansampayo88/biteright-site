@@ -78,7 +78,10 @@ def render_inline(text: str):
 
     def link_repl(m):
         label = html.escape(m.group(1))
-        href = html.escape(m.group(2), quote=True)
+        raw_href = m.group(2)
+        href = html.escape(raw_href, quote=True)
+        if 'apps.apple.com/app/biteright-gluten-scanner' in raw_href:
+            return f'<span class="cta-group"><a class="btn btn-primary" href="{href}" aria-label="Get BiteRight on the App Store">{label}</a></span>'
         return f'<a href="{href}">{label}</a>'
 
     esc = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_repl, esc)
@@ -227,6 +230,10 @@ def base_styles():
     a { color:#0f766e; }
     .meta { color:#64748b; font-size:14px; margin-bottom:14px; }
     .hero { width:100%; border-radius:16px; margin: 12px 0 24px; }
+    .cta-group { display:flex; gap:12px; flex-wrap:wrap; margin: 20px 0; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; border-radius:999px; text-decoration:none; font-weight:700; font-size:17px; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 28px rgba(13, 27, 42, 0.25); }
+    .btn-primary { background: var(--navy); color:#fff !important; box-shadow: 0 10px 20px rgba(13, 27, 42, 0.2); }
     .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px; }
     .card { background:white; border-radius:16px; padding:20px; box-shadow:var(--shadow-card); text-decoration:none; color:inherit; display:block; }
     .card:hover { transform:translateY(-2px); }

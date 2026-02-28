@@ -90,6 +90,8 @@ People expect label reading to be binary: safe or unsafe. In reality, it’s a r
 
 The best response is not memorizing every risky term. It’s building a fast, repeatable method that works across categories.
 
+[Download BiteRight on the App Store](https://apps.apple.com/app/biteright-gluten-scanner/id6755896176)
+
 ---
 
 ## Step-by-Step Label Reading Workflow
@@ -106,6 +108,8 @@ Prefer, in descending confidence:
 Important: certification is not magic, but it generally adds process controls and audit structure.
 
 ### Step 2: Read the full ingredient list
+
+If sauces are your weak spot, use our practical guides for [soy sauce](/is-soy-sauce-gluten-free/), [teriyaki sauce](/is-teriyaki-sauce-gluten-free/), and [fish sauce](/is-fish-sauce-gluten-free/).
 
 Red-flag ingredients or terms:
 - Wheat (including spelt, durum, semolina, farina, einkorn, emmer, kamut)
@@ -131,7 +135,7 @@ For coeliac safety policy, treat “may contain wheat” as a **risk flag**, esp
 
 ### Step 4: Handle oats carefully
 
-Oats are a frequent confusion point.
+Oats are a frequent confusion point. For a broader context, pair this with our [gluten-free diet primer](/gluten-free-diet/) and [hidden gluten guide](/hidden-gluten/).
 - Oats themselves do not contain wheat/barley/rye gluten proteins.
 - But oats can be contaminated in farming/transport/processing.
 - Prefer labels that explicitly indicate controlled gluten-free oat practices or recognized gluten-free standards.
@@ -152,6 +156,8 @@ Adopt this household rule:
 - **Any ambiguity = do not buy this time**
 
 This reduces “decision fatigue” and accidental risk-taking.
+
+[Get BiteRight and scan labels in seconds](https://apps.apple.com/app/biteright-gluten-scanner/id6755896176)
 
 ---
 
@@ -232,6 +238,10 @@ BiteRight can support this workflow by turning your manual process into a repeat
 - Separate “safe for me” from “safe for occasional testing”
 
 You still make the final decision, but decision quality improves when your process is consistent.
+
+If you’re newly diagnosed and building your first safe shopping routine, start with our [newly diagnosed guide](/newly-diagnosed/) and browse the full [Knowledge Hub](/knowledge-hub/).
+
+[Download BiteRight — Start your 3-day free trial](https://apps.apple.com/app/biteright-gluten-scanner/id6755896176)
 
 ---
 
@@ -391,4 +401,6 @@ Video can help reinforce the checklist above, especially for visual learners who
 ## Related Reading
 
 - [BiteRight Blog Hub](/blog/)
-- [Gluten-Free Label Checker Tool](/blog/gluten-free-label-checker-tool/)
+- [Knowledge Hub](/knowledge-hub/)
+- [Hidden Gluten Guide](/hidden-gluten/)
+- [Gluten-Free Diet Guide](/gluten-free-diet/)
