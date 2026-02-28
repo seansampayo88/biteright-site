@@ -93,6 +93,8 @@ def strip_internal_sections(md: str):
     out = []
     i = 0
     block_titles = {
+        'research summary (pre-writing synthesis)',
+        'research summary',
         'seo package',
         'youtube enrichment',
         'fact-check + anti-hallucination reflection log',
@@ -103,7 +105,7 @@ def strip_internal_sections(md: str):
         line = lines[i]
         low_line = line.strip().lower()
         # Drop TOC / inline references for internal-only sections
-        if '(#seo-package)' in low_line or '(#youtube-enrichment)' in low_line or '(#fact-check--anti-hallucination-reflection-log)' in low_line:
+        if '(#research-summary-pre-writing-synthesis)' in low_line or '(#seo-package)' in low_line or '(#youtube-enrichment)' in low_line or '(#fact-check--anti-hallucination-reflection-log)' in low_line:
             i += 1
             continue
 
