@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "rice-pudding",
+  "slug": "is-rice-pudding-gluten-free",
+  "title": "Is Rice-pudding Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Rice-pudding. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Rice-pudding gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Rice-pudding and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Rice pudding is generally safe for individuals with coeliac disease as it primarily consists of rice, milk, and sugar, which are gluten-free. However, cross-contamination and the use of certain additives should be monitored."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-01"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Rice-pudding can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Shared equipment with gluten-containing foods",
+      "Flavored or pre-packaged rice mixes that may contain gluten",
+      "Thickeners or additives that may contain gluten"
+    ],
+    "safe": [
+      "Plain rice",
+      "Milk",
+      "Sugar",
+      "Cinnamon",
+      "Vanilla extract"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the rice pudding is made with gluten-free ingredients and prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Quinoa pudding",
+    "Coconut rice",
+    "Chia seed pudding",
+    "Oatmeal (with certified gluten-free oats)",
+    "Panna cotta"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Rice-pudding is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

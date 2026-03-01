@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "balsamic-dressing",
+  "slug": "is-balsamic-dressing-gluten-free",
+  "title": "Is Balsamic-dressing Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Balsamic-dressing. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Balsamic-dressing gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Balsamic-dressing and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Balsamic dressing can be safe, but there is a risk of gluten contamination from certain ingredients or cross-contact during preparation. Always check labels and inquire about preparation methods."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-01"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Balsamic-dressing can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Balsamic vinegar (if made with gluten-containing grains)",
+      "Soy sauce (if not labeled gluten-free)",
+      "Thickeners or stabilizers that may contain gluten"
+    ],
+    "safe": [
+      "Pure balsamic vinegar (made from grapes)",
+      "Olive oil",
+      "Herbs and spices",
+      "Honey or maple syrup (as sweeteners)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the balsamic dressing is gluten-free and prepared in a dedicated area?"
+  },
+  "safe_alternatives": [
+    "Olive oil and vinegar dressing",
+    "Lemon juice and olive oil",
+    "Avocado oil dressing",
+    "Yogurt-based dressing"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Balsamic-dressing is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
