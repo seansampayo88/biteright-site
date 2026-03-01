@@ -141,6 +141,11 @@ def build_page_html(page_data, related_pages):
     verdict = page_data.get('verdict', {})
     verdict_status = verdict.get('status', 'caution')
     verdict_summary = verdict.get('summary', '')
+    if not description:
+        description = verdict_summary
+
+    slug = page_data.get('slug', '')
+    canonical = page_data.get('canonical') or (f"https://biterightgluten.com/{slug}/" if slug else "https://biterightgluten.com/")
     ingredients = page_data.get('ingredients', {})
     risk_items = ingredients.get('risk', [])
     safe_items = ingredients.get('safe', [])
@@ -256,6 +261,7 @@ def build_page_html(page_data, related_pages):
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{html_escape.escape(title)}</title>
     <meta name="description" content="{html_escape.escape(description)}" />
+    <link rel="canonical" href="{html_escape.escape(canonical)}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
