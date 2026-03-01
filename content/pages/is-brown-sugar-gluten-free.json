@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "topic_key": "brown-sugar",
+  "slug": "is-brown-sugar-gluten-free",
+  "title": "Is Brown-sugar Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Brown-sugar. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Brown-sugar gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Brown-sugar and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Brown sugar is typically made from sugar and molasses, both of which are gluten-free. However, cross-contamination during processing or packaging could pose a risk."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-01"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Brown-sugar can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [],
+    "safe": [
+      "Granulated sugar",
+      "Molasses",
+      "Dedicated gluten-free processing equipment"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the brown sugar is processed in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Coconut sugar",
+    "Honey",
+    "Maple syrup"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Brown-sugar is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
