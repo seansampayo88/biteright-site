@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "falafel",
+  "slug": "is-falafel-gluten-free",
+  "title": "Is Falafel Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Falafel. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Falafel gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Falafel and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Falafel is often made from chickpeas and spices, which are gluten-free; however, there is a risk of cross-contamination with gluten-containing ingredients or shared cooking equipment. Care should be taken to ensure that no gluten is introduced during preparation or cooking."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-07"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Falafel can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used as a binder in some recipes)",
+      "Shared fryer (with gluten-containing items)",
+      "Breadcrumbs (used for coating in some variations)"
+    ],
+    "safe": [
+      "Chickpeas",
+      "Spices",
+      "Fresh herbs",
+      "Dedicated gluten-free fryer",
+      "Gluten-free flour alternatives (like chickpea flour)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the falafel is prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Grilled chicken salad",
+    "Quinoa bowl",
+    "Stuffed bell peppers",
+    "Vegetable skewers",
+    "Hummus with gluten-free pita"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Falafel is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
