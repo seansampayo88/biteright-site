@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "potato-salad",
+  "slug": "is-potato-salad-gluten-free",
+  "title": "Is Potato-salad Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Potato-salad. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Potato-salad gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Potato-salad and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Potato salad can be at risk for gluten contamination primarily due to the use of certain dressings and potential cross-contact during preparation. Care should be taken to ensure all ingredients are gluten-free and prepared in a safe environment."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-07"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Potato-salad can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Traditional mayonnaise (may contain gluten in some recipes)",
+      "Vinegar (malt vinegar is a concern)",
+      "Pre-packaged seasoning mixes",
+      "Shared utensils or surfaces",
+      "Croutons or gluten-containing toppings"
+    ],
+    "safe": [
+      "Fresh potatoes",
+      "Homemade mayonnaise (using gluten-free ingredients)",
+      "Plain vinegar (like apple cider or white vinegar)",
+      "Fresh herbs and spices",
+      "Dedicated gluten-free utensils and surfaces"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that all ingredients in the potato salad are gluten-free and prepared separately?"
+  },
+  "safe_alternatives": [
+    "Quinoa salad",
+    "Rice salad",
+    "Coleslaw",
+    "Bean salad",
+    "Vegetable medley"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Potato-salad is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
