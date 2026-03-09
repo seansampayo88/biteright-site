@@ -329,7 +329,7 @@ def post_template(title: str, desc: str, date: str, hero: str, content_html: str
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <style>{base_styles()}</style>
   <script type="application/ld+json">{json.dumps(article_schema)}</script>
 </head>
@@ -412,7 +412,7 @@ def index_template(items_html: str):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <style>{base_styles()}</style>
   <script type="application/ld+json">{json.dumps(webpage_schema)}</script>
 </head>

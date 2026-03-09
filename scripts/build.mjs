@@ -151,7 +151,7 @@ function renderPage(pageData) {
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
     ${articleSchema}
     ${faqSchema}
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <style>
       :root {
         --primary-teal: #00a36f;

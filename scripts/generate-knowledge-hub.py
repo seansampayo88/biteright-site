@@ -63,7 +63,7 @@ def main():
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   <style>
     :root {{ --paper-color: #FDFBF7; --primary-teal: #00A36F; --navy: #0D1B2A; --text-body: #5F6B7A; --radius-lg: 24px; --shadow-card: 0 10px 30px rgba(13, 27, 42, 0.05); }}
     * {{ box-sizing: border-box; }}
