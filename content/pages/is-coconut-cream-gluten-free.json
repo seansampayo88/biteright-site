@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "topic_key": "coconut-cream",
+  "slug": "is-coconut-cream-gluten-free",
+  "title": "Is Coconut-cream Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Coconut-cream. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Coconut-cream gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Coconut-cream and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Coconut cream is naturally gluten-free, but cross-contamination can occur during processing or preparation. It's important to ensure that no gluten-containing ingredients are added or that it is not processed in a facility that handles gluten."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-10"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Coconut-cream can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Cross-contamination during processing",
+      "Added flavorings or thickeners containing gluten",
+      "Shared equipment with gluten-containing products"
+    ],
+    "safe": [
+      "Pure coconut cream",
+      "Coconut milk",
+      "Dedicated gluten-free preparation methods",
+      "Coconut-based desserts without gluten additives"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Is this coconut cream processed in a gluten-free facility?"
+  },
+  "safe_alternatives": [
+    "Almond cream",
+    "Cashew cream",
+    "Soy cream",
+    "Oat milk",
+    "Rice milk"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Coconut-cream is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

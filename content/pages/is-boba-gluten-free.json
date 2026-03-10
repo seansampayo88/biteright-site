@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "boba",
+  "slug": "is-boba-gluten-free",
+  "title": "Is Boba Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Boba. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Boba gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Boba and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Boba itself is typically made from tapioca starch, which is gluten-free; however, cross-contamination and certain flavorings or additives may introduce gluten risks. Care should be taken with syrups and toppings that may contain gluten."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-10"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Boba can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat-based flavorings",
+      "Barley malt syrup",
+      "Shared equipment with gluten-containing products"
+    ],
+    "safe": [
+      "Tapioca pearls",
+      "Fruit-based syrups",
+      "Dedicated gluten-free preparation area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the boba and syrups are prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Fruit smoothies",
+    "Coconut milk drinks",
+    "Herbal teas",
+    "Rice-based desserts",
+    "Gluten-free ice cream"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Boba is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
