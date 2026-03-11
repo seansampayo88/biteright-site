@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "gluten-free-pretzels",
+  "slug": "is-gluten-free-pretzels-gluten-free",
+  "title": "Is Gluten-free-pretzels Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Gluten-free-pretzels. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Gluten-free-pretzels gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Gluten-free-pretzels and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "While gluten-free pretzels are made from gluten-free ingredients, there is a risk of cross-contamination during production or preparation. It's important to ensure that all ingredients and equipment used are certified gluten-free."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-10"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Gluten-free-pretzels can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Shared fryer",
+      "Cross-contaminated surfaces",
+      "Non-gluten-free seasonings"
+    ],
+    "safe": [
+      "Gluten-free flour blends",
+      "Dedicated gluten-free prep area",
+      "Gluten-free baking powder"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the pretzels are made in a dedicated gluten-free area?"
+  },
+  "safe_alternatives": [
+    "Rice cakes",
+    "Corn tortilla chips",
+    "Vegetable sticks with dip",
+    "Popcorn",
+    "Gluten-free crackers"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Gluten-free-pretzels is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

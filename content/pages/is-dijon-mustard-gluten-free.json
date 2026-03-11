@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "dijon-mustard",
+  "slug": "is-dijon-mustard-gluten-free",
+  "title": "Is Dijon-mustard Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Dijon-mustard. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Dijon-mustard gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Dijon-mustard and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Dijon mustard is often gluten-free, but there is a risk of cross-contamination or the use of gluten-containing ingredients in some recipes. Always check labels and inquire about preparation methods."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-10"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Dijon-mustard can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used as a thickener in some recipes)",
+      "Barley malt (used in some varieties)",
+      "Shared equipment with gluten-containing products"
+    ],
+    "safe": [
+      "Vinegar (typically distilled or white)",
+      "Mustard seeds",
+      "Spices (without gluten-containing additives)",
+      "Water"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if your dijon mustard is gluten-free and prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Yellow mustard",
+    "Honey mustard (check for gluten-free labeling)",
+    "Spicy mustard (check for gluten-free labeling)",
+    "Homemade mustard"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Dijon-mustard is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
