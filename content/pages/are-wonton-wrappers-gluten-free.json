@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "wonton-wrappers",
+  "slug": "are-wonton-wrappers-gluten-free",
+  "title": "Are Wonton-wrappers Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Wonton-wrappers. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Wonton-wrappers gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Wonton-wrappers and how to order more safely.",
+  "verdict": {
+    "status": "unsafe",
+    "summary": "Traditional wonton wrappers are typically made from wheat flour, which contains gluten, posing a significant risk for individuals with coeliac disease. Cross-contamination during preparation can further increase gluten exposure."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Wonton-wrappers can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour",
+      "Shared preparation surfaces",
+      "Shared cooking equipment",
+      "Barley malt (if used in sauces)",
+      "Soy sauce (if not labeled gluten-free)"
+    ],
+    "safe": [
+      "Rice flour",
+      "Tapioca starch",
+      "Potato starch",
+      "Dedicated gluten-free preparation area",
+      "Gluten-free soy sauce (labeled GF)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Are your wonton wrappers made with wheat flour or are there gluten-free options available?"
+  },
+  "safe_alternatives": [
+    "Rice paper rolls",
+    "Gluten-free dumplings",
+    "Stuffed bell peppers",
+    "Zucchini noodles",
+    "Quinoa salad"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Wonton-wrappers are gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

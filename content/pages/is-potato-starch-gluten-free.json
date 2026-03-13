@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "potato-starch",
+  "slug": "is-potato-starch-gluten-free",
+  "title": "Is Potato-starch Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Potato-starch. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Potato-starch gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Potato-starch and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Potato starch is naturally gluten-free and poses minimal risk for individuals with coeliac disease. However, cross-contamination during processing or preparation can be a concern."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Potato-starch can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Cross-contamination with wheat flour",
+      "Shared equipment with gluten-containing products",
+      "Use of gluten-containing thickeners in recipes"
+    ],
+    "safe": [
+      "Pure potato starch",
+      "Dedicated gluten-free preparation area",
+      "Gluten-free additives or seasonings"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Is the potato starch prepared in a gluten-free area?"
+  },
+  "safe_alternatives": [
+    "Cornstarch",
+    "Tapioca starch",
+    "Arrowroot powder",
+    "Rice flour",
+    "Almond flour"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Potato-starch is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

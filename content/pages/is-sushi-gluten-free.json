@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "sushi",
+  "slug": "is-sushi-gluten-free",
+  "title": "Is Sushi Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Sushi. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Sushi gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Sushi and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Sushi can pose gluten risks primarily due to the use of soy sauce and certain vinegars, which may contain gluten. Cross-contamination is also a concern in shared preparation areas."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Sushi can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Soy sauce",
+      "Rice vinegar (non-gluten-free)",
+      "Tempura batter",
+      "Marinated fish or seafood",
+      "Shared preparation surfaces"
+    ],
+    "safe": [
+      "Sushi rice",
+      "Fresh fish or seafood",
+      "Vegetables",
+      "Nori (seaweed)",
+      "Tamari (labeled GF)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the soy sauce used is gluten-free?"
+  },
+  "safe_alternatives": [
+    "Sashimi",
+    "Rice bowls with gluten-free ingredients",
+    "Ceviche",
+    "Grilled fish with vegetables",
+    "Gluten-free poke bowls"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Sushi is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
