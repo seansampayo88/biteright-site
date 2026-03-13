@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "tapioca-pudding",
+  "slug": "is-tapioca-pudding-gluten-free",
+  "title": "Is Tapioca-pudding Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Tapioca-pudding. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Tapioca-pudding gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Tapioca-pudding and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Tapioca pudding is primarily made from tapioca starch, which is gluten-free. However, cross-contamination or the use of gluten-containing additives can pose a risk."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Tapioca-pudding can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat-based thickeners",
+      "Barley malt flavoring",
+      "Shared utensils or cooking surfaces"
+    ],
+    "safe": [
+      "Tapioca starch",
+      "Milk or dairy alternatives",
+      "Sugar",
+      "Vanilla extract (pure)",
+      "Dedicated gluten-free preparation area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the tapioca pudding is made without any gluten-containing ingredients or cross-contamination?"
+  },
+  "safe_alternatives": [
+    "Rice pudding",
+    "Coconut pudding",
+    "Chia seed pudding",
+    "Fruit salad",
+    "Gelatin desserts"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Tapioca-pudding is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

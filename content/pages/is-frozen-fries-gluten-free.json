@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "topic_key": "frozen-fries",
+  "slug": "is-frozen-fries-gluten-free",
+  "title": "Is Frozen-fries Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Frozen-fries. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Frozen-fries gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Frozen-fries and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Frozen fries can be at risk for gluten contamination due to shared equipment and potential additives. It's important to verify the preparation methods and ingredient labels."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-03-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Frozen-fries can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used as a coating or seasoning)",
+      "Shared fryer (with gluten-containing foods)",
+      "Barley malt (used in flavoring or seasoning)"
+    ],
+    "safe": [
+      "Potatoes",
+      "Vegetable oil (if dedicated and not shared)",
+      "Salt",
+      "Gluten-free seasoning blends"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Are the fries cooked in a dedicated fryer, or are they shared with gluten-containing items?"
+  },
+  "safe_alternatives": [
+    "Baked sweet potato fries",
+    "Roasted vegetables",
+    "Corn tortilla chips",
+    "Rice cakes",
+    "Polenta fries"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Frozen-fries is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
