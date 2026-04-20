@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "pasta-bake",
+  "slug": "is-pasta-bake-gluten-free",
+  "title": "Is Pasta-bake Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Pasta-bake. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Pasta-bake gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Pasta-bake and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Pasta-bake typically contains gluten due to the use of traditional pasta and sauces that may include wheat-based ingredients. Care should be taken to ensure all components are gluten-free to avoid cross-contamination."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-04-19"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Pasta-bake can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat pasta",
+      "Breadcrumbs",
+      "Certain sauces (e.g., cream sauces with flour)",
+      "Cheese sauces with gluten-containing thickeners",
+      "Shared cooking utensils or surfaces"
+    ],
+    "safe": [
+      "Gluten-free pasta",
+      "Homemade sauces with gluten-free ingredients",
+      "Vegetables",
+      "Cheese (without additives)",
+      "Dedicated gluten-free cooking utensils"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the pasta and sauce used in the bake are gluten-free?"
+  },
+  "safe_alternatives": [
+    "Quinoa bake",
+    "Rice casserole",
+    "Polenta bake",
+    "Zucchini noodles",
+    "Gluten-free lasagna"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Pasta-bake is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

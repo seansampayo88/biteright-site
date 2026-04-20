@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "marinara-sauce",
+  "slug": "is-marinara-sauce-gluten-free",
+  "title": "Is Marinara-sauce Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Marinara-sauce. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Marinara-sauce gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Marinara-sauce and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "While traditional marinara sauce is often made from gluten-free ingredients, cross-contamination during preparation or the use of gluten-containing additives can pose a risk for those with coeliac disease. It's important to verify the ingredients and preparation methods used."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-04-19"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Marinara-sauce can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used as a thickener in some recipes)",
+      "Shared cooking utensils or surfaces",
+      "Pre-packaged marinara sauce with gluten-containing additives"
+    ],
+    "safe": [
+      "Canned tomatoes",
+      "Olive oil",
+      "Garlic",
+      "Herbs and spices (without additives)",
+      "Dedicated gluten-free preparation area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the marinara sauce is made without gluten-containing ingredients or cross-contamination?"
+  },
+  "safe_alternatives": [
+    "Zucchini noodles with marinara",
+    "Polenta with marinara",
+    "Grilled vegetables with marinara",
+    "Rice with marinara",
+    "Gluten-free pasta with marinara"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Marinara-sauce is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
