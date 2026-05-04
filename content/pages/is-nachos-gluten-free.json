@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "topic_key": "nachos",
+  "slug": "is-nachos-gluten-free",
+  "title": "Is Nachos Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Nachos. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Nachos gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Nachos and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Nachos can pose a gluten risk primarily due to the type of chips used and potential cross-contamination during preparation. It's important to verify the ingredients and cooking methods to ensure safety for those with coeliac disease."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-05-04"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Nachos can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Corn tortilla chips (if made with wheat flour)",
+      "Seasoned toppings (if containing gluten-based ingredients)",
+      "Shared fryer (for chips or toppings)",
+      "Sauces or salsas (if thickened with gluten-containing agents)"
+    ],
+    "safe": [
+      "Corn tortilla chips (made from 100% corn)",
+      "Fresh vegetables (like jalapeños, tomatoes, and onions)",
+      "Cheese (if not processed with gluten-containing ingredients)",
+      "Guacamole (if made with gluten-free ingredients)",
+      "Sour cream"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Are the tortilla chips made from 100% corn and fried in a dedicated fryer?"
+  },
+  "safe_alternatives": [
+    "Gluten-free tacos",
+    "Stuffed peppers",
+    "Salads with gluten-free dressings",
+    "Rice bowls with gluten-free toppings",
+    "Gluten-free quesadillas"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Nachos is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
