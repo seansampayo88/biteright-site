@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "topic_key": "peanut-butter",
+  "slug": "is-peanut-butter-gluten-free",
+  "title": "Is Peanut-butter Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Peanut-butter. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Peanut-butter gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Peanut-butter and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "While pure peanut butter is typically gluten-free, cross-contamination during processing or the addition of gluten-containing ingredients can pose a risk for those with coeliac disease. It's important to verify the source and preparation methods."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-05-04"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Peanut-butter can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Added flavorings or ingredients (e.g., malt extract)",
+      "Cross-contamination during processing",
+      "Shared equipment with gluten-containing products"
+    ],
+    "safe": [
+      "Pure peanuts",
+      "Salt (if added)",
+      "Dedicated gluten-free processing equipment"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the peanut butter is processed in a gluten-free facility?"
+  },
+  "safe_alternatives": [
+    "Almond butter",
+    "Sunflower seed butter",
+    "Cashew butter",
+    "Coconut butter"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Peanut-butter is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
