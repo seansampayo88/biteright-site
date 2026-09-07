@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "coconut-rice",
+  "slug": "is-coconut-rice-gluten-free",
+  "title": "Is Coconut-rice Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Coconut-rice. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Coconut-rice gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Coconut-rice and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Coconut-rice can be safe if prepared with gluten-free ingredients, but there is a risk of cross-contamination from shared cooking surfaces or equipment. It's important to verify the source of all ingredients used."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-09-07"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Coconut-rice can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Soy sauce (if not labeled gluten-free)",
+      "Pre-packaged coconut products (if processed with gluten-containing ingredients)",
+      "Shared cooking utensils or surfaces"
+    ],
+    "safe": [
+      "Plain rice",
+      "Coconut milk (labeled gluten-free)",
+      "Fresh coconut",
+      "Dedicated gluten-free cooking equipment",
+      "Spices and seasonings (if gluten-free)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the coconut-rice is prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Quinoa",
+    "Cauliflower rice",
+    "Gluten-free pasta",
+    "Polenta",
+    "Chickpea rice"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Coconut-rice is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "chicken-fingers",
+  "slug": "is-chicken-fingers-gluten-free",
+  "title": "Is Chicken-fingers Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Chicken-fingers. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Chicken-fingers gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Chicken-fingers and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Chicken fingers can pose a gluten risk due to the use of breading and frying methods. Cross-contamination is also a concern if prepared in shared spaces."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-09-07"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Chicken-fingers can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used for breading)",
+      "Breadcrumbs",
+      "Shared fryer"
+    ],
+    "safe": [
+      "Chicken breast (unbreaded)",
+      "Cornstarch (for coating)",
+      "Dedicated gluten-free fryer",
+      "Gluten-free breadcrumbs",
+      "Seasonings without gluten"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the chicken fingers are made with gluten-free breading and cooked in a dedicated fryer?"
+  },
+  "safe_alternatives": [
+    "Grilled chicken strips",
+    "Chicken skewers",
+    "Baked chicken thighs",
+    "Chicken salad",
+    "Chicken tacos with corn tortillas"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Chicken-fingers is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
