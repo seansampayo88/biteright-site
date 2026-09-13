@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "topic_key": "cacao-powder",
+  "slug": "is-cacao-powder-gluten-free",
+  "title": "Is Cacao-powder Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Cacao-powder. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Cacao-powder gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Cacao-powder and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Cacao powder is generally safe for individuals with coeliac disease as it is derived from cacao beans, which are naturally gluten-free. However, cross-contamination during processing can pose a risk if not handled properly."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-09-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Cacao-powder can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Cross-contamination during processing",
+      "Additives or flavorings that may contain gluten",
+      "Shared equipment with gluten-containing products"
+    ],
+    "safe": [
+      "Pure cacao powder",
+      "Dedicated gluten-free processing facilities",
+      "Cacao powder without additives"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the cacao powder is processed in a gluten-free facility?"
+  },
+  "safe_alternatives": [
+    "Carob powder",
+    "Cocoa powder (labeled gluten-free)",
+    "Chocolate made from gluten-free ingredients",
+    "Nut-based powders"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Cacao-powder is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

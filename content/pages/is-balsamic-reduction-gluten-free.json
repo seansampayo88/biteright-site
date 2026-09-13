@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "topic_key": "balsamic-reduction",
+  "slug": "is-balsamic-reduction-gluten-free",
+  "title": "Is Balsamic-reduction Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Balsamic-reduction. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Balsamic-reduction gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Balsamic-reduction and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Balsamic reduction is generally safe for individuals with coeliac disease as it primarily consists of balsamic vinegar and sweeteners, which are typically gluten-free. However, cross-contamination during preparation or the use of certain additives could pose a risk."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-09-13"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Balsamic-reduction can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat-based thickeners",
+      "Barley malt vinegar",
+      "Shared preparation surfaces"
+    ],
+    "safe": [
+      "Balsamic vinegar",
+      "Sugar or honey",
+      "Dedicated GF prep area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the balsamic reduction is made without any gluten-containing ingredients?"
+  },
+  "safe_alternatives": [
+    "Olive oil and vinegar dressing",
+    "Lemon juice with herbs",
+    "Citrus vinaigrette"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Balsamic-reduction is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
