@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "chickpea-flour",
+  "slug": "is-chickpea-flour-gluten-free",
+  "title": "Is Chickpea-flour Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Chickpea-flour. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Chickpea-flour gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Chickpea-flour and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Chickpea flour is naturally gluten-free; however, cross-contamination with gluten-containing grains during processing or preparation can pose a risk for individuals with coeliac disease. It's important to ensure that chickpea flour is sourced from a dedicated gluten-free facility."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-09-16"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Chickpea-flour can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour",
+      "Barley flour",
+      "Shared equipment",
+      "Cross-contamination during storage",
+      "Mixed with gluten-containing flours"
+    ],
+    "safe": [
+      "Pure chickpea flour from a dedicated GF facility",
+      "Dedicated GF prep area",
+      "Properly cleaned equipment",
+      "Tamari (labeled GF)",
+      "Coconut aminos"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Is the chickpea flour prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Almond flour",
+    "Coconut flour",
+    "Rice flour",
+    "Quinoa flour",
+    "Cornmeal"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Chickpea-flour is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
