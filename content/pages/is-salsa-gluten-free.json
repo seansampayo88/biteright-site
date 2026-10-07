@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "topic_key": "salsa",
+  "slug": "is-salsa-gluten-free",
+  "title": "Is Salsa Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Salsa. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Salsa gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Salsa and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Salsa is generally safe, but there is a risk of gluten contamination from certain ingredients or cross-contact during preparation. It's important to verify the ingredients and preparation methods used."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-07"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Salsa can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Soy sauce (if used)",
+      "Seasoning mixes (if they contain gluten)",
+      "Shared utensils or prep surfaces"
+    ],
+    "safe": [
+      "Fresh tomatoes",
+      "Onions",
+      "Cilantro",
+      "Lime juice",
+      "Chili peppers"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the salsa is made without any gluten-containing ingredients or cross-contact?"
+  },
+  "safe_alternatives": [
+    "Guacamole",
+    "Fresh pico de gallo",
+    "Hummus",
+    "Olive tapenade",
+    "Roasted red pepper dip"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Salsa is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
