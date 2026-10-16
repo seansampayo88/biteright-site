@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "beef-stroganoff",
+  "slug": "is-beef-stroganoff-gluten-free",
+  "title": "Is Beef-stroganoff Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Beef-stroganoff. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Beef-stroganoff gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Beef-stroganoff and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Beef stroganoff can pose gluten risks primarily due to the use of traditional thickeners and sauces that may contain gluten. Careful ingredient selection and preparation methods are essential to ensure safety for individuals with coeliac disease."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-16"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Beef-stroganoff can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used for thickening)",
+      "Soy sauce (unless labeled gluten-free)",
+      "Beef broth (if made with gluten-containing ingredients)",
+      "Pasta (if served with stroganoff)",
+      "Pre-packaged sauces or mixes"
+    ],
+    "safe": [
+      "Gluten-free flour (for thickening)",
+      "Beef (fresh, unprocessed)",
+      "Mushrooms",
+      "Sour cream (plain, without additives)",
+      "Dedicated gluten-free preparation area"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the sauce and broth used in the beef stroganoff are gluten-free?"
+  },
+  "safe_alternatives": [
+    "Grilled chicken with vegetables",
+    "Gluten-free pasta with a creamy sauce",
+    "Stir-fried beef with rice",
+    "Vegetable curry with rice",
+    "Quinoa salad with beef"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Beef-stroganoff is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
