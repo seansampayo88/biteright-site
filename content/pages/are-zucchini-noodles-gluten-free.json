@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "zucchini-noodles",
+  "slug": "are-zucchini-noodles-gluten-free",
+  "title": "Are Zucchini-noodles Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Zucchini-noodles. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Are Zucchini-noodles gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Zucchini-noodles and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Zucchini noodles themselves are gluten-free, but cross-contamination and added ingredients can pose a risk. Care should be taken to ensure no gluten-containing sauces or toppings are used."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-22"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Zucchini-noodles can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat-based sauces",
+      "Shared cooking utensils",
+      "Shared frying equipment",
+      "Pasta or noodle dishes served alongside",
+      "Breadcrumbs as a topping"
+    ],
+    "safe": [
+      "Fresh zucchini",
+      "Olive oil",
+      "Garlic",
+      "Herbs and spices",
+      "Dedicated gluten-free cooking equipment"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the zucchini noodles are prepared in a gluten-free environment?"
+  },
+  "safe_alternatives": [
+    "Spaghetti squash",
+    "Shirataki noodles",
+    "Rice noodles",
+    "Quinoa pasta",
+    "Cauliflower rice"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Zucchini-noodles are gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

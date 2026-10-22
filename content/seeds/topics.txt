@@ -168,3 +168,17 @@ pasta-bake
 potato-knishes
 rice-paper
 sushi-rice
+burritos
+frozen-dinner
+gluten-free-cookies
+hot-dogs
+muffin-tin-omelette
+nachos
+pasta-primavera
+potato-skins
+rice-nachos
+sushi-rolls
+taco-seasoning
+tapioca-pudding
+vegan-cheese
+zucchini-noodles
