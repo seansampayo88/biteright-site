@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "beetroot-burgers",
+  "slug": "is-beetroot-burgers-gluten-free",
+  "title": "Is Beetroot-burgers Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Beetroot-burgers. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Beetroot-burgers gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Beetroot-burgers and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "While beetroot itself is gluten-free, the overall safety of beetroot-burgers depends on the other ingredients and preparation methods used, which may introduce gluten risks. Care should be taken to ensure no gluten-containing ingredients are included and that cross-contamination is avoided."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-25"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Beetroot-burgers can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat flour (used as a binder)",
+      "Breadcrumbs (for coating or binding)",
+      "Shared fryer (for frying patties)",
+      "Soy sauce (if not labeled gluten-free)",
+      "Pre-packaged sauces or dressings"
+    ],
+    "safe": [
+      "Fresh beetroot",
+      "Quinoa or rice (as a binder)",
+      "Dedicated gluten-free prep area",
+      "Vegetable oils (for cooking)",
+      "Spices and herbs (without additives)"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm that the beetroot-burger is made without any gluten-containing ingredients?"
+  },
+  "safe_alternatives": [
+    "Lentil burgers",
+    "Chickpea patties",
+    "Grilled vegetable burgers",
+    "Stuffed bell peppers",
+    "Zucchini fritters"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Beetroot-burgers is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
