@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "topic_key": "buttermilk",
+  "slug": "is-buttermilk-gluten-free",
+  "title": "Is Buttermilk Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Buttermilk. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Buttermilk gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Buttermilk and how to order more safely.",
+  "verdict": {
+    "status": "safe",
+    "summary": "Buttermilk is typically made from milk and a bacterial culture, both of which are gluten-free. However, cross-contamination or the use of additives could pose a risk."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-28"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Buttermilk can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Flavored buttermilk",
+      "Additives or thickeners",
+      "Cross-contamination during processing"
+    ],
+    "safe": [
+      "Plain buttermilk",
+      "Milk",
+      "Cultured buttermilk",
+      "Dedicated gluten-free preparation methods"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the buttermilk is made without any gluten-containing additives or cross-contamination?"
+  },
+  "safe_alternatives": [
+    "Coconut milk",
+    "Almond milk",
+    "Soy milk",
+    "Oat milk (certified gluten-free)",
+    "Rice milk"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Buttermilk is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}

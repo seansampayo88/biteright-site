@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "topic_key": "balsamic-glazed-chicken",
+  "slug": "is-balsamic-glazed-chicken-gluten-free",
+  "title": "Is Balsamic-glazed-chicken Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Balsamic-glazed-chicken. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Balsamic-glazed-chicken gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Balsamic-glazed-chicken and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Balsamic-glazed chicken may contain gluten due to the use of certain sauces or marinades that could include gluten-containing ingredients. Care should be taken to ensure that all components are gluten-free."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-10-28"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Balsamic-glazed-chicken can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Balsamic vinegar (if not labeled gluten-free)",
+      "Soy sauce (if not labeled gluten-free)",
+      "Marinades or pre-packaged sauces",
+      "Shared cooking surfaces or utensils"
+    ],
+    "safe": [
+      "Fresh chicken",
+      "Homemade balsamic glaze (using gluten-free ingredients)",
+      "Olive oil",
+      "Herbs and spices",
+      "Dedicated gluten-free cooking equipment"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the balsamic glaze and any marinades used are gluten-free?"
+  },
+  "safe_alternatives": [
+    "Grilled chicken with lemon and herbs",
+    "Roasted vegetables",
+    "Quinoa salad",
+    "Stuffed bell peppers",
+    "Zucchini noodles with pesto"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Balsamic-glazed-chicken is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
