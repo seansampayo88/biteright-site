@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "topic_key": "rice-krispies",
+  "slug": "is-rice-krispies-gluten-free",
+  "title": "Is Rice-krispies Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Rice-krispies. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Rice-krispies gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Rice-krispies and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Rice Krispies are typically made from rice, which is gluten-free; however, there is a risk of cross-contamination with gluten-containing grains during processing. Additionally, some varieties may include barley malt, which contains gluten."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-11-05"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Rice-krispies can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Barley malt",
+      "Shared processing equipment",
+      "Wheat-based additives"
+    ],
+    "safe": [
+      "Plain rice cereal",
+      "Dedicated gluten-free processing",
+      "Gluten-free sweeteners"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if these Rice Krispies are made in a gluten-free facility?"
+  },
+  "safe_alternatives": [
+    "Corn puffs",
+    "Quinoa crisps",
+    "Gluten-free granola",
+    "Rice cakes",
+    "Oatmeal (certified gluten-free)"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Rice-krispies is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
