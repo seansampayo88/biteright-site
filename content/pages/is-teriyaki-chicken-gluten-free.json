@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "teriyaki-chicken",
+  "slug": "is-teriyaki-chicken-gluten-free",
+  "title": "Is Teriyaki-chicken Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Teriyaki-chicken. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Teriyaki-chicken gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Teriyaki-chicken and how to order more safely.",
+  "verdict": {
+    "status": "caution",
+    "summary": "Teriyaki chicken may contain gluten due to the use of soy sauce and other ingredients that can have wheat. It's important to verify the specific ingredients used in the preparation."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-11-20"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Teriyaki-chicken can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Soy sauce",
+      "Teriyaki sauce",
+      "Marinades containing wheat",
+      "Shared cooking surfaces",
+      "Breaded chicken"
+    ],
+    "safe": [
+      "Tamari (labeled GF)",
+      "Coconut aminos",
+      "Grilled or baked chicken without sauce",
+      "Dedicated GF prep area",
+      "Fresh vegetables"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Can you confirm if the soy sauce or teriyaki sauce used is gluten-free?"
+  },
+  "safe_alternatives": [
+    "Grilled chicken salad",
+    "Rice bowl with vegetables",
+    "Stir-fried vegetables with tofu",
+    "Quinoa with grilled chicken",
+    "Zucchini noodles with chicken"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Teriyaki-chicken is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
