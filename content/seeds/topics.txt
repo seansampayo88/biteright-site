@@ -168,3 +168,17 @@ pasta-bake
 potato-knishes
 rice-paper
 sushi-rice
+frozen-dinners
+gluten-free-cookies
+gluten-free-pasta-sauce
+grits
+instant-oatmeal
+marzipan
+muffins-mix
+pasta-primavera
+potato-bake
+rice-krispies
+salsa
+sourdough-bread
+tapioca-pudding
+teriyaki-chicken
