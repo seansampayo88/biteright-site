@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "topic_key": "crouton-bread",
+  "slug": "is-crouton-bread-gluten-free",
+  "title": "Is Crouton-bread Gluten Free? | BiteRight",
+  "description": "Public gluten safety analysis for Crouton-bread. See major risks, safer alternatives, and what to ask before ordering.",
+  "heading": "Is Crouton-bread gluten free?",
+  "intro": "This public analysis report explains the biggest gluten risks in Crouton-bread and how to order more safely.",
+  "verdict": {
+    "status": "unsafe",
+    "summary": "Crouton-bread typically contains gluten due to the use of wheat-based bread as the main ingredient. Cross-contamination during preparation can also pose a significant risk for individuals with coeliac disease."
+  },
+  "disclaimer": "This guidance is informational only. Always verify ingredients and preparation with the restaurant.",
+  "meta": {
+    "updated_at": "2026-11-26"
+  },
+  "sections": [
+    {
+      "title": "Quick answer",
+      "body": "Crouton-bread can vary by recipe, ingredients, and cross-contact controls in the kitchen."
+    },
+    {
+      "title": "Common gluten risks",
+      "body": "Watch for hidden sources like soy sauce, malt flavoring, marinades, thickeners, and shared fryers."
+    },
+    {
+      "title": "How BiteRight helps",
+      "body": "Scan menus and ingredient labels with BiteRight to get a localized gluten-risk breakdown in seconds."
+    }
+  ],
+  "ingredients": {
+    "risk": [
+      "Wheat bread",
+      "Barley malt",
+      "Shared preparation surfaces",
+      "Shared cooking utensils",
+      "Seasoning mixes with gluten"
+    ],
+    "safe": [
+      "Gluten-free bread",
+      "Dedicated gluten-free preparation area",
+      "Gluten-free seasonings",
+      "Olive oil for dressing",
+      "Fresh vegetables"
+    ]
+  },
+  "waiter_script": {
+    "preview": "Is the crouton-bread made with gluten-free bread?"
+  },
+  "safe_alternatives": [
+    "Salad without croutons",
+    "Quinoa bowl",
+    "Rice dish",
+    "Gluten-free pasta",
+    "Vegetable stir-fry"
+  ],
+  "faq": [
+    {
+      "question": "Can BiteRight confirm if Crouton-bread is gluten free?",
+      "answer": "BiteRight highlights likely gluten risks based on ingredients and preparation. Always confirm with the kitchen if you have coeliac disease."
+    },
+    {
+      "question": "What should I ask a restaurant?",
+      "answer": "Ask about shared equipment, sauces, marinades, and whether the kitchen has a dedicated gluten-free prep area."
+    }
+  ],
+  "cta": {
+    "title": "Want to scan menus in seconds?",
+    "body": "Download BiteRight to check ingredients and menu items on the go.",
+    "href": "https://apps.apple.com/app/biteright-gluten-scanner/id6755896176",
+    "label": "Download on the App Store"
+  }
+}
